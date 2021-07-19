@@ -37,8 +37,13 @@ class MyApp extends StatelessWidget {
         textTheme: const TextTheme(
           headline1: TextStyle(
             fontSize: 20.0,
-            color: Colors.white,
+            color: Colors.black,
             fontWeight: FontWeight.bold,
+          ),
+          headline2: TextStyle(
+            fontSize: 18.0,
+            color: Colors.black,
+            fontWeight: FontWeight.normal,
           ),
           button: TextStyle(
             fontSize: 16.0,
