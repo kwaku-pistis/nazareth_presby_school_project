@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:nazareth_presby_school_project/home.dart';
@@ -44,6 +45,20 @@ class MyApp extends StatelessWidget {
             fontSize: 18.0,
             color: Colors.black,
             fontWeight: FontWeight.normal,
+          ),
+          caption: TextStyle(
+            fontSize: 24.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+          headline3: TextStyle(
+            fontSize: 20.0,
+            // color: Color(0xff2A3A9C),
+            color: Colors.red,
+          ),
+          bodyText1: TextStyle(
+            fontSize: 16.0,
+            color: Colors.grey,
           ),
           button: TextStyle(
             fontSize: 16.0,
