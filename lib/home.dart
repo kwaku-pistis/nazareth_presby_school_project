@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nazareth_presby_school_project/components/carousel.dart';
 import 'package:nazareth_presby_school_project/components/header.dart';
 
 class Home extends StatefulWidget {
@@ -11,27 +12,25 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: SizedBox(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          child: Column(
+    return Container(
+      padding: const EdgeInsets.all(0),
+      child: SingleChildScrollView(
+        child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const Header(),
-              Center(
-                child: ElevatedButton(
-                  onPressed: null,
-                  child: Text(
-                    "WORK IN PROGRESS",
-                    style: Theme.of(context).textTheme.button,
-                  ),
-                )
-              ),
+              const Carousel(),
+              // Center(
+              //   child: ElevatedButton(
+              //     onPressed: null,
+              //     child: Text(
+              //       "WORK IN PROGRESS",
+              //       style: Theme.of(context).textTheme.button,
+              //     ),
+              //   )
+              // ),
             ],
           ),
-        ),
       ),
     );
   }
