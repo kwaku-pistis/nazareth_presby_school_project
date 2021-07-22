@@ -1,5 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:nazareth_presby_school_project/components/contact_us.dart';
+import 'package:nazareth_presby_school_project/home.dart';
+
+import 'about_project.dart';
+import 'church_info.dart';
 
 class Header extends StatefulWidget {
   const Header({Key? key}) : super(key: key);
@@ -8,12 +13,16 @@ class Header extends StatefulWidget {
   _HeaderState createState() => _HeaderState();
 }
 
+final homeKey = GlobalKey();
+var activeKey = homeKey;
+
 class _HeaderState extends State<Header> {
   var _activeMenu = 'HOME';
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: homeKey,
       width: MediaQuery.of(context).size.width,
       height: 100,
       color: null,
@@ -22,15 +31,34 @@ class _HeaderState extends State<Header> {
         elevation: 10.0,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          // ignore: prefer_const_literals_to_create_immutables
           children: [
-            Container(
-              margin: const EdgeInsets.only(left: 20.0),
-              child: const Image(
-                image: AssetImage('assets/images/pcg_logo.png'),
-                width: 70,
-                height: 70,
+            GestureDetector(
+              child: Container(
+                margin: const EdgeInsets.only(left: 100.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const Image(
+                      image: AssetImage('assets/images/pcg_logo.png'),
+                      width: 70,
+                      height: 70,
+                    ),
+                    const SizedBox(
+                      child: Text(
+                        'NAZARETH\nCONGREGATION\nADJEI KOJO',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
+              onTap: () {
+                Scrollable.ensureVisible(homeKey.currentContext!);
+              },
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -38,6 +66,7 @@ class _HeaderState extends State<Header> {
                 TextButton(
                     onPressed: () {
                       _setActiveMenu('HOME');
+                      Scrollable.ensureVisible(homeKey.currentContext!);
                     },
                     child: Text(
                       "HOME",
@@ -47,27 +76,30 @@ class _HeaderState extends State<Header> {
                     )),
                 TextButton(
                     onPressed: () {
-                      _setActiveMenu('ABOUT PROJECT');
+                      _setActiveMenu('SCHOOL PROJECT');
+                      Scrollable.ensureVisible(aboutProjectKey.currentContext!);
                     },
                     child: Text(
-                      "ABOUT PROJECT",
-                      style: _activeMenu == 'ABOUT PROJECT'
+                      "SCHOOL PROJECT",
+                      style: _activeMenu == 'SCHOOL PROJECT'
                           ? Theme.of(context).textTheme.headline1
                           : Theme.of(context).textTheme.headline2,
                     )),
                 TextButton(
                     onPressed: () {
-                      _setActiveMenu('ABOUT US');
+                      _setActiveMenu('CHURCH INFO');
+                      Scrollable.ensureVisible(churchInfoKey.currentContext!);
                     },
                     child: Text(
-                      "ABOUT US",
-                      style: _activeMenu == 'ABOUT US'
+                      "CHURCH INFO",
+                      style: _activeMenu == 'CHURCH INFO'
                           ? Theme.of(context).textTheme.headline1
                           : Theme.of(context).textTheme.headline2,
                     )),
                 TextButton(
                     onPressed: () {
                       _setActiveMenu('CONTACT US');
+                      Scrollable.ensureVisible(contactKey.currentContext!);
                     },
                     child: Text(
                       "CONTACT US",
@@ -78,7 +110,7 @@ class _HeaderState extends State<Header> {
               ],
             ),
             Container(
-                margin: const EdgeInsets.only(right: 20.0),
+                margin: const EdgeInsets.only(right: 100.0),
                 child: ElevatedButton(
                     onPressed: null,
                     style: ButtonStyle(
@@ -125,5 +157,33 @@ class _HeaderState extends State<Header> {
     setState(() {
       _activeMenu = menu;
     });
+
+    // toggle floating action button visibility
+    switch (menu) {
+      case 'HOME':
+        setState(() {
+          isVisible = false;
+        });
+        break;
+      case 'SCHOOL PROJECT':
+        setState(() {
+          isVisible = true;
+        });
+        break;
+      case 'CHURCH INFO':
+        setState(() {
+          isVisible = true;
+        });
+        break;
+      case 'CONTACT US':
+        setState(() {
+          isVisible = true;
+        });
+        break;
+      default:
+        setState(() {
+          isVisible = false;
+        });
+    }
   }
 }
