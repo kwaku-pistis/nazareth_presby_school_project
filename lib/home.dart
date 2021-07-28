@@ -4,6 +4,7 @@ import 'package:nazareth_presby_school_project/components/carousel.dart';
 import 'package:nazareth_presby_school_project/components/church_info.dart';
 import 'package:nazareth_presby_school_project/components/contact_us.dart';
 import 'package:nazareth_presby_school_project/components/header.dart';
+import 'package:nazareth_presby_school_project/components/mobile_menu.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
 
 class Home extends StatefulWidget {
@@ -55,52 +56,61 @@ class _HomeState extends State<Home> {
             title: _isSliverCollapsed
                 ? const Header()
                 : SizedBox(
-                    child: _landscape == Orientation.landscape ? Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Image(
-                          image: AssetImage('assets/images/pcg_logo.png'),
-                          width: 70,
-                          height: 70,
-                        ),
-                        SizedBox(
-                          child: Text(
-                            'PRESBYTERIAN CHURCH OF GHANA\nNAZARETH CONGREGATION\nADJEI KOJO',
-                            style: TextStyle(
-                              // fontSize: 20.0,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ) : Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Image(
-                          image: AssetImage('assets/images/pcg_logo.png'),
-                          width: 50,
-                          height: 50,
-                        ),
-                        SizedBox(
-                          child: Text(
-                            'PRESBYTERIAN CHURCH OF GHANA\nNAZARETH CONGREGATION\nADJEI KOJO',
-                            style: TextStyle(
-                              fontSize: 13.0,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ],
-                    )
-                  ),
+                    child: _landscape == Orientation.landscape
+                        ? Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Image(
+                                image: AssetImage('assets/images/pcg_logo.png'),
+                                width: 70,
+                                height: 70,
+                              ),
+                              SizedBox(
+                                child: Text(
+                                  'PRESBYTERIAN CHURCH OF GHANA\nNAZARETH CONGREGATION\nADJEI KOJO',
+                                  style: TextStyle(
+                                    // fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        : Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Image(
+                                image: AssetImage('assets/images/pcg_logo.png'),
+                                width: 50,
+                                height: 50,
+                              ),
+                              SizedBox(
+                                child: Text(
+                                  'PRESBYTERIAN CHURCH OF GHANA\nNAZARETH CONGREGATION\nADJEI KOJO',
+                                  style: TextStyle(
+                                    fontSize: 13.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )),
             background: const Carousel(),
           ),
           backgroundColor: Colors.white,
+          // bottom: const PreferredSize(
+          //   preferredSize: Size.fromHeight(100),
+          //   child: MobileMenu(),
+          // ),
         ),
         SliverList(
           delegate: SliverChildListDelegate([
+            Visibility(
+              child: const MobileMenu(),
+              visible: isMenuOpened,
+            ),
             const AboutProject(),
             const ChurchInfo(),
             const ContactUs(),

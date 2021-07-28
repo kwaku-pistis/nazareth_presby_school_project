@@ -15,7 +15,9 @@ class Header extends StatefulWidget {
 }
 
 final homeKey = GlobalKey();
+
 var activeKey = homeKey;
+bool isMenuOpened = false;
 
 class _HeaderState extends State<Header> {
   var _activeMenu = 'HOME';
@@ -38,13 +40,13 @@ class _HeaderState extends State<Header> {
                     margin: const EdgeInsets.only(left: 0.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        const Image(
+                      children: const [
+                        Image(
                           image: AssetImage('assets/images/pcg_logo.png'),
                           width: 70,
                           height: 70,
                         ),
-                        const SizedBox(
+                        SizedBox(
                           child: Text(
                             'NAZARETH\nCONGREGATION\nADJEI KOJO',
                             style: TextStyle(
@@ -155,73 +157,77 @@ class _HeaderState extends State<Header> {
             ),
           )
         : Container(
-          // padding: const EdgeInsets.all(16),
-          width: MediaQuery.of(context).size.width,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              SizedBox(
-                width: 50,
-                child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.menu,
-                    color: CustomColor.blue,
-                  )
-                )
-              ),
-              SizedBox(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    const Image(
-                      image: AssetImage('assets/images/pcg_logo.png'),
-                      width: 60,
-                      height: 60,
-                    ),
-                    const SizedBox(
-                      child: Text(
-                        'NAZARETH\nCONGREGATION\nADJEI KOJO',
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
+            // padding: const EdgeInsets.all(16),
+            width: MediaQuery.of(context).size.width,
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  SizedBox(
+                      width: 50,
+                      child: IconButton(
+                          onPressed: () {
+                            setState(() {
+                              isMenuOpened = !isMenuOpened;
+                            });
+                          },
+                          icon: isMenuOpened
+                              ? const Icon(
+                                  Icons.close,
+                                  color: CustomColor.blue,
+                                )
+                              : const Icon(
+                                  Icons.menu,
+                                  color: CustomColor.blue,
+                                ))),
+                  SizedBox(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: const [
+                        Image(
+                          image: AssetImage('assets/images/pcg_logo.png'),
+                          width: 60,
+                          height: 60,
                         ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  // width: MediaQuery.of(context).size.width,
-                  // margin: const EdgeInsets.only(left: 100.0),
-                  alignment: Alignment.centerRight,
-                  child: ElevatedButton(
-                      onPressed: () {},
-                      style: ButtonStyle(
-                          fixedSize:
-                              MaterialStateProperty.all(const Size(120, 50)),
-                          backgroundColor:
-                              MaterialStateProperty.all(Colors.red)),
-                      child: AnimatedTextKit(
-                        animatedTexts: [
-                          ScaleAnimatedText(
-                            'DONATE',
-                            textStyle: const TextStyle(
-                              fontSize: 18.0,
-                              color: Colors.white,
+                        SizedBox(
+                          child: Text(
+                            'NAZARETH\nCONGREGATION\nADJEI KOJO',
+                            style: TextStyle(
+                              fontSize: 16.0,
                               fontWeight: FontWeight.bold,
+                              color: Colors.black,
                             ),
                           ),
-                        ],
-                        repeatForever: true,
-                      )))
-              )
-            ]
-          )
-        );
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                      child: Container(
+                          // width: MediaQuery.of(context).size.width,
+                          // margin: const EdgeInsets.only(left: 100.0),
+                          alignment: Alignment.centerRight,
+                          child: ElevatedButton(
+                              onPressed: () {},
+                              style: ButtonStyle(
+                                  fixedSize: MaterialStateProperty.all(
+                                      const Size(120, 50)),
+                                  backgroundColor:
+                                      MaterialStateProperty.all(Colors.red)),
+                              child: AnimatedTextKit(
+                                animatedTexts: [
+                                  ScaleAnimatedText(
+                                    'DONATE',
+                                    textStyle: const TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                                repeatForever: true,
+                              ))))
+                ]));
   }
 
   _setActiveMenu(String menu) {
