@@ -7,6 +7,7 @@ class Carousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var images = [
+      'images/church.jpg',
       'images/carousel_1.jpg',
       'images/carousel_2.jpg',
       'images/carousel_3.jpg',
@@ -34,7 +35,7 @@ class Carousel extends StatelessWidget {
             builder: (BuildContext context) {
               return Container(
                 width: MediaQuery.of(context).size.width,
-                margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                margin: const EdgeInsets.symmetric(horizontal: 0.0),
                 child: Image.asset(i, fit: BoxFit.cover,),
               );
             },
