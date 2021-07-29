@@ -6,6 +6,7 @@ class Carousel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final carouselKey = GlobalKey();
     var images = [
       'images/church.jpg',
       'images/carousel_1.jpg',
@@ -14,6 +15,7 @@ class Carousel extends StatelessWidget {
     ];
 
     return SizedBox(
+      key: carouselKey,
       child: CarouselSlider(
         options: CarouselOptions(
           height: MediaQuery.of(context).size.height,

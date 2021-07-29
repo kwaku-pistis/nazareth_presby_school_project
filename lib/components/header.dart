@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:nazareth_presby_school_project/components/contact_us.dart';
 import 'package:nazareth_presby_school_project/home.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
+import 'package:provider/src/provider.dart';
 
+import '../main.dart';
 import 'about_project.dart';
 import 'church_info.dart';
 
@@ -69,6 +71,9 @@ class _HeaderState extends State<Header> {
                     TextButton(
                         onPressed: () {
                           _setActiveMenu('HOME');
+                          context
+                              .read<ChangeBoolState>()
+                              .changeFabVisibility('HOME');
                           Scrollable.ensureVisible(homeKey.currentContext!);
                         },
                         child: Text(
@@ -80,6 +85,9 @@ class _HeaderState extends State<Header> {
                     TextButton(
                         onPressed: () {
                           _setActiveMenu('SCHOOL PROJECT');
+                          context
+                              .read<ChangeBoolState>()
+                              .changeFabVisibility('SCHOOL PROJECT');
                           Scrollable.ensureVisible(
                               aboutProjectKey.currentContext!);
                         },
@@ -92,6 +100,9 @@ class _HeaderState extends State<Header> {
                     TextButton(
                         onPressed: () {
                           _setActiveMenu('CHURCH INFO');
+                          context
+                              .read<ChangeBoolState>()
+                              .changeFabVisibility('CHURCH INFO');
                           Scrollable.ensureVisible(
                               churchInfoKey.currentContext!);
                         },
@@ -104,6 +115,9 @@ class _HeaderState extends State<Header> {
                     TextButton(
                         onPressed: () {
                           _setActiveMenu('CONTACT US');
+                          context
+                              .read<ChangeBoolState>()
+                              .changeFabVisibility('CONTACT US');
                           Scrollable.ensureVisible(contactKey.currentContext!);
                         },
                         child: Text(
@@ -166,12 +180,9 @@ class _HeaderState extends State<Header> {
                   SizedBox(
                       width: 50,
                       child: IconButton(
-                          onPressed: () {
-                            setState(() {
-                              isMenuOpened = !isMenuOpened;
-                            });
-                          },
-                          icon: isMenuOpened
+                          onPressed: () =>
+                              context.read<ChangeBoolState>().changeState(),
+                          icon: context.watch<ChangeBoolState>().isMenuOpen
                               ? const Icon(
                                   Icons.close,
                                   color: CustomColor.blue,
@@ -234,33 +245,5 @@ class _HeaderState extends State<Header> {
     setState(() {
       _activeMenu = menu;
     });
-
-    // toggle floating action button visibility
-    switch (menu) {
-      case 'HOME':
-        setState(() {
-          isVisible = false;
-        });
-        break;
-      case 'SCHOOL PROJECT':
-        setState(() {
-          isVisible = true;
-        });
-        break;
-      case 'CHURCH INFO':
-        setState(() {
-          isVisible = true;
-        });
-        break;
-      case 'CONTACT US':
-        setState(() {
-          isVisible = true;
-        });
-        break;
-      default:
-        setState(() {
-          isVisible = false;
-        });
-    }
   }
 }

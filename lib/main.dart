@@ -1,11 +1,60 @@
+import 'dart:html';
+
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:nazareth_presby_school_project/home.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_) => ChangeBoolState()),
+    ],
+    child: const MyApp(),
+  ));
+}
+
+class ChangeBoolState with ChangeNotifier, DiagnosticableTreeMixin {
+  bool _isMenuOpen = false;
+  bool _isFabVisible = false;
+
+  bool get isMenuOpen => _isMenuOpen;
+  bool get isFabVisible => _isFabVisible;
+
+  void changeState() {
+    _isMenuOpen = !_isMenuOpen;
+    notifyListeners();
+  }
+
+  void changeFabVisibility(String menu) {
+    // toggle floating action button visibility
+    switch (menu) {
+      case 'HOME':
+        _isFabVisible = false;
+        break;
+      case 'SCHOOL PROJECT':
+        _isFabVisible = true;
+        break;
+      case 'CHURCH INFO':
+        _isFabVisible = true;
+        break;
+      case 'CONTACT US':
+        _isFabVisible = true;
+        break;
+      default:
+        _isFabVisible = true;
+    }
+    notifyListeners();
+  }
+
+  // @override
+  // void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+  //   super.debugFillProperties(properties);
+  //   properties.add(IntProperty('count', count));
+  // }
 }
 
 class MyApp extends StatelessWidget {
@@ -60,10 +109,7 @@ class MyApp extends StatelessWidget {
                 fontSize: 16.0,
                 color: Colors.grey,
               ),
-              bodyText2: TextStyle(
-                fontSize: 16.0,
-                color: Colors.white
-              ),
+              bodyText2: TextStyle(fontSize: 16.0, color: Colors.white),
               button: TextStyle(
                 fontSize: 16.0,
                 color: Colors.white,
