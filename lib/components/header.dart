@@ -129,7 +129,7 @@ class _HeaderState extends State<Header> {
                   ],
                 ),
                 Container(
-                    margin: const EdgeInsets.only(right: 70.0),
+                    margin: const EdgeInsets.only(right: 0.0),
                     child: ElevatedButton(
                         onPressed: null,
                         style: ButtonStyle(

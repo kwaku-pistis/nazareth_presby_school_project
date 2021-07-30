@@ -4,6 +4,7 @@ import 'package:nazareth_presby_school_project/components/carousel.dart';
 import 'package:nazareth_presby_school_project/components/church_info.dart';
 import 'package:nazareth_presby_school_project/components/contact_us.dart';
 import 'package:nazareth_presby_school_project/components/header.dart';
+import 'package:nazareth_presby_school_project/components/home_details.dart';
 import 'package:nazareth_presby_school_project/components/mobile_menu.dart';
 import 'package:nazareth_presby_school_project/main.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
@@ -123,22 +124,20 @@ class _HomeState extends State<Home> {
                 background: const Carousel(),
               ),
               backgroundColor: Colors.white,
-              // bottom: const PreferredSize(
-              //   preferredSize: Size.fromHeight(100),
-              //   child: MobileMenu(),
-              // ),
             ),
             SliverList(
               delegate: SliverChildListDelegate([
                 Visibility(
                     child: const MobileMenu(),
                     visible: context.watch<ChangeBoolState>().isMenuOpen),
+                const HomeDetails(),
                 const AboutProject(),
                 const ChurchInfo(),
                 const ContactUs(),
               ]),
             )
           ],
+          
         ),
         onNotification: (ScrollNotification notification) {
           // var position = notification.metrics.pixels;
