@@ -49,8 +49,8 @@ class _MobileMenuState extends State<MobileMenu> {
                 ),
               )),
           Container(
-            width: MediaQuery.of(context).size.width,
               alignment: Alignment.centerLeft,
+            width: MediaQuery.of(context).size.width,
             child: TextButton(
               onPressed: (){}, 
               child: const Text(

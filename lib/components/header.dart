@@ -85,11 +85,11 @@ class _HeaderState extends State<Header> {
                     TextButton(
                         onPressed: () {
                           _setActiveMenu('SCHOOL PROJECT');
-                          context
-                              .read<ChangeBoolState>()
-                              .changeFabVisibility('SCHOOL PROJECT');
-                          Scrollable.ensureVisible(
-                              aboutProjectKey.currentContext!);
+                          scrollController.position.ensureVisible(
+                              aboutProjectKey.currentContext!
+                                  .findRenderObject()!);
+                          // Scrollable.ensureVisible(
+                          //     aboutProjectKey.currentContext!);
                         },
                         child: Text(
                           "SCHOOL PROJECT",
@@ -100,9 +100,6 @@ class _HeaderState extends State<Header> {
                     TextButton(
                         onPressed: () {
                           _setActiveMenu('CHURCH INFO');
-                          context
-                              .read<ChangeBoolState>()
-                              .changeFabVisibility('CHURCH INFO');
                           Scrollable.ensureVisible(
                               churchInfoKey.currentContext!);
                         },
@@ -171,7 +168,7 @@ class _HeaderState extends State<Header> {
             ),
           )
         : Container(
-            // padding: const EdgeInsets.all(16),
+            key: homeKey,
             width: MediaQuery.of(context).size.width,
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,

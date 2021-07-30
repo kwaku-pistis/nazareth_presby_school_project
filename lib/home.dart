@@ -18,8 +18,9 @@ class Home extends StatefulWidget {
 }
 
 final sliverbarKey = GlobalKey();
+final aboutProjectKey = GlobalKey();
 
-var _controller = ScrollController();
+var scrollController = ScrollController();
 bool _isSliverCollapsed = false;
 bool _isFabVisible = false;
 
@@ -28,30 +29,30 @@ class _HomeState extends State<Home> {
   void initState() {
     super.initState();
 
-    _controller.addListener(() {
-      if (_controller.offset <= MediaQuery.of(context).size.height - 100 &&
-          !_controller.position.outOfRange) {
+    scrollController.addListener(() {
+      if (scrollController.offset <= MediaQuery.of(context).size.height - 100 &&
+          !scrollController.position.outOfRange) {
         setState(() {
           _isSliverCollapsed = false;
         });
       }
 
-      if (_controller.offset > MediaQuery.of(context).size.height - 100 &&
-          !_controller.position.outOfRange) {
+      if (scrollController.offset > MediaQuery.of(context).size.height - 100 &&
+          !scrollController.position.outOfRange) {
         setState(() {
           _isSliverCollapsed = true;
         });
       }
 
-      if (_controller.offset > _controller.position.minScrollExtent &&
-          !_controller.position.outOfRange) {
+      if (scrollController.offset > scrollController.position.minScrollExtent &&
+          !scrollController.position.outOfRange) {
         setState(() {
           _isFabVisible = true;
         });
       }
 
-      if (_controller.offset <= _controller.position.minScrollExtent &&
-          !_controller.position.outOfRange) {
+      if (scrollController.offset <= scrollController.position.minScrollExtent &&
+          !scrollController.position.outOfRange) {
         setState(() {
           _isFabVisible = false;
         });
@@ -66,7 +67,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: NotificationListener(
         child: CustomScrollView(
-          controller: _controller,
+          controller: scrollController,
           slivers: [
             SliverAppBar(
               key: sliverbarKey,
@@ -131,27 +132,16 @@ class _HomeState extends State<Home> {
                     child: const MobileMenu(),
                     visible: context.watch<ChangeBoolState>().isMenuOpen),
                 const HomeDetails(),
-                const AboutProject(),
+                AboutProject(key: aboutProjectKey,),
                 const ChurchInfo(),
                 const ContactUs(),
               ]),
             )
           ],
-          
         ),
         onNotification: (ScrollNotification notification) {
           // var position = notification.metrics.pixels;
-
-          // // print("Hello there: $position");
-          // if (position > MediaQuery.of(context).size.height) {
-          //   setState(() {
-          //     _isFabVisible = true;
-          //   });
-          // } else {
-          //   setState(() {
-          //     _isFabVisible = false;
-          //   });
-          // }
+          // print(notification.depth);
           return false;
         },
       ),
@@ -160,11 +150,8 @@ class _HomeState extends State<Home> {
         visible: _isFabVisible,
         child: FloatingActionButton(
           onPressed: () {
-            _controller.animateTo(
-              0, 
-              duration: const Duration(seconds: 1), 
-              curve: Curves.easeIn
-            );
+            scrollController.animateTo(0,
+                duration: const Duration(seconds: 1), curve: Curves.linear);
           },
           child: const Icon(Icons.navigation),
           backgroundColor: CustomColor.red,
@@ -172,5 +159,11 @@ class _HomeState extends State<Home> {
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    scrollController.dispose();
   }
 }
