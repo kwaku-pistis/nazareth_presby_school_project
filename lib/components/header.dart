@@ -149,7 +149,7 @@ class _HeaderState extends State<Header> {
                             fixedSize:
                                 MaterialStateProperty.all(const Size(150, 50)),
                             backgroundColor:
-                                MaterialStateProperty.all(Colors.red)),
+                                MaterialStateProperty.all(CustomColor.blue)),
                         child: AnimatedTextKit(
                           animatedTexts: [
                             ScaleAnimatedText(
@@ -237,7 +237,7 @@ class _HeaderState extends State<Header> {
                                   fixedSize: MaterialStateProperty.all(
                                       const Size(120, 50)),
                                   backgroundColor:
-                                      MaterialStateProperty.all(Colors.red)),
+                                      MaterialStateProperty.all(CustomColor.blue)),
                               child: AnimatedTextKit(
                                 animatedTexts: [
                                   ScaleAnimatedText(

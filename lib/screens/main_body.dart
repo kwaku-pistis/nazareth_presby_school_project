@@ -141,7 +141,7 @@ class _MainBodyState extends State<MainBody> {
                 duration: const Duration(seconds: 1), curve: Curves.linear);
           },
           child: const Icon(Icons.navigation),
-          backgroundColor: CustomColor.red,
+          backgroundColor: CustomColor.green,
           tooltip: 'Back to top',
         ),
       ),

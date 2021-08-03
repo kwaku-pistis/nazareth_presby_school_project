@@ -12,9 +12,6 @@ class ChurchInfo extends StatefulWidget {
   _ChurchInfoState createState() => _ChurchInfoState();
 }
 
-String bodyText =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Sem integer vitae justo eget magna. Vel orci porta non pulvinar neque laoreet suspendisse. Facilisis gravida neque convallis a cras semper auctor neque. Duis convallis convallis tellus id interdum velit laoreet id. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Orci nulla pellentesque dignissim enim sit. Quis lectus nulla at volutpat diam ut venenatis tellus in. Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. Scelerisque fermentum dui faucibus in ornare quam viverra orci. Magna eget est lorem ipsum dolor sit amet consectetur. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Tortor at risus viverra adipiscing at in tellus integer. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Congue mauris rhoncus aenean vel.\n\nConsequat id porta nibh venenatis cras sed. Velit egestas dui id ornare arcu odio. Ullamcorper a lacus vestibulum sed arcu. Pellentesque sit amet porttitor eget dolor. Ut eu sem integer vitae justo eget. Eu ultrices vitae auctor eu augue ut lectus. Nisl vel pretium lectus quam id. Leo in vitae turpis massa sed elementum tempus egestas. Est ultricies integer quis auctor elit sed. Neque laoreet suspendisse interdum consectetur.\n\nEt malesuada fames ac turpis egestas. Condimentum mattis pellentesque id nibh tortor id aliquet lectus. Risus in hendrerit gravida rutrum quisque. Enim sit amet venenatis urna cursus eget nunc. Accumsan in nisl nisi scelerisque eu. Quis eleifend quam adipiscing vitae proin sagittis. Faucibus turpis in eu mi bibendum neque. Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Rhoncus urna neque viverra justo nec ultrices dui sapien. Mollis aliquam ut porttitor leo a diam sollicitudin.\n\nEtiam tempor orci eu lobortis. Amet consectetur adipiscing elit duis tristique sollicitudin. Ultrices tincidunt arcu non sodales neque sodales ut etiam sit. Egestas quis ipsum suspendisse ultrices gravida dictum. Tortor posuere ac ut consequat. Aliquet bibendum enim facilisis gravida. Felis eget nunc lobortis mattis aliquam faucibus purus in. Ornare arcu odio ut sem nulla pharetra. Egestas erat imperdiet sed euismod nisi. Auctor elit sed vulputate mi sit amet mauris commodo. Arcu bibendum at varius vel. Scelerisque eleifend donec pretium vulputate sapien. Massa id neque aliquam vestibulum morbi blandit.';
-
 final PageController controller = PageController();
 final churchInfoKey = GlobalKey();
 
@@ -35,7 +32,9 @@ class _ChurchInfoState extends State<ChurchInfo> {
         children: [
           Container(
             width: MediaQuery.of(context).size.width * 0.5,
-            margin: const EdgeInsets.only(top: 30,),
+            margin: const EdgeInsets.only(
+              top: 30,
+            ),
             alignment: Alignment.centerLeft,
             child: const Text(
               'THE NEED OF THE PLANTING OF CHURCH',
@@ -57,7 +56,9 @@ class _ChurchInfoState extends State<ChurchInfo> {
           ),
           Container(
             width: MediaQuery.of(context).size.width * 0.5,
-            margin: const EdgeInsets.only(top: 0,),
+            margin: const EdgeInsets.only(
+              top: 0,
+            ),
             alignment: Alignment.centerLeft,
             child: const Text(
               'FEASIBILITY STUDY',
@@ -79,7 +80,9 @@ class _ChurchInfoState extends State<ChurchInfo> {
           ),
           Container(
             width: MediaQuery.of(context).size.width * 0.5,
-            margin: const EdgeInsets.only(top: 0,),
+            margin: const EdgeInsets.only(
+              top: 0,
+            ),
             alignment: Alignment.centerLeft,
             child: const Text(
               'EVANGELISM ACTIVITIES',
@@ -101,140 +104,140 @@ class _ChurchInfoState extends State<ChurchInfo> {
           ),
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.5,
-            child: Column(
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.5,
-                  child: const Text(
-                    "The ten pioneers were:",
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic,
-                      color: Colors.grey,
-                    ),
-                    textAlign: TextAlign.left,
+            child: Column(children: [
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.5,
+                child: const Text(
+                  "The ten pioneers were:",
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.grey,
                   ),
+                  textAlign: TextAlign.left,
                 ),
-                ListTile(
-                  leading: Text(
-                    "1.",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
-                  title: Text(
-                    "Mr. Martin Sarkodie",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
+              ),
+              ListTile(
+                leading: Text(
+                  "1.",
+                  style: Theme.of(context).textTheme.bodyText1,
                 ),
-                ListTile(
-                  leading: Text(
-                    "2.",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
-                  title: Text(
-                    "Mrs. Evelyn Sarkodie",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
+                title: Text(
+                  "Mr. Martin Sarkodie",
+                  style: Theme.of(context).textTheme.bodyText1,
                 ),
-                ListTile(
-                  leading: Text(
-                    "3.",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
-                  title: Text(
-                    "Mr. Samuel Nkansah",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
+              ),
+              ListTile(
+                leading: Text(
+                  "2.",
+                  style: Theme.of(context).textTheme.bodyText1,
                 ),
-                ListTile(
-                  leading: Text(
-                    "4.",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
-                  title: Text(
-                    "Mr. Samuel Sefa",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
+                title: Text(
+                  "Mrs. Evelyn Sarkodie",
+                  style: Theme.of(context).textTheme.bodyText1,
                 ),
-                ListTile(
-                  leading: Text(
-                    "5.",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
-                  title: Text(
-                    "Mr. Samuel Akuffo",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
+              ),
+              ListTile(
+                leading: Text(
+                  "3.",
+                  style: Theme.of(context).textTheme.bodyText1,
                 ),
-                ListTile(
-                  leading: Text(
-                    "6.",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
-                  title: Text(
-                    "Madam Linda Owusu",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
+                title: Text(
+                  "Mr. Samuel Nkansah",
+                  style: Theme.of(context).textTheme.bodyText1,
                 ),
-                ListTile(
-                  leading: Text(
-                    "7.",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
-                  title: Text(
-                    "Mrs. Mercy Agyekum (deceased). May her soul rest in peace",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
+              ),
+              ListTile(
+                leading: Text(
+                  "4.",
+                  style: Theme.of(context).textTheme.bodyText1,
                 ),
-                ListTile(
-                  leading: Text(
-                    "8.",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
-                  title: Text(
-                    "Madam Mercy Agbedeka",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
+                title: Text(
+                  "Mr. Samuel Sefa",
+                  style: Theme.of(context).textTheme.bodyText1,
                 ),
-                ListTile(
-                  leading: Text(
-                    "9.",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
-                  title: Text(
-                    "Madam Suzzy Akutu",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
+              ),
+              ListTile(
+                leading: Text(
+                  "5.",
+                  style: Theme.of(context).textTheme.bodyText1,
                 ),
-                ListTile(
-                  leading: Text(
-                    "10.",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
-                  title: Text(
-                    "Mr. Nicholas Martey",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
+                title: Text(
+                  "Mr. Samuel Akuffo",
+                  style: Theme.of(context).textTheme.bodyText1,
                 ),
-                SizedBox(
-                  child: Text(
-                    'Mr. Samuel Nkansah and Mad. Linda Owusu were asked to as Session Clerk and Treasurer respectively. To increase membership, Cat. Benjamin Ottu led some of the missionaries to undertake dawn broadcasting which yielded a lot.\n\nHe asked Sowers International – Ashaiman branch to help their skills. House-to-house and visitation were seriously undertaken by the missionaries. Once a while the entire District B.S.P.G got involved. These activities amongst led to the fast growth of the church. By the close of the year 1997, membership totaled thirty (30) thus Eighteen (18) males and Twelve (12) females excluding the juvenile services.',
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
-                )
-              ]
-            ),
+              ),
+              ListTile(
+                leading: Text(
+                  "6.",
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+                title: Text(
+                  "Madam Linda Owusu",
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+              ),
+              ListTile(
+                leading: Text(
+                  "7.",
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+                title: Text(
+                  "Mrs. Mercy Agyekum (deceased). May her soul rest in peace",
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+              ),
+              ListTile(
+                leading: Text(
+                  "8.",
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+                title: Text(
+                  "Madam Mercy Agbedeka",
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+              ),
+              ListTile(
+                leading: Text(
+                  "9.",
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+                title: Text(
+                  "Madam Suzzy Akutu",
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+              ),
+              ListTile(
+                leading: Text(
+                  "10.",
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+                title: Text(
+                  "Mr. Nicholas Martey",
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+              ),
+              SizedBox(
+                child: Text(
+                  'Mr. Samuel Nkansah and Mad. Linda Owusu were asked to as Session Clerk and Treasurer respectively. To increase membership, Cat. Benjamin Ottu led some of the missionaries to undertake dawn broadcasting which yielded a lot.\n\nHe asked Sowers International – Ashaiman branch to help their skills. House-to-house and visitation were seriously undertaken by the missionaries. Once a while the entire District B.S.P.G got involved. These activities amongst led to the fast growth of the church. By the close of the year 1997, membership totaled thirty (30) thus Eighteen (18) males and Twelve (12) females excluding the juvenile services.',
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+              )
+            ]),
           ),
           Container(
             width: MediaQuery.of(context).size.width * 0.5,
-            margin: const EdgeInsets.only(top: 20,),
+            margin: const EdgeInsets.only(
+              top: 20,
+            ),
             alignment: Alignment.centerLeft,
             child: const Text(
-              'MISSIONARIES',
+              'Missionaries:',
               style: TextStyle(
-                fontSize: 20.0,
+                fontSize: 18.0,
                 fontWeight: FontWeight.bold,
-                color: CustomColor.red,
+                color: Colors.black,
               ),
               textAlign: TextAlign.left,
             ),
@@ -245,698 +248,665 @@ class _ChurchInfoState extends State<ChurchInfo> {
             child: Container(
               margin: const EdgeInsets.only(left: 0.0),
               child: Table(
-                defaultColumnWidth: FixedColumnWidth((MediaQuery.of(context).size.width * 0.5) / 3),
-                border: TableBorder.all(
-                  style: BorderStyle.none
-                ),
+                defaultColumnWidth: FixedColumnWidth(
+                    (MediaQuery.of(context).size.width * 0.5) / 3),
+                border: TableBorder.all(style: BorderStyle.none),
                 children: [
-                  TableRow(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "1. Mr. Benjamin Ottu",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "1. Mr. Benjamin Ottu",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              "-",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 5),
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "Leader (now Catechist at Hope Congregation,Santeo)",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Leader (now Catechist at Hope Congregation,Santeo)",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                    ]
-                  ),
-                  TableRow(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "2. Mr. Edward Narh",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "2. Mr. Edward Narh",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              "-",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 5),
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "Assistant Leader (now at Calvary Presby - Tema)",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Assistant Leader (now at Calvary Presby - Tema)",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                    ]
-                  ),
-                  TableRow(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "3. Mr. Benjamin Ankrah",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "3. Mr. Benjamin Ankrah",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              "-",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 5),
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "(now an ex presbyter of Nazareth)",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "(now an ex presbyter of Nazareth)",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                    ]
-                  ),
-                  TableRow(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "4. Mr. Moses D. Angmor",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "4. Mr. Moses D. Angmor",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              "-",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 5),
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "(now an ex presbyter of Nazareth)",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "(now an ex presbyter of Nazareth)",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                    ]
-                  ),
-                  TableRow(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "5. Mr. Isaac Amanor",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "5. Mr. Isaac Amanor",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              "-",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 5),
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "(now Elder at Central)",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "(now Elder at Central)",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                    ]
-                  ),
-                  TableRow(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "6. Mr. Daniel Puplampu",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "6. Mr. Daniel Puplampu",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              "-",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 5),
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "(now Elder at Victory)",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "(now Elder at Victory)",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                    ]
-                  ),
-                  TableRow(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "7. Mr. Luther Otu",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "7. Mr. Luther Otu",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              "-",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 5),
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "(now Elder at Zion)",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "(now Elder at Zion)",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                    ]
-                  ),
-                  TableRow(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "8. Mr. Henry Ayiku",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "8. Mr. Henry Ayiku",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              "-",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 5),
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "(now Catechist in charge of Bethel)",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "(now Catechist in charge of Bethel)",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                    ]
-                  ),
-                  TableRow(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "9. Mr. Joseph Nartey",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "9. Mr. Joseph Nartey",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              "-",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 5),
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "(now at Zion Zone Two)",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "(now at Zion Zone Two)",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                    ]
-                  ),
-                  TableRow(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "10. Mr. David Nartey",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "10. Mr. David Nartey",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              "-",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 5),
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "(JY Teacher of Nazareth)",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "(JY Teacher of Nazareth)",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                    ]
-                  ),
-                  TableRow(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "11. Mr. Samuel Partey",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "11. Mr. Samuel Partey",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              "-",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 5),
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "(now with Resurrection Faith Ministry)",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "(now with Resurrection Faith Ministry)",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                    ]
-                  ),
-                  TableRow(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "12. Mr. Benjamin Agyapong",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "12. Mr. Benjamin Agyapong",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              "-",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 5),
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "(Central)",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "(Central)",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                    ]
-                  ),
-                  TableRow(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "13. Mrs. Faustina Odonkor",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "13. Mrs. Faustina Odonkor",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              "-",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 5),
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "(Central)",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "(Central)",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                    ]
-                  ),
-                  TableRow(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "14. Mrs. Comfort Padi",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "14. Mrs. Comfort Padi",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              "-",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 5),
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "(now at Agomeda)",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "(now at Agomeda)",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                    ]
-                  ),
-                  TableRow(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "15. Mrs. Elizabeth Patawah",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "15. Mrs. Elizabeth Patawah",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              "-",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 5),
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "(C/S Mother - Central)",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "(C/S Mother - Central)",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                    ]
-                  ),
-                  TableRow(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "16. Mrs. Victoria Totimeh",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "16. Mrs. Victoria Totimeh",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              "-",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 5),
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "(now at Zion Lebanon Zone Two)",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "(now at Zion Lebanon Zone Two)",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                    ]
-                  ),
-                  TableRow(
-                    children: [
-                      Column(
-                        children: [
-                          SizedBox(
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "17. Mr. Ebenezer Tetteh",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "17. Mr. Ebenezer Tetteh",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
-                              "-",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 5),
-                            width: (MediaQuery.of(context).size.width * 0.5) / 3,
-                            child: Text(
-                              "(now Caretaker, Adenta Presby)",
-                              style: Theme.of(context).textTheme.bodyText1,
-                              textAlign: TextAlign.left,
-                            ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "(now Caretaker, Adenta Presby)",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
                           ),
-                        ],
-                      ),
-                    ]
-                  ),
+                        ),
+                      ],
+                    ),
+                  ]),
                 ],
               ),
             ),
           ),
           Container(
             width: MediaQuery.of(context).size.width * 0.5,
-            margin: const EdgeInsets.only(top: 0,),
+            margin: const EdgeInsets.only(
+              top: 0,
+            ),
             alignment: Alignment.centerLeft,
             child: const Text(
               'RE-LOCATION',
@@ -958,7 +928,9 @@ class _ChurchInfoState extends State<ChurchInfo> {
           ),
           Container(
             width: MediaQuery.of(context).size.width * 0.5,
-            margin: const EdgeInsets.only(top: 0,),
+            margin: const EdgeInsets.only(
+              top: 0,
+            ),
             alignment: Alignment.centerLeft,
             child: const Text(
               'THE CHURCH ADMINISTRATION',
@@ -980,14 +952,16 @@ class _ChurchInfoState extends State<ChurchInfo> {
           ),
           Container(
             width: MediaQuery.of(context).size.width * 0.5,
-            margin: const EdgeInsets.only(top: 20,),
+            margin: const EdgeInsets.only(
+              top: 0,
+            ),
             alignment: Alignment.centerLeft,
             child: const Text(
-              'THE OUT-GOING IMC MEMBERS WERE AS FOLLOWS:',
+              'The Out-Going IMC Members were as follows:',
               style: TextStyle(
-                fontSize: 20.0,
+                fontSize: 18.0,
                 fontWeight: FontWeight.bold,
-                color: CustomColor.red,
+                color: Colors.black,
               ),
               textAlign: TextAlign.left,
             ),
@@ -997,15 +971,363 @@ class _ChurchInfoState extends State<ChurchInfo> {
             margin: const EdgeInsets.fromLTRB(50, 20, 50, 20),
             child: Container(
               margin: const EdgeInsets.only(left: 20.0),
-              child: Text(
-                "1. Catechist Benjamin Ottu - Agent –In- Charge\n2. Mad. Comfort Nkansah Afari - Senior Presbyter\n\3. Mr. Godwin Fianu - Clerk\n4. Mr. Benjamin Ankrah - Director of Finance\n5. Mr. Moses Angmor - Member\n6. Mr. Henry Ayiku - Coordinator to Suncity\n7. Mad. Helena Aboagye - Member\n8. Mad. Veronica Bosu - Member\n9. Mr.Samuel Amoako Mensah - Member",
-                style: Theme.of(context).textTheme.bodyText1,
+              child: Table(
+                defaultColumnWidth: FixedColumnWidth((MediaQuery.of(context).size.width * 0.5) / 3),
+                border: TableBorder.all(
+                  style: BorderStyle.none,
+                ),
+                children: [
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "1. Catechist Benjamin Ottu",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Agent-In-Charge",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "2. Mad. Comfort Nkansah Afari",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Senior Presbyter",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "3. Mr. Godwin Fianu",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Clerk",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "4. Mr. Benjamin Ankrah",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Director of Finance",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "5. Mr. Moses Angmor",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Member",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "6. Mr. Henry Ayiku",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Coordinator to Suncity",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "7. Mad. Helena Aboagye",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Member",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "8. Mad. Veronica Bosu",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Member",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "9. Mr. Samuel Amoako Mensah",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Member",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                ],
               ),
             ),
           ),
           Container(
             width: MediaQuery.of(context).size.width * 0.5,
-            margin: const EdgeInsets.only(top: 0,),
+            margin: const EdgeInsets.only(
+              top: 0,
+            ),
             alignment: Alignment.centerLeft,
             child: const Text(
               'BAPTISM AND CONFIRMATION',
@@ -1027,7 +1349,9 @@ class _ChurchInfoState extends State<ChurchInfo> {
           ),
           Container(
             width: MediaQuery.of(context).size.width * 0.5,
-            margin: const EdgeInsets.only(top: 0,),
+            margin: const EdgeInsets.only(
+              top: 0,
+            ),
             alignment: Alignment.centerLeft,
             child: const Text(
               'NAMING',
@@ -1049,7 +1373,9 @@ class _ChurchInfoState extends State<ChurchInfo> {
           ),
           Container(
             width: MediaQuery.of(context).size.width * 0.5,
-            margin: const EdgeInsets.only(top: 20,),
+            margin: const EdgeInsets.only(
+              top: 20,
+            ),
             alignment: Alignment.centerLeft,
             child: const Text(
               'CURRENT LEADERSHIP',
@@ -1066,15 +1392,667 @@ class _ChurchInfoState extends State<ChurchInfo> {
             margin: const EdgeInsets.fromLTRB(50, 20, 50, 20),
             child: Container(
               margin: const EdgeInsets.only(left: 0.0),
-              child: Text(
-                "Rev. Godfried Emmanuel Quagraine - Minister in Charge\nCat. Roseline Gyanwaa Baiden - Catechist with a Charge\nPresbyter Kenneth Boakye – Yiadom - Senior Presbyter\nPresbyter Emmanuel K.O Larbi - Session Clerk\nPresbyter Janet Naa Ayorkor Klu - Ass. Session Clerk\nPresbyter Enoch Kwesi Sain - Treasurer\nPresbyter Emmanuel Adu Bempah - Member\nPresbyter Lovelace Samuel Amponsah - Member\nPresbyter Ebenezer Ronald Sekyi - Member\nPresbyter Samuel Wilfred Partey - Member\nPresbyter Joseph Kwadwo Awuah - Member\nPresbyter Daniel Tetteh Agu - Member\nPresbyter Beatrice Odoi - Member\nPresbyter Mercy Ampabena Gyan - Member\nPresbyter Elizabeth Puplampu - Member\nPresbyter Veronica Amegavi - Member\nPresbyter Rita Lomokie Larwer - Member",
-                style: Theme.of(context).textTheme.bodyText1,
+              child: Table(
+                defaultColumnWidth: FixedColumnWidth((MediaQuery.of(context).size.width * 0.5) / 3),
+                border: TableBorder.all(
+                  style: BorderStyle.none,
+                ),
+                children: [
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Rev. Godfried Emmanuel Quagraine",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Minister in Charge",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Cat. Roseline Gyanwaa Baiden",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Catechist with a Charge",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Presbyter Kenneth Boakye - Yiadom",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Senior Presbyter",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Presbyter Emmanuel K. O. Larbi",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Session Clerk",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Presbyter Janet Naa Ayorkor Klu",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Ass. Session Clerk",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Presbyter Enoch Kwesi Sain",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Treasurer",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Presbyter Emmanuel Adu Bempah",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Member",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Presbyter Lovelace Samuel Amponsah",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Member",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Presbyter Ebenezer Ronald Sekyi",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Member",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Presbyter Wilfred Samuel Partey",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Member",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Presbyter Joseph Kwadwo Awuah",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Member",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Presbyter Daniel Tetteh Agu",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Member",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Presbyter Beatrice Odoi",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Member",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Presbyter Mercy Ampabena Gyan",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Member",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Presbyter Elizabeth Puplampu",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Member",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Presbyter Veronica Amegavi",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Member",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                  TableRow(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Presbyter Rita Lomokie Larwerh",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          child: Text(
+                            "-",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 5),
+                          width: (MediaQuery.of(context).size.width * 0.5) / 3,
+                          child: Text(
+                            "Member",
+                            style: Theme.of(context).textTheme.bodyText1,
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                ],
               ),
             ),
           ),
           Container(
             width: MediaQuery.of(context).size.width * 0.5,
-            margin: const EdgeInsets.only(top: 0,),
+            margin: const EdgeInsets.only(
+              top: 0,
+            ),
             alignment: Alignment.centerLeft,
             child: const Text(
               'REMARKABLE ACHIEVEMENTS',
@@ -1174,7 +2152,9 @@ class _ChurchInfoState extends State<ChurchInfo> {
           ),
           Container(
             width: MediaQuery.of(context).size.width * 0.5,
-            margin: const EdgeInsets.only(top: 0,),
+            margin: const EdgeInsets.only(
+              top: 0,
+            ),
             alignment: Alignment.centerLeft,
             child: const Text(
               'MEMBERSHIP',
@@ -1187,250 +2167,198 @@ class _ChurchInfoState extends State<ChurchInfo> {
             ),
           ),
           Container(
-            width: MediaQuery.of(context).size.width * 0.5,
-            margin: const EdgeInsets.fromLTRB(50, 20, 50, 20),
-            child: Column(
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.5,
-                  child: Text(
-                    "Membership of the congregation as at now stand as follows:",
-                    style: Theme.of(context).textTheme.bodyText1,
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.only(top: 20),
-                  child: Table(
-                    defaultColumnWidth: const FixedColumnWidth(150.0),
-                    border: TableBorder.all(
-                      color: Colors.grey,
-                      style: BorderStyle.none,
-                      width: 2
+              width: MediaQuery.of(context).size.width * 0.5,
+              margin: const EdgeInsets.fromLTRB(50, 20, 50, 20),
+              child: Column(
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.5,
+                    child: Text(
+                      "Membership of the congregation as at now stand as follows:",
+                      style: Theme.of(context).textTheme.bodyText1,
+                      textAlign: TextAlign.left,
                     ),
-                    children:  [
-                      TableRow(
-                        children: [
-                          Column(
-                            children: [
-                              SizedBox(
-                                width: 150.0,
-                                child: Text(
-                                  "1. Adults",
-                                  style: Theme.of(context).textTheme.bodyText1,
-                                  textAlign: TextAlign.left,
-                                ),
-                              )
-                            ]
-                          ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                width: 150.0,
-                                child: Text(
-                                  "(a) Males",
-                                  style: Theme.of(context).textTheme.bodyText1,
-                                  textAlign: TextAlign.left,
-                                ),
-                              )
-                            ]
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                "-",
-                                style: Theme.of(context).textTheme.bodyText1,
-                              )
-                            ]
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                "125",
-                                style: Theme.of(context).textTheme.bodyText1,
-                              )
-                            ]
-                          ),
-                        ]
-                      ),
-                      TableRow(
-                        children: [
-                          Column(
-                            children: [
-                              Text(
-                                "",
-                                style: Theme.of(context).textTheme.bodyText1,
-                              )
-                            ]
-                          ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                width: 150.0,
-                                child: Text(
-                                  "(b) Females",
-                                  style: Theme.of(context).textTheme.bodyText1,
-                                  textAlign: TextAlign.left,
-                                ),
-                              )
-                            ]
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                "-",
-                                style: Theme.of(context).textTheme.bodyText1,
-                              )
-                            ]
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                "112",
-                                style: Theme.of(context).textTheme.bodyText1,
-                              )
-                            ]
-                          ),
-                        ]
-                      ),
-                      TableRow(
-                        children: [
-                          Column(
-                            children: [
-                              SizedBox(
-                                width: 150.0,
-                                child: Text(
-                                  "2. Junior Youth (J.Y)",
-                                  style: Theme.of(context).textTheme.bodyText1,
-                                  textAlign: TextAlign.left,
-                                ),
-                              )
-                            ]
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                "",
-                                style: Theme.of(context).textTheme.bodyText1,
-                              )
-                            ]
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                "-",
-                                style: Theme.of(context).textTheme.bodyText1,
-                              )
-                            ]
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                "72",
-                                style: Theme.of(context).textTheme.bodyText1,
-                              )
-                            ]
-                          ),
-                        ]
-                      ),
-                      TableRow(
-                        children: [
-                          Column(
-                            children: [
-                              SizedBox(
-                                width: 150.0,
-                                child: Text(
-                                  "3. Children Service",
-                                  style: Theme.of(context).textTheme.bodyText1,
-                                  textAlign: TextAlign.left,
-                                ),
-                              )
-                            ]
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                "",
-                                style: Theme.of(context).textTheme.bodyText1,
-                              )
-                            ]
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                "-",
-                                style: Theme.of(context).textTheme.bodyText1,
-                              )
-                            ]
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                "163",
-                                style: Theme.of(context).textTheme.bodyText1,
-                              )
-                            ]
-                          ),
-                        ]
-                      ),
-                      TableRow(
-                        children: [
-                          Column(
-                            children: const [
-                              Text(
-                                "TOTAL",
-                                style: TextStyle(
-                                  fontSize: 16.0,
-                                  color: Colors.grey,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              )
-                            ]
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                "",
-                                style: Theme.of(context).textTheme.bodyText1,
-                              )
-                            ]
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                "-",
-                                style: Theme.of(context).textTheme.bodyText1,
-                              )
-                            ]
-                          ),
-                          Column(
-                            children: const [
-                              Text(
-                                "472",
-                                style: TextStyle(
-                                  fontSize: 16.0,
-                                  color: Colors.grey,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              )
-                            ]
-                          ),
-                        ]
-                      ),
-                    ],
                   ),
-                ),
-                Container(
-                  margin: const EdgeInsets.only(top: 20),
-                  width: MediaQuery.of(context).size.width * 0.5,
-                  child: Text(
-                    "Concerning the spiritual and welfare of the members, things are progressing as at 31st July, 2021. To God be the entire and first gratitude. His rich grace cannot be under emphasized. Ebenezer! Books cannot contain the names of all the good people, both deceased and alive for all their enormous input to make us reach this current state as a congregation.",
-                    style: Theme.of(context).textTheme.bodyText1,
+                  Container(
+                    margin: const EdgeInsets.only(top: 20),
+                    child: Table(
+                      defaultColumnWidth: const FixedColumnWidth(150.0),
+                      border: TableBorder.all(
+                          color: Colors.grey,
+                          style: BorderStyle.none,
+                          width: 2),
+                      children: [
+                        TableRow(children: [
+                          Column(children: [
+                            SizedBox(
+                              width: 150.0,
+                              child: Text(
+                                "1. Adults",
+                                style: Theme.of(context).textTheme.bodyText1,
+                                textAlign: TextAlign.left,
+                              ),
+                            )
+                          ]),
+                          Column(children: [
+                            SizedBox(
+                              width: 150.0,
+                              child: Text(
+                                "(a) Males",
+                                style: Theme.of(context).textTheme.bodyText1,
+                                textAlign: TextAlign.left,
+                              ),
+                            )
+                          ]),
+                          Column(children: [
+                            Text(
+                              "-",
+                              style: Theme.of(context).textTheme.bodyText1,
+                            )
+                          ]),
+                          Column(children: [
+                            Text(
+                              "125",
+                              style: Theme.of(context).textTheme.bodyText1,
+                            )
+                          ]),
+                        ]),
+                        TableRow(children: [
+                          Column(children: [
+                            Text(
+                              "",
+                              style: Theme.of(context).textTheme.bodyText1,
+                            )
+                          ]),
+                          Column(children: [
+                            SizedBox(
+                              width: 150.0,
+                              child: Text(
+                                "(b) Females",
+                                style: Theme.of(context).textTheme.bodyText1,
+                                textAlign: TextAlign.left,
+                              ),
+                            )
+                          ]),
+                          Column(children: [
+                            Text(
+                              "-",
+                              style: Theme.of(context).textTheme.bodyText1,
+                            )
+                          ]),
+                          Column(children: [
+                            Text(
+                              "112",
+                              style: Theme.of(context).textTheme.bodyText1,
+                            )
+                          ]),
+                        ]),
+                        TableRow(children: [
+                          Column(children: [
+                            SizedBox(
+                              width: 150.0,
+                              child: Text(
+                                "2. Junior Youth (J.Y)",
+                                style: Theme.of(context).textTheme.bodyText1,
+                                textAlign: TextAlign.left,
+                              ),
+                            )
+                          ]),
+                          Column(children: [
+                            Text(
+                              "",
+                              style: Theme.of(context).textTheme.bodyText1,
+                            )
+                          ]),
+                          Column(children: [
+                            Text(
+                              "-",
+                              style: Theme.of(context).textTheme.bodyText1,
+                            )
+                          ]),
+                          Column(children: [
+                            Text(
+                              "72",
+                              style: Theme.of(context).textTheme.bodyText1,
+                            )
+                          ]),
+                        ]),
+                        TableRow(children: [
+                          Column(children: [
+                            SizedBox(
+                              width: 150.0,
+                              child: Text(
+                                "3. Children Service",
+                                style: Theme.of(context).textTheme.bodyText1,
+                                textAlign: TextAlign.left,
+                              ),
+                            )
+                          ]),
+                          Column(children: [
+                            Text(
+                              "",
+                              style: Theme.of(context).textTheme.bodyText1,
+                            )
+                          ]),
+                          Column(children: [
+                            Text(
+                              "-",
+                              style: Theme.of(context).textTheme.bodyText1,
+                            )
+                          ]),
+                          Column(children: [
+                            Text(
+                              "163",
+                              style: Theme.of(context).textTheme.bodyText1,
+                            )
+                          ]),
+                        ]),
+                        TableRow(children: [
+                          Column(children: const [
+                            Text(
+                              "TOTAL",
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: Colors.grey,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            )
+                          ]),
+                          Column(children: [
+                            Text(
+                              "",
+                              style: Theme.of(context).textTheme.bodyText1,
+                            )
+                          ]),
+                          Column(children: [
+                            Text(
+                              "-",
+                              style: Theme.of(context).textTheme.bodyText1,
+                            )
+                          ]),
+                          Column(children: const [
+                            Text(
+                              "472",
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: Colors.grey,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            )
+                          ]),
+                        ]),
+                      ],
+                    ),
                   ),
-                ),
-              ],
-            )
-          ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 20),
+                    width: MediaQuery.of(context).size.width * 0.5,
+                    child: Text(
+                      "Concerning the spiritual and welfare of the members, things are progressing as at 31st July, 2021. To God be the entire and first gratitude. His rich grace cannot be under emphasized. Ebenezer! Books cannot contain the names of all the good people, both deceased and alive for all their enormous input to make us reach this current state as a congregation.",
+                      style: Theme.of(context).textTheme.bodyText1,
+                    ),
+                  ),
+                ],
+              )),
           // const SizedBox(
           //   height: 10.0,
           // ),
@@ -1475,7 +2403,9 @@ class _ChurchInfoState extends State<ChurchInfo> {
           //   pageController: controller,
           //   onPageChanged: null,
           // )),
-          const SizedBox(height: 30,)
+          const SizedBox(
+            height: 30,
+          )
         ],
       ),
     );
