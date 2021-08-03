@@ -4,7 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:nazareth_presby_school_project/components/home_details.dart';
 import 'package:nazareth_presby_school_project/home.dart';
+import 'package:nazareth_presby_school_project/screens/main_body.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
 import 'package:provider/provider.dart';
 
@@ -12,6 +14,7 @@ void main() {
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (_) => ChangeBoolState()),
+      ChangeNotifierProvider(create: (_) => BodyWidget()),
     ],
     child: const MyApp(),
   ));
@@ -20,9 +23,11 @@ void main() {
 class ChangeBoolState with ChangeNotifier, DiagnosticableTreeMixin {
   bool _isMenuOpen = false;
   bool _isFabVisible = false;
+  String _activeMenu = "HOME";
 
   bool get isMenuOpen => _isMenuOpen;
   bool get isFabVisible => _isFabVisible;
+  String get activeMenu => _activeMenu;
 
   void changeState() {
     _isMenuOpen = !_isMenuOpen;
@@ -50,11 +55,26 @@ class ChangeBoolState with ChangeNotifier, DiagnosticableTreeMixin {
     notifyListeners();
   }
 
+  void setActiveMenu(String menu) {
+    _activeMenu = menu;
+  }
+
   // @override
   // void debugFillProperties(DiagnosticPropertiesBuilder properties) {
   //   super.debugFillProperties(properties);
   //   properties.add(IntProperty('count', count));
   // }
+}
+
+class BodyWidget with ChangeNotifier, DiagnosticableTreeMixin {
+  Widget _bodyWidget = const HomeDetails();
+
+  Widget get bodyWidget => _bodyWidget;
+
+  void setBodyWidget(Widget widget) {
+    _bodyWidget = widget;
+    notifyListeners();
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -108,13 +128,14 @@ class MyApp extends StatelessWidget {
               bodyText1: TextStyle(
                 fontSize: 16.0,
                 color: Colors.grey,
+                height: 1.2,
               ),
               bodyText2: TextStyle(fontSize: 16.0, color: Colors.white),
               button: TextStyle(
                 fontSize: 16.0,
                 color: Colors.white,
               ))),
-      home: const Home(),
+      home: const MainBody(),
     );
   }
 }

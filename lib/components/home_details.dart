@@ -31,26 +31,26 @@ class _HomeDetailsState extends State<HomeDetails> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          // Container(
-          //   width: MediaQuery.of(context).size.width * 0.5,
-          //   margin: const EdgeInsets.only(top: 30,),
-          //   alignment: Alignment.centerLeft,
-          //   // decoration: const BoxDecoration(
-          //   //   color: CustomColor.blue,
-          //   // ),
-          //   child: const Text(
-          //     'CHURCH INFO',
-          //     style: TextStyle(
-          //       fontSize: 24.0,
-          //       fontWeight: FontWeight.bold,
-          //       color: CustomColor.red,
-          //     ),
-          //     textAlign: TextAlign.left,
-          //   ),
-          // ),
           Container(
             width: MediaQuery.of(context).size.width * 0.5,
-            margin: const EdgeInsets.fromLTRB(50, 40, 50, 20),
+            margin: const EdgeInsets.only(top: 30,),
+            alignment: Alignment.centerLeft,
+            // decoration: const BoxDecoration(
+            //   color: CustomColor.blue,
+            // ),
+            child: const Text(
+              'ABOUT THE CONGREGATION',
+              style: TextStyle(
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold,
+                color: CustomColor.red,
+              ),
+              textAlign: TextAlign.left,
+            ),
+          ),
+          Container(
+            width: MediaQuery.of(context).size.width * 0.5,
+            margin: const EdgeInsets.fromLTRB(50, 30, 50, 20),
             child: Text(
               bodyText,
               style: Theme.of(context).textTheme.bodyText1,

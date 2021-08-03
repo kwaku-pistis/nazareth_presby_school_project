@@ -1,7 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:nazareth_presby_school_project/components/contact_us.dart';
-import 'package:nazareth_presby_school_project/home.dart';
+import 'package:nazareth_presby_school_project/components/home_details.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
 import 'package:provider/src/provider.dart';
 
@@ -20,16 +20,25 @@ final homeKey = GlobalKey();
 
 var activeKey = homeKey;
 bool isMenuOpened = false;
+var _activeMenu = "HOME";
 
 class _HeaderState extends State<Header> {
-  var _activeMenu = 'HOME';
+  @override
+  void initState() {
+    super.initState();
+
+    // setState(() {
+    //   _activeMenu = context.watch<ChangeBoolState>().activeMenu;
+    // });
+  }
 
   @override
   Widget build(BuildContext context) {
     var _landscape = MediaQuery.of(context).orientation;
+    _activeMenu = context.watch<ChangeBoolState>().activeMenu;
 
     return _landscape == Orientation.landscape
-        ? Container(
+        ? SizedBox(
             key: homeKey,
             width: MediaQuery.of(context).size.width,
             // height: 100,
@@ -71,10 +80,10 @@ class _HeaderState extends State<Header> {
                     TextButton(
                         onPressed: () {
                           _setActiveMenu('HOME');
+                          context.read<ChangeBoolState>().setActiveMenu('HOME');
                           context
-                              .read<ChangeBoolState>()
-                              .changeFabVisibility('HOME');
-                          Scrollable.ensureVisible(homeKey.currentContext!);
+                              .read<BodyWidget>()
+                              .setBodyWidget(const HomeDetails());
                         },
                         child: Text(
                           "HOME",
@@ -85,11 +94,12 @@ class _HeaderState extends State<Header> {
                     TextButton(
                         onPressed: () {
                           _setActiveMenu('SCHOOL PROJECT');
-                          scrollController.position.ensureVisible(
-                              aboutProjectKey.currentContext!
-                                  .findRenderObject()!);
-                          // Scrollable.ensureVisible(
-                          //     aboutProjectKey.currentContext!);
+                          context
+                              .read<ChangeBoolState>()
+                              .setActiveMenu('SCHOOL PROJECT');
+                          context
+                              .read<BodyWidget>()
+                              .setBodyWidget(const AboutProject());
                         },
                         child: Text(
                           "SCHOOL PROJECT",
@@ -99,13 +109,17 @@ class _HeaderState extends State<Header> {
                         )),
                     TextButton(
                         onPressed: () {
-                          _setActiveMenu('CHURCH INFO');
-                          Scrollable.ensureVisible(
-                              churchInfoKey.currentContext!);
+                          _setActiveMenu('CHURCH HISTORY');
+                          context
+                              .read<ChangeBoolState>()
+                              .setActiveMenu('CHURCH HISTORY');
+                          context
+                              .read<BodyWidget>()
+                              .setBodyWidget(const ChurchInfo());
                         },
                         child: Text(
-                          "CHURCH INFO",
-                          style: _activeMenu == 'CHURCH INFO'
+                          "CHURCH HISTORY",
+                          style: _activeMenu == 'CHURCH HISTORY'
                               ? Theme.of(context).textTheme.headline1
                               : Theme.of(context).textTheme.headline2,
                         )),
@@ -114,8 +128,10 @@ class _HeaderState extends State<Header> {
                           _setActiveMenu('CONTACT US');
                           context
                               .read<ChangeBoolState>()
-                              .changeFabVisibility('CONTACT US');
-                          Scrollable.ensureVisible(contactKey.currentContext!);
+                              .setActiveMenu('CONTACT US');
+                          context
+                              .read<BodyWidget>()
+                              .setBodyWidget(const ContactUs());
                         },
                         child: Text(
                           "CONTACT US",
@@ -167,7 +183,7 @@ class _HeaderState extends State<Header> {
               ],
             ),
           )
-        : Container(
+        : SizedBox(
             key: homeKey,
             width: MediaQuery.of(context).size.width,
             child: Row(
