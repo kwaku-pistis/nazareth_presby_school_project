@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nazareth_presby_school_project/components/carousel.dart';
+import 'package:nazareth_presby_school_project/components/footer.dart';
 import 'package:nazareth_presby_school_project/components/header.dart';
 import 'package:nazareth_presby_school_project/components/mobile_menu.dart';
 import 'package:nazareth_presby_school_project/main.dart';
@@ -128,6 +129,7 @@ class _MainBodyState extends State<MainBody> {
                     child: const MobileMenu(),
                     visible: context.watch<ChangeBoolState>().isMenuOpen),
                 context.watch<BodyWidget>().bodyWidget,
+                const Footer(),
               ]),
             )
           ],

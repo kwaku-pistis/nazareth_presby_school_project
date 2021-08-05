@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter/widgets.dart';
 import 'package:nazareth_presby_school_project/screens/home_details.dart';
 import 'package:nazareth_presby_school_project/screens/main_body.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
@@ -113,7 +114,7 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.normal,
               ),
               caption: TextStyle(
-                fontSize: 24.0,
+                fontSize: 16.0,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
@@ -134,6 +135,12 @@ class MyApp extends StatelessWidget {
                 height: 1.2,
               ),
               bodyText2: TextStyle(fontSize: 16.0, color: Colors.white),
+              subtitle1: TextStyle(
+                fontFamily: 'Raleway',
+                fontSize: 14,
+                color: Colors.grey, 
+                decoration: TextDecoration.underline,
+              ),
               button: TextStyle(
                 fontSize: 16.0,
                 color: Colors.white,
