@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nazareth_presby_school_project/components/about_project.dart';
 import 'package:nazareth_presby_school_project/components/carousel.dart';
-import 'package:nazareth_presby_school_project/components/church_info.dart';
-import 'package:nazareth_presby_school_project/components/contact_us.dart';
 import 'package:nazareth_presby_school_project/components/header.dart';
 import 'package:nazareth_presby_school_project/components/home_details.dart';
 import 'package:nazareth_presby_school_project/components/mobile_menu.dart';

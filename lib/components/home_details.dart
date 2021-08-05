@@ -1,20 +1,32 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:nazareth_presby_school_project/components/carousel.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
-import 'package:photo_view/photo_view.dart';
-import 'package:photo_view/photo_view_gallery.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 class HomeDetails extends StatefulWidget {
-  const HomeDetails({ Key? key }) : super(key: key);
+  const HomeDetails({Key? key}) : super(key: key);
 
   @override
   _HomeDetailsState createState() => _HomeDetailsState();
 }
 
 String bodyText =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Sem integer vitae justo eget magna. Vel orci porta non pulvinar neque laoreet suspendisse. Facilisis gravida neque convallis a cras semper auctor neque. Duis convallis convallis tellus id interdum velit laoreet id. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Orci nulla pellentesque dignissim enim sit. Quis lectus nulla at volutpat diam ut venenatis tellus in. Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. Scelerisque fermentum dui faucibus in ornare quam viverra orci. Magna eget est lorem ipsum dolor sit amet consectetur. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Tortor at risus viverra adipiscing at in tellus integer. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Congue mauris rhoncus aenean vel.\n\nConsequat id porta nibh venenatis cras sed. Velit egestas dui id ornare arcu odio. Ullamcorper a lacus vestibulum sed arcu. Pellentesque sit amet porttitor eget dolor. Ut eu sem integer vitae justo eget. Eu ultrices vitae auctor eu augue ut lectus. Nisl vel pretium lectus quam id. Leo in vitae turpis massa sed elementum tempus egestas. Est ultricies integer quis auctor elit sed. Neque laoreet suspendisse interdum consectetur.\n\nEt malesuada fames ac turpis egestas. Condimentum mattis pellentesque id nibh tortor id aliquet lectus. Risus in hendrerit gravida rutrum quisque. Enim sit amet venenatis urna cursus eget nunc. Accumsan in nisl nisi scelerisque eu. Quis eleifend quam adipiscing vitae proin sagittis. Faucibus turpis in eu mi bibendum neque. Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Rhoncus urna neque viverra justo nec ultrices dui sapien. Mollis aliquam ut porttitor leo a diam sollicitudin.\n\nEtiam tempor orci eu lobortis. Amet consectetur adipiscing elit duis tristique sollicitudin. Ultrices tincidunt arcu non sodales neque sodales ut etiam sit. Egestas quis ipsum suspendisse ultrices gravida dictum. Tortor posuere ac ut consequat. Aliquet bibendum enim facilisis gravida. Felis eget nunc lobortis mattis aliquam faucibus purus in. Ornare arcu odio ut sem nulla pharetra. Egestas erat imperdiet sed euismod nisi. Auctor elit sed vulputate mi sit amet mauris commodo. Arcu bibendum at varius vel. Scelerisque eleifend donec pretium vulputate sapien. Massa id neque aliquam vestibulum morbi blandit.';
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Sem integer vitae justo eget magna. Vel orci porta non pulvinar neque laoreet suspendisse. Facilisis gravida neque convallis a cras semper auctor neque. Duis convallis convallis tellus id interdum velit laoreet id. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Orci nulla pellentesque dignissim enim sit.';
 
 final PageController controller = PageController();
 final homeDetailsKey = GlobalKey();
+
+final YoutubePlayerController _controller = YoutubePlayerController(
+  initialVideoId: '0Qy_PDrfZaI',
+  params: const YoutubePlayerParams(
+      playlist: ['Lnqn5-AXCi8', 'Y1JX_INLVTo'], // Defining custom playlist
+      startAt: Duration(seconds: 0),
+      showControls: true,
+      showFullscreenButton: true,
+  ),
+);
 
 class _HomeDetailsState extends State<HomeDetails> {
   var galleryItems = [
@@ -25,83 +37,227 @@ class _HomeDetailsState extends State<HomeDetails> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      key: homeDetailsKey,
-      width: MediaQuery.of(context).size.width,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            width: MediaQuery.of(context).size.width * 0.5,
-            margin: const EdgeInsets.only(top: 30,),
-            alignment: Alignment.centerLeft,
-            // decoration: const BoxDecoration(
-            //   color: CustomColor.blue,
-            // ),
-            child: const Text(
-              'ABOUT THE CONGREGATION',
-              style: TextStyle(
-                fontSize: 24.0,
-                fontWeight: FontWeight.bold,
-                color: CustomColor.red,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width * 0.5,
-            margin: const EdgeInsets.fromLTRB(50, 30, 50, 20),
-            child: Text(
-              bodyText,
-              style: Theme.of(context).textTheme.bodyText1,
-            ),
-          ),
-          const SizedBox(
-            height: 10.0,
-          ),
-          const SizedBox(
-            child: Text(
-              'GALLERY',
-              style: TextStyle(
-                fontSize: 22.0,
-                fontWeight: FontWeight.bold,
-                color: CustomColor.red,
-              ),
-            ),
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width * 0.5,
-            height: MediaQuery.of(context).size.width * 0.4,
-            margin: const EdgeInsets.all(10),
-              child: PhotoViewGallery.builder(
-            scrollPhysics: const BouncingScrollPhysics(),
-            builder: (BuildContext context, int index) {
-              return PhotoViewGalleryPageOptions(
-                imageProvider: AssetImage(galleryItems[index]),
-                initialScale: PhotoViewComputedScale.contained,
-                heroAttributes: PhotoViewHeroAttributes(tag: index++),
-              );
-            },
-            itemCount: galleryItems.length,
-            loadingBuilder: (context, event) => Center(
-              child: SizedBox(
-                width: 20.0,
-                height: 20.0,
-                child: CircularProgressIndicator(
-                  value: event == null
-                      ? 0
-                      : event.cumulativeBytesLoaded / event.expectedTotalBytes!,
+    return Center(
+      child: SizedBox(
+        key: homeDetailsKey,
+        width: MediaQuery.of(context).size.width * 0.875,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.55,
+                  margin: const EdgeInsets.only(right: 30),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                          // width: MediaQuery.of(context).size.width * 0.875,
+                          margin: const EdgeInsets.only(
+                            top: 30,
+                          ),
+                          alignment: Alignment.centerLeft,
+                          child: Container(
+                            padding: const EdgeInsets.all(10),
+                            decoration: const BoxDecoration(
+                              color: CustomColor.red,
+                            ),
+                            child: const Text(
+                              'CURRENT PROJECTS',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                              textAlign: TextAlign.left,
+                            ),
+                          )),
+                      Container(
+                        // width: MediaQuery.of(context).size.width * 0.5,
+                        margin: const EdgeInsets.fromLTRB(0, 16, 0, 20),
+                        child: Text(
+                          bodyText,
+                          style: Theme.of(context).textTheme.bodyText1,
+                        ),
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.55,
+                        child: const Text(
+                          '1. School Project',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                            color: CustomColor.blue,
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 10.0,
+                      ),
+                      SizedBox(
+                        child: RichText(
+                          text: TextSpan(
+                            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor... ',
+                            style: Theme.of(context).textTheme.bodyText1,
+                            children: [
+                              TextSpan(
+                                text: 'Read More',
+                                style: Theme.of(context).textTheme.headline3,
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {}
+                              )
+                            ]
+                          ),
+                        )
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.55,
+                        height: 400.0,
+                        margin: const EdgeInsets.only(top: 16, bottom: 16),
+                        child: const Carousel()
+                      ),
+                      const SizedBox(height: 16,),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.55,
+                        child: const Text(
+                          '2. Church Building',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                            color: CustomColor.blue,
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 10.0,
+                      ),
+                      SizedBox(
+                        child: RichText(
+                          text: TextSpan(
+                            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor... ',
+                            style: Theme.of(context).textTheme.bodyText1,
+                            children: [
+                              TextSpan(
+                                text: 'Read More',
+                                style: Theme.of(context).textTheme.headline3,
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {}
+                              )
+                            ]
+                          ),
+                        )
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.55,
+                        height: 400.0,
+                        margin: const EdgeInsets.only(top: 16),
+                        child: const Carousel()
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      )
+                    ],
+                  ),
                 ),
+                Expanded(
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.35,
+                    height: MediaQuery.of(context).size.height,
+                    margin: const EdgeInsets.only(top: 30),
+                    padding: const EdgeInsets.all(16),
+                    color: CustomColor.blue,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.only(bottom: 0.0),
+                          decoration: const BoxDecoration(
+                            border: Border(
+                              bottom: BorderSide(
+                                width: 2.0,
+                                color: CustomColor.red,
+                              )
+                            ),
+                            // color: CustomColor.red
+                          ),
+                          child: const Text(
+                            'Announcements',
+                            textAlign: TextAlign.left,
+                          ),
+                        ),
+                      ],
+                    )
+                  )
+                )
+              ],
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 20),
+              alignment: Alignment.centerLeft,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(right: 20),
+                    padding: const EdgeInsets.all(10),
+                    decoration: const BoxDecoration(
+                      color: CustomColor.red,
+                    ),
+                    child: const Text(
+                      'VIDEO PODCASTS',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                  ),
+                  Container(
+                    height: 30.0,
+                    child: AnimatedTextKit(
+                      animatedTexts: [
+                        RotateAnimatedText(
+                          'Listen and be blessed!',
+                          textStyle: Theme.of(context).textTheme.headline4,
+                          rotateOut: true,
+                          duration: const Duration(seconds: 3)
+                        ),
+                        RotateAnimatedText(
+                          'Messages from Rev. Godfried Emmanuel Quagraine',
+                          textStyle: Theme.of(context).textTheme.headline4,
+                          rotateOut: true,
+                          duration: const Duration(seconds: 3)
+                        ),
+                      ],
+                      // totalRepeatCount: 4,
+                      // pause: const Duration(milliseconds: 5),
+                      // displayFullTextOnTap: true,
+                      // stopPauseOnTap: true,
+                      // isRepeatingAnimation: true,
+                      repeatForever: true,
+                    ),
+                  ),
+                ],
+              )
+            ),
+            const SizedBox(height: 20,),
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.875,
+              height: 400.0,
+              child: YoutubePlayerIFrame(
+                  controller: _controller,
+                  aspectRatio: 16 / 9,
               ),
             ),
-            backgroundDecoration: const BoxDecoration(
-              color: Colors.grey,
-            ),
-            pageController: controller,
-            onPageChanged: null,
-          )),
-          const SizedBox(height: 30,)
-        ],
+            const SizedBox(height: 20,),
+          ],
+        )
       ),
     );
   }

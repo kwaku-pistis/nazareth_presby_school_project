@@ -1,11 +1,8 @@
-import 'dart:html';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:nazareth_presby_school_project/components/home_details.dart';
-import 'package:nazareth_presby_school_project/home.dart';
 import 'package:nazareth_presby_school_project/screens/main_body.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
 import 'package:provider/provider.dart';
@@ -106,12 +103,12 @@ class MyApp extends StatelessWidget {
           )),
           textTheme: const TextTheme(
               headline1: TextStyle(
-                fontSize: 18.0,
+                fontSize: 16.0,
                 color: CustomColor.red,
                 fontWeight: FontWeight.bold,
               ),
               headline2: TextStyle(
-                fontSize: 18.0,
+                fontSize: 16.0,
                 color: Colors.black,
                 fontWeight: FontWeight.normal,
               ),
@@ -121,12 +118,18 @@ class MyApp extends StatelessWidget {
                 color: Colors.white,
               ),
               headline3: TextStyle(
-                fontSize: 20.0,
+                fontSize: 12.0,
                 fontStyle: FontStyle.italic,
-                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                color: CustomColor.blue
+              ),
+              headline4: TextStyle(
+                fontSize: 12.0,
+                fontWeight: FontWeight.bold,
+                color: CustomColor.blue
               ),
               bodyText1: TextStyle(
-                fontSize: 16.0,
+                // fontSize: 16.0,
                 color: Colors.grey,
                 height: 1.2,
               ),
