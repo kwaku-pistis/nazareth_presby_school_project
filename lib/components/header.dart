@@ -1,13 +1,13 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:nazareth_presby_school_project/components/contact_us.dart';
-import 'package:nazareth_presby_school_project/components/home_details.dart';
+import 'package:nazareth_presby_school_project/screens/contact_us.dart';
+import 'package:nazareth_presby_school_project/screens/home_details.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
 import 'package:provider/src/provider.dart';
 
 import '../main.dart';
-import 'about_project.dart';
-import 'church_info.dart';
+import '../screens/about_project.dart';
+import '../screens/church_info.dart';
 
 class Header extends StatefulWidget {
   const Header({Key? key}) : super(key: key);

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:nazareth_presby_school_project/components/home_details.dart';
+import 'package:nazareth_presby_school_project/screens/home_details.dart';
 import 'package:nazareth_presby_school_project/screens/main_body.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
 import 'package:provider/provider.dart';
@@ -124,7 +124,7 @@ class MyApp extends StatelessWidget {
                 color: CustomColor.blue
               ),
               headline4: TextStyle(
-                fontSize: 12.0,
+                fontSize: 14.0,
                 fontWeight: FontWeight.bold,
                 color: CustomColor.blue
               ),

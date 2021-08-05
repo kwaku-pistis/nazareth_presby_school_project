@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:nazareth_presby_school_project/components/announcements.dart';
 import 'package:nazareth_presby_school_project/components/carousel.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
@@ -167,29 +168,23 @@ class _HomeDetailsState extends State<HomeDetails> {
                 Expanded(
                   child: Container(
                     width: MediaQuery.of(context).size.width * 0.35,
-                    height: MediaQuery.of(context).size.height,
                     margin: const EdgeInsets.only(top: 30),
-                    padding: const EdgeInsets.all(16),
-                    color: CustomColor.blue,
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      // crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          padding: const EdgeInsets.only(bottom: 0.0),
-                          decoration: const BoxDecoration(
-                            border: Border(
-                              bottom: BorderSide(
-                                width: 2.0,
-                                color: CustomColor.red,
-                              )
-                            ),
-                            // color: CustomColor.red
-                          ),
-                          child: const Text(
-                            'Announcements',
-                            textAlign: TextAlign.left,
-                          ),
+                          color: CustomColor.blue,
+                          width: MediaQuery.of(context).size.width * 0.35,
+                          height: MediaQuery.of(context).size.height,
+                          margin: const EdgeInsets.only(bottom: 30),
+                          padding: const EdgeInsets.all(16),
+                          child: const Announcements(),
                         ),
+                        Container(
+                          height: MediaQuery.of(context).size.height * 0.4,
+                          color: CustomColor.red,
+                        )
                       ],
                     )
                   )
@@ -218,7 +213,7 @@ class _HomeDetailsState extends State<HomeDetails> {
                       textAlign: TextAlign.left,
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     height: 30.0,
                     child: AnimatedTextKit(
                       animatedTexts: [
