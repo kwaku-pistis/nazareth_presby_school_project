@@ -78,20 +78,24 @@ class _HeaderState extends State<Header> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    TextButton(
-                        onPressed: () {
-                          _setActiveMenu('HOME');
-                          context.read<ChangeBoolState>().setActiveMenu('HOME');
-                          context
-                              .read<BodyWidget>()
-                              .setBodyWidget(const HomeDetails());
-                        },
-                        child: Text(
-                          "HOME",
-                          style: _activeMenu == 'HOME'
-                              ? Theme.of(context).textTheme.headline1
-                              : Theme.of(context).textTheme.headline2,
-                        )),
+                    OnHover(builder: (isHovered) {
+                      return TextButton(
+                          onPressed: () {
+                            _setActiveMenu('HOME');
+                            context
+                                .read<ChangeBoolState>()
+                                .setActiveMenu('HOME');
+                            context
+                                .read<BodyWidget>()
+                                .setBodyWidget(const HomeDetails());
+                          },
+                          child: Text(
+                            "HOME",
+                            style: _activeMenu == 'HOME'
+                                ? Theme.of(context).textTheme.headline1
+                                : Theme.of(context).textTheme.headline2,
+                          ));
+                    }),
                     OnHover(builder: (isHovered) {
                       return TextButton(
                           onPressed: () {
@@ -110,38 +114,42 @@ class _HeaderState extends State<Header> {
                                 : Theme.of(context).textTheme.headline2,
                           ));
                     }),
-                    TextButton(
-                        onPressed: () {
-                          _setActiveMenu('CHURCH HISTORY');
-                          context
-                              .read<ChangeBoolState>()
-                              .setActiveMenu('CHURCH HISTORY');
-                          context
-                              .read<BodyWidget>()
-                              .setBodyWidget(const ChurchInfo());
-                        },
-                        child: Text(
-                          "CHURCH HISTORY",
-                          style: _activeMenu == 'CHURCH HISTORY'
-                              ? Theme.of(context).textTheme.headline1
-                              : Theme.of(context).textTheme.headline2,
-                        )),
-                    TextButton(
-                        onPressed: () {
-                          _setActiveMenu('CONTACT US');
-                          context
-                              .read<ChangeBoolState>()
-                              .setActiveMenu('CONTACT US');
-                          context
-                              .read<BodyWidget>()
-                              .setBodyWidget(const ContactUs());
-                        },
-                        child: Text(
-                          "CONTACT US",
-                          style: _activeMenu == 'CONTACT US'
-                              ? Theme.of(context).textTheme.headline1
-                              : Theme.of(context).textTheme.headline2,
-                        )),
+                    OnHover(builder: (isHovered) {
+                      return TextButton(
+                          onPressed: () {
+                            _setActiveMenu('CHURCH HISTORY');
+                            context
+                                .read<ChangeBoolState>()
+                                .setActiveMenu('CHURCH HISTORY');
+                            context
+                                .read<BodyWidget>()
+                                .setBodyWidget(const ChurchInfo());
+                          },
+                          child: Text(
+                            "CHURCH HISTORY",
+                            style: _activeMenu == 'CHURCH HISTORY'
+                                ? Theme.of(context).textTheme.headline1
+                                : Theme.of(context).textTheme.headline2,
+                          ));
+                    }),
+                    OnHover(builder: (isHovered) {
+                      return TextButton(
+                          onPressed: () {
+                            _setActiveMenu('CONTACT US');
+                            context
+                                .read<ChangeBoolState>()
+                                .setActiveMenu('CONTACT US');
+                            context
+                                .read<BodyWidget>()
+                                .setBodyWidget(const ContactUs());
+                          },
+                          child: Text(
+                            "CONTACT US",
+                            style: _activeMenu == 'CONTACT US'
+                                ? Theme.of(context).textTheme.headline1
+                                : Theme.of(context).textTheme.headline2,
+                          ));
+                    }),
                   ],
                 ),
                 Container(
