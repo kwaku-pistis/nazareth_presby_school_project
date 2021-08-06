@@ -7,7 +7,7 @@ import 'package:nazareth_presby_school_project/utils/on_hover.dart';
 import 'package:provider/src/provider.dart';
 
 import '../main.dart';
-import '../screens/about_project.dart';
+import '../screens/school_project.dart';
 import '../screens/church_info.dart';
 
 class Header extends StatefulWidget {
@@ -105,7 +105,7 @@ class _HeaderState extends State<Header> {
                                 .setActiveMenu('SCHOOL PROJECT');
                             context
                                 .read<BodyWidget>()
-                                .setBodyWidget(const AboutProject());
+                                .setBodyWidget(const SchoolProject());
                           },
                           child: Text(
                             "SCHOOL PROJECT",
