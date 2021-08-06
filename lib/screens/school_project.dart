@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:nazareth_presby_school_project/components/carousel.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
@@ -112,7 +111,6 @@ class _SchoolProjectState extends State<SchoolProject> {
                 )),
             Container(
               padding: const EdgeInsets.only(bottom: 5),
-              // alignment: Alignment.centerRight,
               decoration: const BoxDecoration(
                   border: Border(
                       bottom: BorderSide(
