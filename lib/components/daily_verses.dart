@@ -18,21 +18,22 @@ class _DailyVerseState extends State<DailyVerse> {
       children: [
         Container(
           padding: const EdgeInsets.only(bottom: 5),
+          // alignment: Alignment.centerRight,
           decoration: const BoxDecoration(
             border: Border(
               bottom: BorderSide(
-                color: Colors.white,
+                color: CustomColor.red,
                 width: 2,
                 style: BorderStyle.solid
               )
             )
           ),
           child: const Text(
-            'Daily Verse',
+            'DAILY VERSE',
             style: TextStyle(
               fontFamily: 'Raleway',
               fontSize: 16.0,
-              color: Colors.white,
+              color: CustomColor.blue,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -47,7 +48,7 @@ class _DailyVerseState extends State<DailyVerse> {
                 textStyle: const TextStyle(
                   fontSize: 14.0,
                   fontStyle: FontStyle.italic,
-                  color: Colors.white,
+                  color: Colors.grey,
                 ),
                 speed: const Duration(milliseconds: 100),
               )
@@ -63,7 +64,7 @@ class _DailyVerseState extends State<DailyVerse> {
             style: TextStyle(
               fontSize: 14.0,
               fontStyle: FontStyle.italic,
-              color: Colors.white,
+              color: CustomColor.red,
             ),
           )
         )

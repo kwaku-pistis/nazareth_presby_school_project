@@ -26,99 +26,108 @@ class _AnnouncementsState extends State<Announcements> {
                 color: CustomColor.red,
               ),
             ),
-            // color: CustomColor.red,
           ),
           child: const Text(
-            'Announcements',
-            style: TextStyle(fontWeight: FontWeight.bold),
-            textAlign: TextAlign.left,
+            'ANNOUNCEMENTS',
+            style:
+                TextStyle(fontWeight: FontWeight.bold, color: CustomColor.blue),
           ),
         ),
-        const SizedBox(height: 20,),
+        const SizedBox(
+          height: 20,
+        ),
         const SizedBox(
           child: ListTile(
             contentPadding: EdgeInsets.zero,
             leading: Icon(
               Icons.announcement,
-              color: CustomColor.white,
+              color: CustomColor.red,
             ),
             title: Text(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
               style: TextStyle(
                 fontFamily: 'Raleway',
-                color: CustomColor.white,
+                color: Colors.grey,
                 decoration: TextDecoration.none,
               ),
             ),
           ),
         ),
-        const SizedBox(height: 20,),
+        const SizedBox(
+          height: 20,
+        ),
         const SizedBox(
           child: ListTile(
             contentPadding: EdgeInsets.zero,
             leading: Icon(
               Icons.announcement,
-              color: CustomColor.white,
+              color: CustomColor.red,
             ),
             title: Text(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
               style: TextStyle(
                 fontFamily: 'Raleway',
-                color: CustomColor.white,
+                color: Colors.grey,
                 decoration: TextDecoration.none,
               ),
             ),
           ),
         ),
-        const SizedBox(height: 20,),
+        const SizedBox(
+          height: 20,
+        ),
         const SizedBox(
           child: ListTile(
             contentPadding: EdgeInsets.zero,
             leading: Icon(
               Icons.announcement,
-              color: CustomColor.white,
+              color: CustomColor.red,
             ),
             title: Text(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
               style: TextStyle(
                 fontFamily: 'Raleway',
-                color: CustomColor.white,
+                color: Colors.grey,
                 decoration: TextDecoration.none,
               ),
             ),
           ),
         ),
-        const SizedBox(height: 20,),
+        const SizedBox(
+          height: 20,
+        ),
         const SizedBox(
           child: ListTile(
             contentPadding: EdgeInsets.zero,
             leading: Icon(
               Icons.announcement,
-              color: CustomColor.white,
+              color: CustomColor.red,
             ),
             title: Text(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
               style: TextStyle(
                 fontFamily: 'Raleway',
-                color: CustomColor.white,
+                color: Colors.grey,
                 decoration: TextDecoration.none,
               ),
             ),
           ),
         ),
-        const SizedBox(height: 20,),
+        const SizedBox(
+          height: 20,
+        ),
         const SizedBox(
           child: ListTile(
             contentPadding: EdgeInsets.zero,
             leading: Icon(
               Icons.announcement,
-              color: CustomColor.white,
+              color: CustomColor.red,
             ),
             title: Text(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
               style: TextStyle(
                 fontFamily: 'Raleway',
-                color: CustomColor.white,
+                color: Colors.grey,
                 decoration: TextDecoration.none,
               ),
             ),

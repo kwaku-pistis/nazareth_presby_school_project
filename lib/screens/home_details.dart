@@ -175,19 +175,35 @@ class _HomeDetailsState extends State<HomeDetails> {
                       // crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          color: CustomColor.blue,
                           width: MediaQuery.of(context).size.width * 0.35,
                           height: MediaQuery.of(context).size.height,
                           margin: const EdgeInsets.only(bottom: 30),
-                          padding: const EdgeInsets.all(16),
-                          child: const Announcements(),
+                          child: Card(
+                            child: Container(
+                              padding: const EdgeInsets.all(16),
+                              color: CustomColor.white,
+                              child: const Announcements(),
+                            ),
+                            elevation: 10,
+                            shadowColor: Colors.black38,
+                            color: Colors.white,
+                            
+                          ),
                         ),
-                        Container(
+                        SizedBox(
                           width: MediaQuery.of(context).size.width * 0.35,
                           height: MediaQuery.of(context).size.height * 0.3,
-                          padding: const EdgeInsets.all(16),
-                          color: CustomColor.red,
-                          child: const DailyVerse(),
+                          child: Card(
+                            child: Container(
+                              padding: const EdgeInsets.all(16),
+                              color: CustomColor.white,
+                              child: const DailyVerse()
+                            ),
+                            elevation: 10,
+                            shadowColor: Colors.black38,
+                            color: Colors.white,
+                            
+                          ),
                         )
                       ],
                     )

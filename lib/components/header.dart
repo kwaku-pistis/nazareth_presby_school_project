@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:nazareth_presby_school_project/screens/contact_us.dart';
 import 'package:nazareth_presby_school_project/screens/home_details.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
+import 'package:nazareth_presby_school_project/utils/on_hover.dart';
 import 'package:provider/src/provider.dart';
 
 import '../main.dart';
@@ -91,22 +92,24 @@ class _HeaderState extends State<Header> {
                               ? Theme.of(context).textTheme.headline1
                               : Theme.of(context).textTheme.headline2,
                         )),
-                    TextButton(
-                        onPressed: () {
-                          _setActiveMenu('SCHOOL PROJECT');
-                          context
-                              .read<ChangeBoolState>()
-                              .setActiveMenu('SCHOOL PROJECT');
-                          context
-                              .read<BodyWidget>()
-                              .setBodyWidget(const AboutProject());
-                        },
-                        child: Text(
-                          "SCHOOL PROJECT",
-                          style: _activeMenu == 'SCHOOL PROJECT'
-                              ? Theme.of(context).textTheme.headline1
-                              : Theme.of(context).textTheme.headline2,
-                        )),
+                    OnHover(builder: (isHovered) {
+                      return TextButton(
+                          onPressed: () {
+                            _setActiveMenu('SCHOOL PROJECT');
+                            context
+                                .read<ChangeBoolState>()
+                                .setActiveMenu('SCHOOL PROJECT');
+                            context
+                                .read<BodyWidget>()
+                                .setBodyWidget(const AboutProject());
+                          },
+                          child: Text(
+                            "SCHOOL PROJECT",
+                            style: _activeMenu == 'SCHOOL PROJECT'
+                                ? Theme.of(context).textTheme.headline1
+                                : Theme.of(context).textTheme.headline2,
+                          ));
+                    }),
                     TextButton(
                         onPressed: () {
                           _setActiveMenu('CHURCH HISTORY');
@@ -236,8 +239,8 @@ class _HeaderState extends State<Header> {
                               style: ButtonStyle(
                                   fixedSize: MaterialStateProperty.all(
                                       const Size(120, 50)),
-                                  backgroundColor:
-                                      MaterialStateProperty.all(CustomColor.blue)),
+                                  backgroundColor: MaterialStateProperty.all(
+                                      CustomColor.blue)),
                               child: AnimatedTextKit(
                                 animatedTexts: [
                                   ScaleAnimatedText(
