@@ -17,7 +17,7 @@ class Footer extends StatelessWidget {
             Center(
               child: Container(
                 width: MediaQuery.of(context).size.width * 0.875,
-                margin: const EdgeInsets.only(left: 80, right: 80),
+                margin: const EdgeInsets.only(left: 0, right: 0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -206,118 +206,116 @@ class Footer extends StatelessWidget {
               margin: const EdgeInsets.only(top: 30, bottom: 30),
               color: Colors.grey,
             ),
-            Container(
-              margin: const EdgeInsets.only(left: 80, right: 80),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    '© 2021 PCG - Nazareth Congregation',
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
-                  SizedBox(
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          GestureDetector(
-                            child: Container(
-                              width: 30,
-                              height: 30,
-                              margin: const EdgeInsets.only(right: 5),
-                              padding: EdgeInsets.zero,
-                              decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.white,
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                        '/images/social_icons/facebook.png'),
-                                    fit: BoxFit.cover,
-                                  )),
-                              
+            Center(
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.875,
+                margin: const EdgeInsets.only(left: 0, right: 0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '© 2021 PCG - Nazareth Congregation',
+                      style: Theme.of(context).textTheme.bodyText1,
+                    ),
+                    SizedBox(
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            GestureDetector(
+                              child: Container(
+                                width: 30,
+                                height: 30,
+                                margin: const EdgeInsets.only(right: 5),
+                                padding: EdgeInsets.zero,
+                                decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.white,
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                          '/images/social_icons/facebook.png'),
+                                      fit: BoxFit.cover,
+                                    )),
+                              ),
+                              onTap: () {},
                             ),
-                            onTap: (){},
-                          ),
-                          GestureDetector(
-                            child: Container(
-                              width: 30,
-                              height: 30,
-                              margin: const EdgeInsets.only(right: 5),
-                              padding: EdgeInsets.zero,
-                              decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.white,
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                        '/images/social_icons/instagram.png'),
-                                    fit: BoxFit.cover,
-                                  )),
-                              
+                            GestureDetector(
+                              child: Container(
+                                width: 30,
+                                height: 30,
+                                margin: const EdgeInsets.only(right: 5),
+                                padding: EdgeInsets.zero,
+                                decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.white,
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                          '/images/social_icons/instagram.png'),
+                                      fit: BoxFit.cover,
+                                    )),
+                              ),
+                              onTap: () {},
                             ),
-                            onTap: (){},
-                          ),
-                          GestureDetector(
-                            child: Container(
-                              width: 30,
-                              height: 30,
-                              margin: const EdgeInsets.only(right: 5),
-                              padding: EdgeInsets.zero,
-                              decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.white,
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                        '/images/social_icons/twitter.png'),
-                                    fit: BoxFit.cover,
-                                  )),
-                              
+                            GestureDetector(
+                              child: Container(
+                                width: 30,
+                                height: 30,
+                                margin: const EdgeInsets.only(right: 5),
+                                padding: EdgeInsets.zero,
+                                decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.white,
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                          '/images/social_icons/twitter.png'),
+                                      fit: BoxFit.cover,
+                                    )),
+                              ),
+                              onTap: () {},
                             ),
-                            onTap: (){},
-                          ),
-                          GestureDetector(
-                            child: Container(
-                              width: 30,
-                              height: 30,
-                              margin: const EdgeInsets.only(right: 5),
-                              padding: EdgeInsets.zero,
-                              decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.white,
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                        '/images/social_icons/linkedin.png'),
-                                    fit: BoxFit.cover,
-                                  )),
-                              
+                            GestureDetector(
+                              child: Container(
+                                width: 30,
+                                height: 30,
+                                margin: const EdgeInsets.only(right: 5),
+                                padding: EdgeInsets.zero,
+                                decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.white,
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                          '/images/social_icons/linkedin.png'),
+                                      fit: BoxFit.cover,
+                                    )),
+                              ),
+                              onTap: () {},
                             ),
-                            onTap: (){},
-                          ),
-                          GestureDetector(
-                            child: Container(
-                              width: 30,
-                              height: 30,
-                              margin: const EdgeInsets.only(right: 5),
-                              padding: EdgeInsets.zero,
-                              decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.white,
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                        '/images/social_icons/youtube.png'),
-                                    fit: BoxFit.cover,
-                                  )),
-                              
+                            GestureDetector(
+                              child: Container(
+                                width: 30,
+                                height: 30,
+                                margin: const EdgeInsets.only(right: 5),
+                                padding: EdgeInsets.zero,
+                                decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.white,
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                          '/images/social_icons/youtube.png'),
+                                      fit: BoxFit.cover,
+                                    )),
+                              ),
+                              onTap: () {},
                             ),
-                            onTap: (){},
-                          ),
-                        ]),
-                  ),
-                  Text(
-                    'Designed by Daniel Pistis Partey',
-                    style: Theme.of(context).textTheme.bodyText1,
-                  )
-                ],
+                          ]),
+                    ),
+                    Text(
+                      'Designed by Daniel Pistis Partey',
+                      style: Theme.of(context).textTheme.bodyText1,
+                    )
+                  ],
+                ),
               ),
-            ),
+            )
           ],
         ));
   }
