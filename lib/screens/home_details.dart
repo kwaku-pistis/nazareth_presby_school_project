@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:nazareth_presby_school_project/components/announcements.dart';
 import 'package:nazareth_presby_school_project/components/carousel.dart';
+import 'package:nazareth_presby_school_project/components/daily_verses.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
@@ -182,8 +183,11 @@ class _HomeDetailsState extends State<HomeDetails> {
                           child: const Announcements(),
                         ),
                         Container(
-                          height: MediaQuery.of(context).size.height * 0.4,
+                          width: MediaQuery.of(context).size.width * 0.35,
+                          height: MediaQuery.of(context).size.height * 0.3,
+                          padding: const EdgeInsets.all(16),
                           color: CustomColor.red,
+                          child: const DailyVerse(),
                         )
                       ],
                     )
@@ -230,11 +234,6 @@ class _HomeDetailsState extends State<HomeDetails> {
                           duration: const Duration(seconds: 3)
                         ),
                       ],
-                      // totalRepeatCount: 4,
-                      // pause: const Duration(milliseconds: 5),
-                      // displayFullTextOnTap: true,
-                      // stopPauseOnTap: true,
-                      // isRepeatingAnimation: true,
                       repeatForever: true,
                     ),
                   ),
