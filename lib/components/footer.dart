@@ -217,77 +217,99 @@ class Footer extends StatelessWidget {
                   ),
                   SizedBox(
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.only(right: 5),
-                          padding: EdgeInsets.zero,
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white
-                          ),
-                          child: IconButton(
-                            onPressed: (){}, 
-                            icon: const Icon(
-                              Icons.facebook,
-                              color: CustomColor.blue,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          GestureDetector(
+                            child: Container(
+                              width: 30,
+                              height: 30,
+                              margin: const EdgeInsets.only(right: 5),
+                              padding: EdgeInsets.zero,
+                              decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                        '/images/social_icons/facebook.png'),
+                                    fit: BoxFit.cover,
+                                  )),
+                              
                             ),
-                            iconSize: 35,
-                            padding: EdgeInsets.zero,
-                          )
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(right: 5),
-                          padding: EdgeInsets.zero,
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white
+                            onTap: (){},
                           ),
-                          child: IconButton(
-                            onPressed: (){}, 
-                            icon: const Icon(
-                              Icons.facebook,
-                              color: CustomColor.blue,
+                          GestureDetector(
+                            child: Container(
+                              width: 30,
+                              height: 30,
+                              margin: const EdgeInsets.only(right: 5),
+                              padding: EdgeInsets.zero,
+                              decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                        '/images/social_icons/instagram.png'),
+                                    fit: BoxFit.cover,
+                                  )),
+                              
                             ),
-                            iconSize: 35,
-                            padding: EdgeInsets.zero,
-                          )
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(right: 5),
-                          padding: EdgeInsets.zero,
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white
+                            onTap: (){},
                           ),
-                          child: IconButton(
-                            onPressed: (){}, 
-                            icon: const Icon(
-                              Icons.facebook,
-                              color: CustomColor.blue,
+                          GestureDetector(
+                            child: Container(
+                              width: 30,
+                              height: 30,
+                              margin: const EdgeInsets.only(right: 5),
+                              padding: EdgeInsets.zero,
+                              decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                        '/images/social_icons/twitter.png'),
+                                    fit: BoxFit.cover,
+                                  )),
+                              
                             ),
-                            iconSize: 35,
-                            padding: EdgeInsets.zero,
-                          )
-                        ),
-                        Container(
-                          padding: EdgeInsets.zero,
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white
+                            onTap: (){},
                           ),
-                          child: IconButton(
-                            onPressed: (){}, 
-                            icon: const Icon(
-                              Icons.facebook,
-                              color: CustomColor.blue,
+                          GestureDetector(
+                            child: Container(
+                              width: 30,
+                              height: 30,
+                              margin: const EdgeInsets.only(right: 5),
+                              padding: EdgeInsets.zero,
+                              decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                        '/images/social_icons/linkedin.png'),
+                                    fit: BoxFit.cover,
+                                  )),
+                              
                             ),
-                            iconSize: 35,
-                            padding: EdgeInsets.zero,
-                          )
-                        ),
-                      ]
-                    ),
+                            onTap: (){},
+                          ),
+                          GestureDetector(
+                            child: Container(
+                              width: 30,
+                              height: 30,
+                              margin: const EdgeInsets.only(right: 5),
+                              padding: EdgeInsets.zero,
+                              decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                        '/images/social_icons/youtube.png'),
+                                    fit: BoxFit.cover,
+                                  )),
+                              
+                            ),
+                            onTap: (){},
+                          ),
+                        ]),
                   ),
                   Text(
                     'Designed by Daniel Pistis Partey',
