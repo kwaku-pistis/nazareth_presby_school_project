@@ -38,7 +38,7 @@ class ChangeBoolState with ChangeNotifier, DiagnosticableTreeMixin {
       case 'HOME':
         _isFabVisible = false;
         break;
-      case 'SCHOOL PROJECT':
+      case 'PROJECTS':
         _isFabVisible = true;
         break;
       case 'CHURCH INFO':

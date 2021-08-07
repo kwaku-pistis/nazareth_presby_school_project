@@ -23,6 +23,9 @@ var activeKey = homeKey;
 bool isMenuOpened = false;
 var _activeMenu = "HOME";
 
+var listItems = <String>['PROJECTS', 'SCHOOL', 'CHURCH'];
+int counter = 0;
+
 class _HeaderState extends State<Header> {
   @override
   void initState() {
@@ -97,22 +100,57 @@ class _HeaderState extends State<Header> {
                           ));
                     }),
                     OnHover(builder: (isHovered) {
-                      return TextButton(
-                          onPressed: () {
-                            _setActiveMenu('SCHOOL PROJECT');
+                      return DropdownButton<String>(
+                        value: 'PROJECTS',
+                        icon: const Icon(Icons.arrow_drop_down),
+                        // isExpanded: isHovered,
+                        iconSize: 20,
+                        elevation: 0,
+                        style: Theme.of(context).textTheme.headline2,
+                        underline: Container(
+                          height: 0,
+                        ),
+                        selectedItemBuilder: (BuildContext context) {
+                          return listItems.map<Widget>((String item) {
+                            if (counter == 0) {
+                              return Text(
+                                'PROJECTS',
+                                style: Theme.of(context).textTheme.headline2,
+                                textAlign: TextAlign.center,
+                              );
+                            } else {
+                              return Text(
+                                'PROJECTS',
+                                style: Theme.of(context).textTheme.headline1,
+                                textAlign: TextAlign.center,
+                              );
+                            }
+                          }).toList();
+                        },
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            counter++;
+                          });
+                          if (newValue == 'SCHOOL') {
+                            // _setActiveMenu('PROJECTS');
                             context
                                 .read<ChangeBoolState>()
-                                .setActiveMenu('SCHOOL PROJECT');
+                                .setActiveMenu('PROJECTS');
                             context
                                 .read<BodyWidget>()
                                 .setBodyWidget(const SchoolProject());
-                          },
-                          child: Text(
-                            "SCHOOL PROJECT",
-                            style: _activeMenu == 'SCHOOL PROJECT'
-                                ? Theme.of(context).textTheme.headline1
-                                : Theme.of(context).textTheme.headline2,
-                          ));
+                          }
+
+                          if (newValue == 'CHURCH') {}
+                        },
+                        items: listItems
+                            .map<DropdownMenuItem<String>>((String value) {
+                          return DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(value),
+                          );
+                        }).toList(),
+                      );
                     }),
                     OnHover(builder: (isHovered) {
                       return TextButton(
@@ -268,6 +306,7 @@ class _HeaderState extends State<Header> {
   _setActiveMenu(String menu) {
     setState(() {
       _activeMenu = menu;
+      counter = 0;
     });
   }
 }
