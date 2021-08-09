@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:nazareth_presby_school_project/screens/church_project.dart';
 import 'package:nazareth_presby_school_project/screens/contact_us.dart';
 import 'package:nazareth_presby_school_project/screens/home_details.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
@@ -141,7 +142,14 @@ class _HeaderState extends State<Header> {
                                 .setBodyWidget(const SchoolProject());
                           }
 
-                          if (newValue == 'CHURCH') {}
+                          if (newValue == 'CHURCH') {
+                            context
+                                .read<ChangeBoolState>()
+                                .setActiveMenu('PROJECTS');
+                            context
+                                .read<BodyWidget>()
+                                .setBodyWidget(const ChurchProject());
+                          }
                         },
                         items: listItems
                             .map<DropdownMenuItem<String>>((String value) {

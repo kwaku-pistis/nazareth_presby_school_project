@@ -119,6 +119,18 @@ class Footer extends StatelessWidget {
                               child: GestureDetector(
                                 onTap: () {},
                                 child: Text(
+                                  'Church Project',
+                                  style: Theme.of(context).textTheme.subtitle1,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            SizedBox(
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: Text(
                                   'Church History',
                                   style: Theme.of(context).textTheme.subtitle1,
                                 ),
