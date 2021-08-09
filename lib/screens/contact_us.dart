@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nazareth_presby_school_project/components/profile.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
 
 class ContactUs extends StatefulWidget {
@@ -23,6 +24,10 @@ class _ContactUsState extends State<ContactUs> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Container(
+                  margin: const EdgeInsets.only(top: 30),
+                  child: const Profile(),
+                ),
                 Container(
                     margin: const EdgeInsets.only(top: 30),
                     child: Container(
@@ -270,12 +275,21 @@ class _ContactUsState extends State<ContactUs> {
                                     ),
                                   ),
                                 )),
+                            Container(
+                              width: MediaQuery.of(context).size.width * 0.25,
+                              margin: const EdgeInsets.only(top: 10),
+                              alignment: Alignment.centerRight,
+                              child: ElevatedButton(
+                                child: const Text('SUBMIT'),
+                                onPressed: () {},
+                              ),
+                            )
                           ],
                         ),
                       ),
                       SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.3,
-                        height: 355.0,
+                        width: MediaQuery.of(context).size.width * 0.32,
+                        height: 410.0,
                         child: Card(
                             color: CustomColor.white,
                             elevation: 10,

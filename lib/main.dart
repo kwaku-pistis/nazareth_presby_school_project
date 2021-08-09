@@ -99,7 +99,7 @@ class MyApp extends StatelessWidget {
               style: TextButton.styleFrom(primary: Colors.white)),
           elevatedButtonTheme: ElevatedButtonThemeData(
               style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Colors.blue),
+            backgroundColor: MaterialStateProperty.all(CustomColor.red),
             padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
           )),
           textTheme: const TextTheme(
