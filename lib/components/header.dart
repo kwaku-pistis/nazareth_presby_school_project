@@ -104,26 +104,34 @@ class _HeaderState extends State<Header> {
                       return DropdownButton<String>(
                         value: 'PROJECTS',
                         icon: const Icon(Icons.arrow_drop_down),
-                        // isExpanded: isHovered,
-                        iconSize: 20,
-                        elevation: 0,
+                        elevation: 8,
                         style: Theme.of(context).textTheme.headline2,
+                        isDense: true,
                         underline: Container(
                           height: 0,
                         ),
                         selectedItemBuilder: (BuildContext context) {
                           return listItems.map<Widget>((String item) {
+                            // print(counter);
                             if (counter == 0) {
                               return Text(
                                 'PROJECTS',
                                 style: Theme.of(context).textTheme.headline2,
-                                textAlign: TextAlign.center,
+                                // textAlign: TextAlign.center,
                               );
-                            } else {
+                            } 
+                            // else if (counter > 0 && item == 'PROJECTS') {
+                            //   return Text(
+                            //     'PROJECTS',
+                            //     style: Theme.of(context).textTheme.headline2,
+                            //     // textAlign: TextAlign.center,
+                            //   );
+                            // } 
+                            else {
                               return Text(
                                 'PROJECTS',
                                 style: Theme.of(context).textTheme.headline1,
-                                textAlign: TextAlign.center,
+                                // textAlign: TextAlign.center,
                               );
                             }
                           }).toList();
