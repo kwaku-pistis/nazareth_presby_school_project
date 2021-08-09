@@ -224,7 +224,7 @@ class _HeaderState extends State<Header> {
                         );
                       },
                       icon: const Icon(
-                        Icons.money_sharp,
+                        Icons.monetization_on,
                         color: CustomColor.white,
                       ),
                       label: const Text(
@@ -289,7 +289,7 @@ class _HeaderState extends State<Header> {
                           child: ElevatedButton.icon(
                             onPressed: () {},
                             icon: const Icon(
-                              Icons.money_sharp,
+                              Icons.monetization_on,
                               color: CustomColor.white,
                               size: 20,
                             ),

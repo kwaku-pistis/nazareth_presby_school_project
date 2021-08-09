@@ -2173,7 +2173,7 @@ class _ChurchInfoState extends State<ChurchInfo> {
                 contentPadding: EdgeInsets.zero,
               ),
             ),
-            Container(
+            SizedBox(
               child: ListTile(
                 leading: Text(
                   '2.',
@@ -2186,7 +2186,7 @@ class _ChurchInfoState extends State<ChurchInfo> {
                 contentPadding: EdgeInsets.zero,
               ),
             ),
-            Container(
+            SizedBox(
               child: ListTile(
                 leading: Text(
                   '3.',
@@ -2199,7 +2199,7 @@ class _ChurchInfoState extends State<ChurchInfo> {
                 contentPadding: EdgeInsets.zero,
               ),
             ),
-            Container(
+            SizedBox(
               child: ListTile(
                 leading: Text(
                   '4.',
@@ -2212,7 +2212,7 @@ class _ChurchInfoState extends State<ChurchInfo> {
                 contentPadding: EdgeInsets.zero,
               ),
             ),
-            Container(
+            SizedBox(
               child: ListTile(
                 leading: Text(
                   '5.',
