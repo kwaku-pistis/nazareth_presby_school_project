@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:nazareth_presby_school_project/screens/home_details.dart';
 import 'package:nazareth_presby_school_project/screens/main_body.dart';
@@ -142,8 +143,9 @@ class MyApp extends StatelessWidget {
                 decoration: TextDecoration.underline,
               ),
               button: TextStyle(
-                fontSize: 16.0,
-                color: Colors.white,
+                fontSize: 14.0,
+                color: CustomColor.white,
+                fontWeight: FontWeight.bold
               ))),
       home: const MainBody(),
     );

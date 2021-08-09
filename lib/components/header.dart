@@ -1,5 +1,5 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:nazareth_presby_school_project/components/givings_dialog.dart';
 import 'package:nazareth_presby_school_project/screens/church_project.dart';
 import 'package:nazareth_presby_school_project/screens/contact_us.dart';
 import 'package:nazareth_presby_school_project/screens/home_details.dart';
@@ -119,14 +119,14 @@ class _HeaderState extends State<Header> {
                                 style: Theme.of(context).textTheme.headline2,
                                 // textAlign: TextAlign.center,
                               );
-                            } 
+                            }
                             // else if (counter > 0 && item == 'PROJECTS') {
                             //   return Text(
                             //     'PROJECTS',
                             //     style: Theme.of(context).textTheme.headline2,
                             //     // textAlign: TextAlign.center,
                             //   );
-                            // } 
+                            // }
                             else {
                               return Text(
                                 'PROJECTS',
@@ -207,44 +207,35 @@ class _HeaderState extends State<Header> {
                   ],
                 ),
                 Container(
-                    margin: const EdgeInsets.only(right: 0.0),
-                    child: ElevatedButton(
-                        onPressed: null,
-                        style: ButtonStyle(
-                            fixedSize:
-                                MaterialStateProperty.all(const Size(150, 50)),
-                            backgroundColor:
-                                MaterialStateProperty.all(CustomColor.red)),
-                        child: AnimatedTextKit(
-                          animatedTexts: [
-                            ScaleAnimatedText(
-                              'DONATE',
-                              textStyle: const TextStyle(
-                                fontSize: 24.0,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
+                    margin: const EdgeInsets.only(right: 10.0),
+                    child: ElevatedButton.icon(
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          barrierDismissible: true,
+                          useSafeArea: false,
+                          builder: (_) => Center(
+                            child: SizedBox(
+                              width: MediaQuery.of(context).size.width * 0.4,
+                              height: MediaQuery.of(context).size.height * 0.6,
+                              child: const GivingsDialog()
                             ),
-                            // ColorizeAnimatedText(
-                            //   'DONATE',
-                            //   textStyle: const TextStyle(
-                            //     fontSize: 20.0,
-                            //   ),
-                            //   colors: [
-                            //     Colors.purple,
-                            //     Colors.yellow,
-                            //     Colors.red,
-                            //     Colors.white,
-                            //   ],
-                            // ),
-                          ],
-                          // totalRepeatCount: 4,
-                          // pause: const Duration(milliseconds: 500),
-                          // displayFullTextOnTap: true,
-                          // stopPauseOnTap: true,
-                          // isRepeatingAnimation: true,
-                          repeatForever: true,
-                        )))
+                          )
+                        );
+                      },
+                      icon: const Icon(
+                        Icons.money_sharp,
+                        color: CustomColor.white,
+                      ),
+                      label: const Text(
+                        'GIVINGS',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ))
               ],
             ),
           )
@@ -293,29 +284,24 @@ class _HeaderState extends State<Header> {
                   ),
                   Expanded(
                       child: Container(
-                          // width: MediaQuery.of(context).size.width,
-                          // margin: const EdgeInsets.only(left: 100.0),
                           alignment: Alignment.centerRight,
-                          child: ElevatedButton(
-                              onPressed: () {},
-                              style: ButtonStyle(
-                                  fixedSize: MaterialStateProperty.all(
-                                      const Size(120, 50)),
-                                  backgroundColor: MaterialStateProperty.all(
-                                      CustomColor.blue)),
-                              child: AnimatedTextKit(
-                                animatedTexts: [
-                                  ScaleAnimatedText(
-                                    'DONATE',
-                                    textStyle: const TextStyle(
-                                      fontSize: 18.0,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                                repeatForever: true,
-                              ))))
+                          margin: const EdgeInsets.only(right: 0.0),
+                          child: ElevatedButton.icon(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.money_sharp,
+                              color: CustomColor.white,
+                              size: 20,
+                            ),
+                            label: const Text(
+                              'GIVINGS',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          )))
                 ]));
   }
 
