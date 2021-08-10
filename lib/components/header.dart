@@ -86,7 +86,7 @@ class _HeaderState extends State<Header> {
                     OnHover(builder: (isHovered) {
                       return TextButton(
                           onPressed: () {
-                            _setActiveMenu('HOME');
+                            setActiveMenu('HOME');
                             context
                                 .read<ChangeBoolState>()
                                 .setActiveMenu('HOME');
@@ -142,7 +142,7 @@ class _HeaderState extends State<Header> {
                             counter++;
                           });
                           if (newValue == 'SCHOOL') {
-                            // _setActiveMenu('PROJECTS');
+                            // setActiveMenu('PROJECTS');
                             context
                                 .read<ChangeBoolState>()
                                 .setActiveMenu('PROJECTS');
@@ -181,7 +181,7 @@ class _HeaderState extends State<Header> {
                     OnHover(builder: (isHovered) {
                       return TextButton(
                           onPressed: () {
-                            _setActiveMenu('CHURCH HISTORY');
+                            setActiveMenu('CHURCH HISTORY');
                             context
                                 .read<ChangeBoolState>()
                                 .setActiveMenu('CHURCH HISTORY');
@@ -199,7 +199,7 @@ class _HeaderState extends State<Header> {
                     OnHover(builder: (isHovered) {
                       return TextButton(
                           onPressed: () {
-                            _setActiveMenu('CONTACT US');
+                            setActiveMenu('CONTACT US');
                             context
                                 .read<ChangeBoolState>()
                                 .setActiveMenu('CONTACT US');
@@ -316,7 +316,7 @@ class _HeaderState extends State<Header> {
                 ]));
   }
 
-  _setActiveMenu(String menu) {
+  setActiveMenu(String menu) {
     setState(() {
       _activeMenu = menu;
       counter = 0;

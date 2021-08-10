@@ -1,5 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:nazareth_presby_school_project/components/header.dart';
+import 'package:nazareth_presby_school_project/main.dart';
+import 'package:nazareth_presby_school_project/screens/church_info.dart';
+import 'package:nazareth_presby_school_project/screens/church_project.dart';
+import 'package:nazareth_presby_school_project/screens/contact_us.dart';
+import 'package:nazareth_presby_school_project/screens/home_details.dart';
+import 'package:nazareth_presby_school_project/screens/school_project.dart';
+import 'package:nazareth_presby_school_project/screens/washroom_project.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
+import 'package:provider/src/provider.dart';
 
 class Footer extends StatelessWidget {
   const Footer({Key? key}) : super(key: key);
@@ -93,8 +102,16 @@ class Footer extends StatelessWidget {
                             ),
                             SizedBox(
                               child: GestureDetector(
-                                onTap: () {},
-                                child: SelectableText(
+                                onTap: () {
+                                  // setActiveMenu('HOME');
+                                  context
+                                      .read<ChangeBoolState>()
+                                      .setActiveMenu('HOME');
+                                  context
+                                      .read<BodyWidget>()
+                                      .setBodyWidget(const HomeDetails());
+                                },
+                                child: Text(
                                   'Home',
                                   style: Theme.of(context).textTheme.subtitle1,
                                 ),
@@ -105,8 +122,16 @@ class Footer extends StatelessWidget {
                             ),
                             SizedBox(
                               child: GestureDetector(
-                                onTap: () {},
-                                child: SelectableText(
+                                onTap: () {
+                                  counter++;
+                                  context
+                                      .read<ChangeBoolState>()
+                                      .setActiveMenu('PROJECTS');
+                                  context
+                                      .read<BodyWidget>()
+                                      .setBodyWidget(const SchoolProject());
+                                },
+                                child: Text(
                                   'School Project',
                                   style: Theme.of(context).textTheme.subtitle1,
                                 ),
@@ -117,8 +142,16 @@ class Footer extends StatelessWidget {
                             ),
                             SizedBox(
                               child: GestureDetector(
-                                onTap: () {},
-                                child: SelectableText(
+                                onTap: () {
+                                  counter++;
+                                  context
+                                      .read<ChangeBoolState>()
+                                      .setActiveMenu('PROJECTS');
+                                  context
+                                      .read<BodyWidget>()
+                                      .setBodyWidget(const ChurchProject());
+                                },
+                                child: Text(
                                   'Church Project',
                                   style: Theme.of(context).textTheme.subtitle1,
                                 ),
@@ -129,8 +162,16 @@ class Footer extends StatelessWidget {
                             ),
                             SizedBox(
                               child: GestureDetector(
-                                onTap: () {},
-                                child: SelectableText(
+                                onTap: () {
+                                  counter++;
+                                  context
+                                      .read<ChangeBoolState>()
+                                      .setActiveMenu('PROJECTS');
+                                  context
+                                      .read<BodyWidget>()
+                                      .setBodyWidget(const WashroomProject());
+                                },
+                                child: Text(
                                   'Washroom Project',
                                   style: Theme.of(context).textTheme.subtitle1,
                                 ),
@@ -141,8 +182,15 @@ class Footer extends StatelessWidget {
                             ),
                             SizedBox(
                               child: GestureDetector(
-                                onTap: () {},
-                                child: SelectableText(
+                                onTap: () {
+                                  context
+                                      .read<ChangeBoolState>()
+                                      .setActiveMenu('CHURCH HISTORY');
+                                  context
+                                      .read<BodyWidget>()
+                                      .setBodyWidget(const ChurchInfo());
+                                },
+                                child: Text(
                                   'Church History',
                                   style: Theme.of(context).textTheme.subtitle1,
                                 ),
@@ -153,8 +201,15 @@ class Footer extends StatelessWidget {
                             ),
                             SizedBox(
                               child: GestureDetector(
-                                onTap: () {},
-                                child: SelectableText(
+                                onTap: () {
+                                  context
+                                      .read<ChangeBoolState>()
+                                      .setActiveMenu('CONTACT US');
+                                  context
+                                      .read<BodyWidget>()
+                                      .setBodyWidget(const ContactUs());
+                                },
+                                child: Text(
                                   'Contact Us',
                                   style: Theme.of(context).textTheme.subtitle1,
                                 ),
