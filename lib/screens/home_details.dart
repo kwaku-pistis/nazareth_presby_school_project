@@ -4,7 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:nazareth_presby_school_project/components/announcements.dart';
 import 'package:nazareth_presby_school_project/components/carousel.dart';
 import 'package:nazareth_presby_school_project/components/daily_verses.dart';
+import 'package:nazareth_presby_school_project/components/header.dart';
+import 'package:nazareth_presby_school_project/main.dart';
+import 'package:nazareth_presby_school_project/screens/church_project.dart';
+import 'package:nazareth_presby_school_project/screens/school_project.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
+import 'package:provider/src/provider.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 class HomeDetails extends StatefulWidget {
@@ -97,20 +102,26 @@ class _HomeDetailsState extends State<HomeDetails> {
                               ),
                             ),
                           ),
-                          child: const SelectableText(
+                          child: SelectableText(
                             'School Building Project',
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 16.0,
                                 fontWeight: FontWeight.bold,
                                 color: CustomColor.blue),
+                            showCursor: false,
+                            onTap: () {
+                              // context
+                              //     .read<BodyWidget>()
+                              //     .setBodyWidget(const SchoolProject());
+                            },
                           ),
                         ),
                         const SizedBox(
                           height: 10.0,
                         ),
                         SizedBox(
-                            child: RichText(
-                          text: TextSpan(
+                            child: SelectableText.rich(
+                          TextSpan(
                               text:
                                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor... ',
                               style: Theme.of(context).textTheme.bodyText1,
@@ -120,7 +131,16 @@ class _HomeDetailsState extends State<HomeDetails> {
                                     style:
                                         Theme.of(context).textTheme.headline3,
                                     recognizer: TapGestureRecognizer()
-                                      ..onTap = () {})
+                                      ..onTap = () {
+                                        counter++;
+                                        context
+                                            .read<ChangeBoolState>()
+                                            .setActiveMenu('PROJECTS');
+                                        context
+                                            .read<BodyWidget>()
+                                            .setBodyWidget(
+                                                const SchoolProject());
+                                      })
                               ]),
                         )),
                         Container(
@@ -153,8 +173,8 @@ class _HomeDetailsState extends State<HomeDetails> {
                           height: 10.0,
                         ),
                         SizedBox(
-                            child: RichText(
-                          text: TextSpan(
+                            child: SelectableText.rich(
+                          TextSpan(
                               text:
                                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor... ',
                               style: Theme.of(context).textTheme.bodyText1,
@@ -164,7 +184,16 @@ class _HomeDetailsState extends State<HomeDetails> {
                                     style:
                                         Theme.of(context).textTheme.headline3,
                                     recognizer: TapGestureRecognizer()
-                                      ..onTap = () {})
+                                      ..onTap = () {
+                                        counter++;
+                                        context
+                                            .read<ChangeBoolState>()
+                                            .setActiveMenu('PROJECTS');
+                                        context
+                                            .read<BodyWidget>()
+                                            .setBodyWidget(
+                                                const ChurchProject());
+                                      })
                               ]),
                         )),
                         Container(
