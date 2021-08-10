@@ -224,7 +224,7 @@ class _ProfileState extends State<Profile> {
                           ),
                           SizedBox(
                             child: SelectableText(
-                              '+233 24 393 5949 / +233 20 268 7335',
+                              '+233 24 344 1682',
                               style: Theme.of(context).textTheme.bodyText1,
                             ),
                           ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mailto/mailto.dart';
 import 'package:nazareth_presby_school_project/components/profile.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactUs extends StatefulWidget {
   const ContactUs({Key? key}) : super(key: key);
@@ -10,6 +12,12 @@ class ContactUs extends StatefulWidget {
 }
 
 final contactKey = GlobalKey();
+var _nameTextController = TextEditingController();
+var _emailTextController = TextEditingController();
+var _msgTextController = TextEditingController();
+const _url =
+    'https://www.google.com.gh/maps/place/Presbyterian+Church+Of+Ghana,+Nazareth+Congregation/@5.6788375,-0.0608992,17z/data=!3m1!4b1!4m5!3m4!1s0xfdf81b227c37b7f:0x4f66e41a7926f33b!8m2!3d5.6788322!4d-0.0587105?hl=en&authuser=0';
+bool _isSubmitEnabled = false;
 
 class _ContactUsState extends State<ContactUs> {
   @override
@@ -224,6 +232,7 @@ class _ContactUsState extends State<ContactUs> {
                                   elevation: 10,
                                   shadowColor: Colors.black45,
                                   child: TextField(
+                                    controller: _nameTextController,
                                     style:
                                         Theme.of(context).textTheme.bodyText1,
                                     cursorColor: CustomColor.blue,
@@ -243,6 +252,7 @@ class _ContactUsState extends State<ContactUs> {
                                   elevation: 10,
                                   shadowColor: Colors.black45,
                                   child: TextField(
+                                    controller: _emailTextController,
                                     style:
                                         Theme.of(context).textTheme.bodyText1,
                                     cursorColor: CustomColor.blue,
@@ -262,6 +272,7 @@ class _ContactUsState extends State<ContactUs> {
                                   elevation: 10,
                                   shadowColor: Colors.black45,
                                   child: TextField(
+                                    controller: _msgTextController,
                                     style:
                                         Theme.of(context).textTheme.bodyText1,
                                     cursorColor: CustomColor.blue,
@@ -273,6 +284,13 @@ class _ContactUsState extends State<ContactUs> {
                                       contentPadding: EdgeInsets.all(10),
                                       border: InputBorder.none,
                                     ),
+                                    onChanged: (value) {
+                                      if (value.isNotEmpty) {
+                                        setState(() {
+                                          _isSubmitEnabled = true;
+                                        });
+                                      }
+                                    },
                                   ),
                                 )),
                             Container(
@@ -281,23 +299,43 @@ class _ContactUsState extends State<ContactUs> {
                               alignment: Alignment.centerRight,
                               child: ElevatedButton(
                                 child: const SelectableText('SUBMIT'),
-                                onPressed: () {},
+                                onPressed: _isSubmitEnabled
+                                    ? () {
+                                        sendMail();
+                                      }
+                                    : null,
                               ),
                             )
                           ],
                         ),
                       ),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.32,
-                        height: 410.0,
-                        child: Card(
-                            color: CustomColor.white,
-                            elevation: 10,
-                            shadowColor: Colors.black45,
-                            child: Image.asset(
-                              '/images/map.png',
-                              fit: BoxFit.cover,
-                            )),
+                      GestureDetector(
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.32,
+                          height: 410.0,
+                          child: Card(
+                              color: CustomColor.white,
+                              elevation: 10,
+                              shadowColor: Colors.black45,
+                              child: Image.asset(
+                                '/images/map.png',
+                                fit: BoxFit.cover,
+                              )
+
+                              // EasyGoogleMaps(
+                              //   address: 'Presbyterian Church Of Ghana, Nazareth Congregation, Tema Metropolitan',
+                              //   title: 'PCG NAZARETH CONG.',
+                              //   apiKey: 'AIzaSyCtByO7njFzStFkjJO4AKd4gOwmdv-LB0I'
+                              // )
+                              ),
+                        ),
+                        onTap: () async {
+                          if (await canLaunch(_url)) {
+                            await launch(_url);
+                          } else {
+                            throw 'Could not launch $_url';
+                          }
+                        },
                       ),
                     ],
                   ),
@@ -309,5 +347,16 @@ class _ContactUsState extends State<ContactUs> {
             ),
           )),
     );
+  }
+
+  sendMail() async {
+    // go ahead and send email
+    final mailtoLink = Mailto(
+      to: ['kwakupistis@gmail.com'],
+      subject: 'CONTACT US - PCG NAZARETH CONG. WEBSITE',
+      body: _msgTextController.text.toString(),
+    );
+
+    await launch('$mailtoLink');
   }
 }
