@@ -93,7 +93,7 @@ class _HeaderState extends State<Header> {
                                 .read<BodyWidget>()
                                 .setBodyWidget(const HomeDetails());
                           },
-                          child: SelectableText(
+                          child: Text(
                             "HOME",
                             style: _activeMenu == 'HOME'
                                 ? Theme.of(context).textTheme.headline1
@@ -114,21 +114,21 @@ class _HeaderState extends State<Header> {
                           return listItems.map<Widget>((String item) {
                             // print(counter);
                             if (counter == 0) {
-                              return SelectableText(
+                              return Text(
                                 'PROJECTS',
                                 style: Theme.of(context).textTheme.headline2,
                                 // textAlign: TextAlign.center,
                               );
                             }
                             // else if (counter > 0 && item == 'PROJECTS') {
-                            //   return SelectableText(
+                            //   return Text(
                             //     'PROJECTS',
                             //     style: Theme.of(context).textTheme.headline2,
                             //     // textAlign: TextAlign.center,
                             //   );
                             // }
                             else {
-                              return SelectableText(
+                              return Text(
                                 'PROJECTS',
                                 style: Theme.of(context).textTheme.headline1,
                                 // textAlign: TextAlign.center,
@@ -163,7 +163,7 @@ class _HeaderState extends State<Header> {
                             .map<DropdownMenuItem<String>>((String value) {
                           return DropdownMenuItem<String>(
                             value: value,
-                            child: SelectableText(value),
+                            child: Text(value),
                           );
                         }).toList(),
                       );
@@ -179,7 +179,7 @@ class _HeaderState extends State<Header> {
                                 .read<BodyWidget>()
                                 .setBodyWidget(const ChurchInfo());
                           },
-                          child: SelectableText(
+                          child: Text(
                             "CHURCH HISTORY",
                             style: _activeMenu == 'CHURCH HISTORY'
                                 ? Theme.of(context).textTheme.headline1
@@ -197,7 +197,7 @@ class _HeaderState extends State<Header> {
                                 .read<BodyWidget>()
                                 .setBodyWidget(const ContactUs());
                           },
-                          child: SelectableText(
+                          child: Text(
                             "CONTACT US",
                             style: _activeMenu == 'CONTACT US'
                                 ? Theme.of(context).textTheme.headline1

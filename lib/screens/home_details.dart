@@ -39,7 +39,7 @@ class _HomeDetailsState extends State<HomeDetails> {
   final _schoolImages = [
     'images/school/plan1.jpeg',
     'images/school/plan2.jpeg',
-    'images/school/plan3.jpeg',
+    'images/school/plan4.jpeg',
   ];
 
   final _churchImages = [

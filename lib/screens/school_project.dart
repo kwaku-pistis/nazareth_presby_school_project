@@ -15,10 +15,35 @@ String bodyText =
 final schoolProjectKey = GlobalKey();
 
 class _SchoolProjectState extends State<SchoolProject> {
-  var images = [
-    'images/carousel_1.jpg',
-    'images/carousel_2.jpg',
-    'images/carousel_3.jpg',
+  final _schoolPlan = [
+    'images/school/plan1.jpeg',
+    'images/school/plan2.jpeg',
+    'images/school/plan4.jpeg',
+  ];
+
+  final _schoolBefore = [
+    'images/school/s1.jpeg',
+    'images/school/s4.jpeg',
+    'images/school/s5.jpeg',
+    'images/school/s6.jpeg',
+    'images/school/s8.jpeg',
+    'images/school/s9.jpeg',
+    'images/school/s11.jpeg',
+    'images/school/s12.jpeg',
+    'images/school/s13.jpeg',
+    'images/school/s17.jpeg',
+    'images/school/s18.jpeg',
+    'images/school/s22.jpeg',
+  ];
+
+  final _schoolOngoing = [
+    'images/school/s2.jpeg',
+    'images/school/s3.jpeg',
+    'images/school/s24.jpeg',
+    'images/school/s25.jpeg',
+    'images/school/s26.jpeg',
+    'images/school/s27.jpeg',
+    'images/school/s28.jpeg',
   ];
 
   @override
@@ -102,7 +127,9 @@ class _SchoolProjectState extends State<SchoolProject> {
                     width: MediaQuery.of(context).size.width * 0.6,
                     height: 400.0,
                     margin: const EdgeInsets.only(bottom: 10),
-                    child: Carousel(images: images,),
+                    child: Carousel(
+                      images: _schoolPlan,
+                    ),
                   ),
                   Container(
                     alignment: Alignment.centerRight,
@@ -156,7 +183,9 @@ class _SchoolProjectState extends State<SchoolProject> {
                     width: MediaQuery.of(context).size.width * 0.6,
                     height: 400.0,
                     margin: const EdgeInsets.only(bottom: 20),
-                    child: Carousel(images: images,),
+                    child: Carousel(
+                      images: _schoolBefore,
+                    ),
                   ),
                   Container(
                     padding: const EdgeInsets.only(bottom: 5),
@@ -184,7 +213,9 @@ class _SchoolProjectState extends State<SchoolProject> {
                     width: MediaQuery.of(context).size.width * 0.6,
                     height: 400.0,
                     margin: const EdgeInsets.only(bottom: 10),
-                    child: Carousel(images: images,),
+                    child: Carousel(
+                      images: _schoolOngoing,
+                    ),
                   ),
                   const SizedBox(
                     height: 30,
