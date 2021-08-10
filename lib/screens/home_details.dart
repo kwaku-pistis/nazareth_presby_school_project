@@ -8,6 +8,7 @@ import 'package:nazareth_presby_school_project/components/header.dart';
 import 'package:nazareth_presby_school_project/main.dart';
 import 'package:nazareth_presby_school_project/screens/church_project.dart';
 import 'package:nazareth_presby_school_project/screens/school_project.dart';
+import 'package:nazareth_presby_school_project/screens/washroom_project.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
 import 'package:provider/src/provider.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
@@ -46,6 +47,11 @@ class _HomeDetailsState extends State<HomeDetails> {
     'images/carousel_1.jpg',
     'images/carousel_2.jpg',
     'images/carousel_3.jpg',
+  ];
+
+  final _washroomImages = [
+    'images/toilet/t9.jpeg',
+    'images/toilet/t2.jpeg',
   ];
 
   @override
@@ -153,7 +159,64 @@ class _HomeDetailsState extends State<HomeDetails> {
                             width: MediaQuery.of(context).size.width * 0.55,
                             height: 400.0,
                             margin: const EdgeInsets.only(top: 16, bottom: 16),
-                            child: Carousel(images: _schoolImages,)),
+                            child: Carousel(
+                              images: _schoolImages,
+                            )),
+                        const SizedBox(
+                          height: 16,
+                        ),
+                        Container(
+                          padding: const EdgeInsets.only(bottom: 5),
+                          decoration: const BoxDecoration(
+                            border: Border(
+                              bottom: BorderSide(
+                                width: 2.0,
+                                color: CustomColor.red,
+                              ),
+                            ),
+                          ),
+                          child: const SelectableText(
+                            'Washroom Project',
+                            style: TextStyle(
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.bold,
+                                color: CustomColor.blue),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10.0,
+                        ),
+                        SizedBox(
+                            child: SelectableText.rich(
+                          TextSpan(
+                              text:
+                                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor... ',
+                              style: Theme.of(context).textTheme.bodyText1,
+                              children: [
+                                TextSpan(
+                                    text: 'Read More',
+                                    style:
+                                        Theme.of(context).textTheme.headline3,
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () {
+                                        counter++;
+                                        context
+                                            .read<ChangeBoolState>()
+                                            .setActiveMenu('PROJECTS');
+                                        context
+                                            .read<BodyWidget>()
+                                            .setBodyWidget(
+                                                const WashroomProject());
+                                      })
+                              ]),
+                        )),
+                        Container(
+                            width: MediaQuery.of(context).size.width * 0.55,
+                            height: 400.0,
+                            margin: const EdgeInsets.only(top: 16, bottom: 16),
+                            child: Carousel(
+                              images: _washroomImages,
+                            )),
                         const SizedBox(
                           height: 16,
                         ),
@@ -206,7 +269,9 @@ class _HomeDetailsState extends State<HomeDetails> {
                             width: MediaQuery.of(context).size.width * 0.55,
                             height: 400.0,
                             margin: const EdgeInsets.only(top: 16),
-                            child: Carousel(images: _churchImages,)),
+                            child: Carousel(
+                              images: _churchImages,
+                            )),
                         const SizedBox(
                           height: 30,
                         )

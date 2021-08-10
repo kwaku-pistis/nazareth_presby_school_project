@@ -3,6 +3,7 @@ import 'package:nazareth_presby_school_project/components/givings_dialog.dart';
 import 'package:nazareth_presby_school_project/screens/church_project.dart';
 import 'package:nazareth_presby_school_project/screens/contact_us.dart';
 import 'package:nazareth_presby_school_project/screens/home_details.dart';
+import 'package:nazareth_presby_school_project/screens/washroom_project.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
 import 'package:nazareth_presby_school_project/utils/on_hover.dart';
 import 'package:provider/src/provider.dart';
@@ -24,7 +25,7 @@ var activeKey = homeKey;
 bool isMenuOpened = false;
 var _activeMenu = "HOME";
 
-var listItems = <String>['PROJECTS', 'SCHOOL', 'CHURCH'];
+var listItems = <String>['PROJECTS', 'SCHOOL', 'CHURCH', 'WASHROOM'];
 int counter = 0;
 
 class _HeaderState extends State<Header> {
@@ -157,6 +158,15 @@ class _HeaderState extends State<Header> {
                             context
                                 .read<BodyWidget>()
                                 .setBodyWidget(const ChurchProject());
+                          }
+
+                          if (newValue == 'WASHROOM') {
+                            context
+                                .read<ChangeBoolState>()
+                                .setActiveMenu('PROJECTS');
+                            context
+                                .read<BodyWidget>()
+                                .setBodyWidget(const WashroomProject());
                           }
                         },
                         items: listItems
