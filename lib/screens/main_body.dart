@@ -20,6 +20,12 @@ var scrollController = ScrollController();
 bool _isSliverCollapsed = false;
 bool _isFabVisible = false;
 
+var _mainPageImages = [
+  'images/carousel_1.jpg',
+  'images/carousel_2.jpg',
+  'images/carousel_3.jpg',
+];
+
 class _MainBodyState extends State<MainBody> {
   @override
   void initState() {
@@ -119,7 +125,7 @@ class _MainBodyState extends State<MainBody> {
                                   ),
                                 ],
                               )),
-                background: const Carousel(),
+                background: Carousel(images: _mainPageImages,),
               ),
               backgroundColor: Colors.white,
             ),

@@ -102,7 +102,7 @@ class _ChurchProjectState extends State<ChurchProject> {
                     width: MediaQuery.of(context).size.width * 0.6,
                     height: 400.0,
                     margin: const EdgeInsets.only(bottom: 10),
-                    child: const Carousel(),
+                    child: Carousel(images: images,),
                   ),
                   Container(
                     alignment: Alignment.centerRight,
@@ -156,7 +156,7 @@ class _ChurchProjectState extends State<ChurchProject> {
                     width: MediaQuery.of(context).size.width * 0.6,
                     height: 400.0,
                     margin: const EdgeInsets.only(bottom: 20),
-                    child: const Carousel(),
+                    child: Carousel(images: images,),
                   ),
                   Container(
                     padding: const EdgeInsets.only(bottom: 5),
@@ -184,7 +184,7 @@ class _ChurchProjectState extends State<ChurchProject> {
                     width: MediaQuery.of(context).size.width * 0.6,
                     height: 400.0,
                     margin: const EdgeInsets.only(bottom: 10),
-                    child: const Carousel(),
+                    child: Carousel(images: images,),
                   ),
                   const SizedBox(
                     height: 30,

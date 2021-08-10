@@ -127,7 +127,7 @@ class _HomeState extends State<Home> {
                                   ),
                                 ],
                               )),
-                background: const Carousel(),
+                background: const Carousel(images: [],),
               ),
               backgroundColor: Colors.white,
             ),

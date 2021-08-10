@@ -36,7 +36,13 @@ final YoutubePlayerController _controller = YoutubePlayerController(
 );
 
 class _HomeDetailsState extends State<HomeDetails> {
-  var galleryItems = [
+  final _schoolImages = [
+    'images/school/plan1.jpeg',
+    'images/school/plan2.jpeg',
+    'images/school/plan3.jpeg',
+  ];
+
+  final _churchImages = [
     'images/carousel_1.jpg',
     'images/carousel_2.jpg',
     'images/carousel_3.jpg',
@@ -147,7 +153,7 @@ class _HomeDetailsState extends State<HomeDetails> {
                             width: MediaQuery.of(context).size.width * 0.55,
                             height: 400.0,
                             margin: const EdgeInsets.only(top: 16, bottom: 16),
-                            child: const Carousel()),
+                            child: Carousel(images: _schoolImages,)),
                         const SizedBox(
                           height: 16,
                         ),
@@ -200,7 +206,7 @@ class _HomeDetailsState extends State<HomeDetails> {
                             width: MediaQuery.of(context).size.width * 0.55,
                             height: 400.0,
                             margin: const EdgeInsets.only(top: 16),
-                            child: const Carousel()),
+                            child: Carousel(images: _churchImages,)),
                         const SizedBox(
                           height: 30,
                         )
