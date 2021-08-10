@@ -3,7 +3,7 @@ import 'package:flutter/painting.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
 
 class GivingsDialog extends StatefulWidget {
-  const GivingsDialog({ Key? key }) : super(key: key);
+  const GivingsDialog({Key? key}) : super(key: key);
 
   @override
   _GivingsDialogState createState() => _GivingsDialogState();
@@ -19,16 +19,15 @@ class _GivingsDialogState extends State<GivingsDialog> {
       child: Container(
         padding: const EdgeInsets.all(20),
         decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('/images/giving.jpg'),
-            fit: BoxFit.cover,
-          )
-        ),
+            image: DecorationImage(
+          image: AssetImage('/images/giving.jpg'),
+          fit: BoxFit.cover,
+        )),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const SizedBox(
-              child: Text(
+              child: SelectableText(
                 'Click on any of the buttons below to give an offering or donate to the projects',
                 style: TextStyle(
                   fontSize: 16.0,
@@ -42,56 +41,56 @@ class _GivingsDialogState extends State<GivingsDialog> {
             SizedBox(
               width: 300,
               child: ElevatedButton(
-                onPressed: (){},
-                child: Text(
+                onPressed: () {},
+                child: SelectableText(
                   'TITHE',
                   style: Theme.of(context).textTheme.button,
                 ),
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(CustomColor.green)
-                ),
+                    backgroundColor:
+                        MaterialStateProperty.all(CustomColor.green)),
               ),
             ),
             const SizedBox(height: 20),
             SizedBox(
               width: 300,
               child: ElevatedButton(
-                onPressed: (){},
-                child: Text(
+                onPressed: () {},
+                child: SelectableText(
                   'OFFERING',
                   style: Theme.of(context).textTheme.button,
                 ),
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(CustomColor.green)
-                ),
+                    backgroundColor:
+                        MaterialStateProperty.all(CustomColor.green)),
               ),
             ),
             const SizedBox(height: 20),
             SizedBox(
               width: 300,
               child: ElevatedButton(
-                onPressed: (){},
-                child: Text(
+                onPressed: () {},
+                child: SelectableText(
                   'DONATE TO SCHOOL BUILDING',
                   style: Theme.of(context).textTheme.button,
                 ),
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(CustomColor.green)
-                ),
+                    backgroundColor:
+                        MaterialStateProperty.all(CustomColor.green)),
               ),
             ),
             const SizedBox(height: 20),
             SizedBox(
               width: 300,
               child: ElevatedButton(
-                onPressed: (){},
-                child: Text(
+                onPressed: () {},
+                child: SelectableText(
                   'DONATE TO CHURCH BUILDING',
                   style: Theme.of(context).textTheme.button,
                 ),
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(CustomColor.green)
-                ),
+                    backgroundColor:
+                        MaterialStateProperty.all(CustomColor.green)),
               ),
             ),
           ],

@@ -35,7 +35,7 @@ class _ContactUsState extends State<ContactUs> {
                       decoration: const BoxDecoration(
                         color: CustomColor.red,
                       ),
-                      child: const Text(
+                      child: const SelectableText(
                         'CONTACT US',
                         style: TextStyle(
                           fontSize: 16.0,
@@ -68,7 +68,7 @@ class _ContactUsState extends State<ContactUs> {
                                         color: CustomColor.red,
                                         width: 2,
                                         style: BorderStyle.solid))),
-                            child: const Text(
+                            child: const SelectableText(
                               'POSTAL ADDRESS',
                               style: TextStyle(
                                 fontFamily: 'Raleway',
@@ -91,7 +91,7 @@ class _ContactUsState extends State<ContactUs> {
                                     children: [
                                       Container(
                                         margin: const EdgeInsets.only(top: 0),
-                                        child: Text(
+                                        child: SelectableText(
                                           'P. O. Box AS 717',
                                           style: Theme.of(context)
                                               .textTheme
@@ -101,7 +101,7 @@ class _ContactUsState extends State<ContactUs> {
                                       ),
                                       Container(
                                         margin: const EdgeInsets.only(top: 10),
-                                        child: Text(
+                                        child: SelectableText(
                                           'Tema West District',
                                           style: Theme.of(context)
                                               .textTheme
@@ -110,7 +110,7 @@ class _ContactUsState extends State<ContactUs> {
                                       ),
                                       Container(
                                         margin: const EdgeInsets.only(top: 10),
-                                        child: Text(
+                                        child: SelectableText(
                                           'Adjei Kojo',
                                           style: Theme.of(context)
                                               .textTheme
@@ -140,7 +140,7 @@ class _ContactUsState extends State<ContactUs> {
                                               color: CustomColor.red,
                                             ),
                                           ),
-                                          Text(
+                                          SelectableText(
                                             '+233 50 143 1230',
                                             style: Theme.of(context)
                                                 .textTheme
@@ -158,7 +158,7 @@ class _ContactUsState extends State<ContactUs> {
                                               margin: const EdgeInsets.only(
                                                   right: 10.0),
                                               child: null),
-                                          Text(
+                                          SelectableText(
                                             '+233 55 143 1230',
                                             style: Theme.of(context)
                                                 .textTheme
@@ -180,7 +180,7 @@ class _ContactUsState extends State<ContactUs> {
                                               color: CustomColor.red,
                                             ),
                                           ),
-                                          Text(
+                                          SelectableText(
                                             'nazarethpresby@gmail.com',
                                             style: Theme.of(context)
                                                 .textTheme
@@ -280,7 +280,7 @@ class _ContactUsState extends State<ContactUs> {
                               margin: const EdgeInsets.only(top: 10),
                               alignment: Alignment.centerRight,
                               child: ElevatedButton(
-                                child: const Text('SUBMIT'),
+                                child: const SelectableText('SUBMIT'),
                                 onPressed: () {},
                               ),
                             )

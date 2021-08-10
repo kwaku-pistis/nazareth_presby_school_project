@@ -22,7 +22,7 @@ class _MobileMenuState extends State<MobileMenu> {
               alignment: Alignment.centerLeft,
               child: TextButton(
                 onPressed: () {},
-                child: const Text(
+                child: const SelectableText(
                   'HOME',
                   style: TextStyle(fontSize: 16.0, color: Colors.black),
                   textAlign: TextAlign.left,
@@ -32,8 +32,8 @@ class _MobileMenuState extends State<MobileMenu> {
               width: MediaQuery.of(context).size.width,
               alignment: Alignment.centerLeft,
               child: TextButton(
-                onPressed: (){},
-                child: const Text(
+                onPressed: () {},
+                child: const SelectableText(
                   'SCHOOL PROJECT',
                   style: TextStyle(fontSize: 16.0, color: Colors.black),
                 ),
@@ -42,26 +42,22 @@ class _MobileMenuState extends State<MobileMenu> {
               width: MediaQuery.of(context).size.width,
               alignment: Alignment.centerLeft,
               child: TextButton(
-                onPressed: (){},
-                child: const Text(
+                onPressed: () {},
+                child: const SelectableText(
                   'SCHOOL INFO',
                   style: TextStyle(fontSize: 16.0, color: Colors.black),
                 ),
               )),
           Container(
               alignment: Alignment.centerLeft,
-            width: MediaQuery.of(context).size.width,
-            child: TextButton(
-              onPressed: (){}, 
-              child: const Text(
-                'CONTACT US',
-                style: TextStyle(
-                  fontSize: 16.0,
-                  color: Colors.black
+              width: MediaQuery.of(context).size.width,
+              child: TextButton(
+                onPressed: () {},
+                child: const SelectableText(
+                  'CONTACT US',
+                  style: TextStyle(fontSize: 16.0, color: Colors.black),
                 ),
-              ),
-            )
-          ),
+              )),
         ],
       ),
     );

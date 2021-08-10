@@ -3,7 +3,7 @@ import 'package:nazareth_presby_school_project/components/carousel.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
 
 class ChurchProject extends StatefulWidget {
-  const ChurchProject({ Key? key }) : super(key: key);
+  const ChurchProject({Key? key}) : super(key: key);
 
   @override
   _ChurchProjectState createState() => _ChurchProjectState();
@@ -31,25 +31,21 @@ class _ChurchProjectState extends State<ChurchProject> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: MediaQuery.of(context).size.width,
-            height: 150,
-            decoration: const BoxDecoration(
-                image: DecorationImage(
-              image: AssetImage('assets/images/church_dark.jpg'),
-              fit: BoxFit.cover,
-            )),
-            child: const Center(
-              child: Text(
-                'CHURCH BUILDING PROJECT',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontFamily: 'Raleway',
-                  fontWeight: FontWeight.bold,
-                  color: CustomColor.white
-                )
-              ),
-            )
-          ),
+              width: MediaQuery.of(context).size.width,
+              height: 150,
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                image: AssetImage('assets/images/church_dark.jpg'),
+                fit: BoxFit.cover,
+              )),
+              child: const Center(
+                child: SelectableText('CHURCH BUILDING PROJECT',
+                    style: TextStyle(
+                        fontSize: 24,
+                        fontFamily: 'Raleway',
+                        fontWeight: FontWeight.bold,
+                        color: CustomColor.white)),
+              )),
           Center(
             child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.6,
@@ -64,7 +60,7 @@ class _ChurchProjectState extends State<ChurchProject> {
                         decoration: const BoxDecoration(
                           color: CustomColor.red,
                         ),
-                        child: const Text(
+                        child: const SelectableText(
                           'ABOUT PROJECT',
                           style: TextStyle(
                             fontSize: 16.0,
@@ -77,7 +73,7 @@ class _ChurchProjectState extends State<ChurchProject> {
                   Container(
                     // width: MediaQuery.of(context).size.width * 0.5,
                     margin: const EdgeInsets.only(top: 30),
-                    child: Text(
+                    child: SelectableText(
                       bodyText,
                       style: Theme.of(context).textTheme.bodyText1,
                     ),
@@ -92,7 +88,7 @@ class _ChurchProjectState extends State<ChurchProject> {
                         decoration: const BoxDecoration(
                           color: CustomColor.red,
                         ),
-                        child: const Text(
+                        child: const SelectableText(
                           'BUILDING PLAN',
                           style: TextStyle(
                             fontSize: 16.0,
@@ -110,7 +106,7 @@ class _ChurchProjectState extends State<ChurchProject> {
                   ),
                   Container(
                     alignment: Alignment.centerRight,
-                    child: Text(
+                    child: SelectableText(
                       'Designed by: Mr. Hello World',
                       style: Theme.of(context).textTheme.headline3,
                     ),
@@ -125,7 +121,7 @@ class _ChurchProjectState extends State<ChurchProject> {
                         decoration: const BoxDecoration(
                           color: CustomColor.red,
                         ),
-                        child: const Text(
+                        child: const SelectableText(
                           'GALLERY',
                           style: TextStyle(
                             fontSize: 16.0,
@@ -143,7 +139,7 @@ class _ChurchProjectState extends State<ChurchProject> {
                                 color: CustomColor.red,
                                 width: 2,
                                 style: BorderStyle.solid))),
-                    child: const Text(
+                    child: const SelectableText(
                       'Before',
                       style: TextStyle(
                         fontFamily: 'Raleway',
@@ -171,7 +167,7 @@ class _ChurchProjectState extends State<ChurchProject> {
                                 color: CustomColor.red,
                                 width: 2,
                                 style: BorderStyle.solid))),
-                    child: const Text(
+                    child: const SelectableText(
                       'On-going',
                       style: TextStyle(
                         fontFamily: 'Raleway',

@@ -29,7 +29,8 @@ class _HomeState extends State<Home> {
     super.initState();
 
     _scrollController.addListener(() {
-      if (_scrollController.offset <= MediaQuery.of(context).size.height - 100 &&
+      if (_scrollController.offset <=
+              MediaQuery.of(context).size.height - 100 &&
           !_scrollController.position.outOfRange) {
         setState(() {
           _isSliverCollapsed = false;
@@ -43,7 +44,8 @@ class _HomeState extends State<Home> {
         });
       }
 
-      if (_scrollController.offset > _scrollController.position.minScrollExtent &&
+      if (_scrollController.offset >
+              _scrollController.position.minScrollExtent &&
           !_scrollController.position.outOfRange) {
         setState(() {
           _isFabVisible = true;
@@ -93,7 +95,7 @@ class _HomeState extends State<Home> {
                                     height: 70,
                                   ),
                                   SizedBox(
-                                    child: Text(
+                                    child: SelectableText(
                                       'PRESBYTERIAN CHURCH OF GHANA\nNAZARETH CONGREGATION\nADJEI KOJO',
                                       style: TextStyle(
                                         // fontSize: 20.0,
@@ -114,7 +116,7 @@ class _HomeState extends State<Home> {
                                     height: 50,
                                   ),
                                   SizedBox(
-                                    child: Text(
+                                    child: SelectableText(
                                       'PRESBYTERIAN CHURCH OF GHANA\nNAZARETH CONGREGATION\nADJEI KOJO',
                                       style: TextStyle(
                                         fontSize: 13.0,

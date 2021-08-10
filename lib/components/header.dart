@@ -63,7 +63,7 @@ class _HeaderState extends State<Header> {
                           height: 70,
                         ),
                         SizedBox(
-                          child: Text(
+                          child: SelectableText(
                             'NAZARETH\nCONGREGATION\nADJEI KOJO',
                             style: TextStyle(
                               fontSize: 20.0,
@@ -93,7 +93,7 @@ class _HeaderState extends State<Header> {
                                 .read<BodyWidget>()
                                 .setBodyWidget(const HomeDetails());
                           },
-                          child: Text(
+                          child: SelectableText(
                             "HOME",
                             style: _activeMenu == 'HOME'
                                 ? Theme.of(context).textTheme.headline1
@@ -114,21 +114,21 @@ class _HeaderState extends State<Header> {
                           return listItems.map<Widget>((String item) {
                             // print(counter);
                             if (counter == 0) {
-                              return Text(
+                              return SelectableText(
                                 'PROJECTS',
                                 style: Theme.of(context).textTheme.headline2,
                                 // textAlign: TextAlign.center,
                               );
                             }
                             // else if (counter > 0 && item == 'PROJECTS') {
-                            //   return Text(
+                            //   return SelectableText(
                             //     'PROJECTS',
                             //     style: Theme.of(context).textTheme.headline2,
                             //     // textAlign: TextAlign.center,
                             //   );
                             // }
                             else {
-                              return Text(
+                              return SelectableText(
                                 'PROJECTS',
                                 style: Theme.of(context).textTheme.headline1,
                                 // textAlign: TextAlign.center,
@@ -163,7 +163,7 @@ class _HeaderState extends State<Header> {
                             .map<DropdownMenuItem<String>>((String value) {
                           return DropdownMenuItem<String>(
                             value: value,
-                            child: Text(value),
+                            child: SelectableText(value),
                           );
                         }).toList(),
                       );
@@ -179,7 +179,7 @@ class _HeaderState extends State<Header> {
                                 .read<BodyWidget>()
                                 .setBodyWidget(const ChurchInfo());
                           },
-                          child: Text(
+                          child: SelectableText(
                             "CHURCH HISTORY",
                             style: _activeMenu == 'CHURCH HISTORY'
                                 ? Theme.of(context).textTheme.headline1
@@ -197,7 +197,7 @@ class _HeaderState extends State<Header> {
                                 .read<BodyWidget>()
                                 .setBodyWidget(const ContactUs());
                           },
-                          child: Text(
+                          child: SelectableText(
                             "CONTACT US",
                             style: _activeMenu == 'CONTACT US'
                                 ? Theme.of(context).textTheme.headline1
@@ -211,23 +211,24 @@ class _HeaderState extends State<Header> {
                     child: ElevatedButton.icon(
                       onPressed: () {
                         showDialog(
-                          context: context,
-                          barrierDismissible: true,
-                          useSafeArea: false,
-                          builder: (_) => Center(
-                            child: SizedBox(
-                              width: MediaQuery.of(context).size.width * 0.4,
-                              height: MediaQuery.of(context).size.height * 0.6,
-                              child: const GivingsDialog()
-                            ),
-                          )
-                        );
+                            context: context,
+                            barrierDismissible: true,
+                            useSafeArea: false,
+                            builder: (_) => Center(
+                                  child: SizedBox(
+                                      width: MediaQuery.of(context).size.width *
+                                          0.4,
+                                      height:
+                                          MediaQuery.of(context).size.height *
+                                              0.6,
+                                      child: const GivingsDialog()),
+                                ));
                       },
                       icon: const Icon(
                         Icons.monetization_on,
                         color: CustomColor.white,
                       ),
-                      label: const Text(
+                      label: const SelectableText(
                         'GIVINGS',
                         style: TextStyle(
                           fontSize: 20.0,
@@ -270,7 +271,7 @@ class _HeaderState extends State<Header> {
                           height: 60,
                         ),
                         SizedBox(
-                          child: Text(
+                          child: SelectableText(
                             'NAZARETH\nCONGREGATION\nADJEI KOJO',
                             style: TextStyle(
                               fontSize: 16.0,
@@ -293,7 +294,7 @@ class _HeaderState extends State<Header> {
                               color: CustomColor.white,
                               size: 20,
                             ),
-                            label: const Text(
+                            label: const SelectableText(
                               'GIVINGS',
                               style: TextStyle(
                                 fontSize: 16.0,

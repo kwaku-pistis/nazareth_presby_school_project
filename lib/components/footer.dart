@@ -36,7 +36,7 @@ class Footer extends StatelessWidget {
                                 height: 60,
                               ),
                               SizedBox(
-                                child: Text(
+                                child: SelectableText(
                                   'PRESBYTERIAN CHURCH OF GHANA\nNAZARETH CONGREGATION\nADJEI KOJO',
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
@@ -48,7 +48,7 @@ class Footer extends StatelessWidget {
                           ),
                           Container(
                               margin: const EdgeInsets.only(top: 20),
-                              child: Text(
+                              child: SelectableText(
                                 '"Bata Awurade ho... Na ye papa!"',
                                 style: Theme.of(context).textTheme.bodyText1,
                               )),
@@ -61,7 +61,7 @@ class Footer extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
-                              child: Text(
+                              child: SelectableText(
                                 'CONTACT',
                                 style: Theme.of(context).textTheme.caption,
                               ),
@@ -70,7 +70,7 @@ class Footer extends StatelessWidget {
                               height: 8,
                             ),
                             SizedBox(
-                              child: Text(
+                              child: SelectableText(
                                 'nazarethpresby@gmail.com\nP. O. Box AS 717\nAshaiman\nTema West District\nAdjei Kojo\n+233 50 143 1230\n+233 55 042 3009',
                                 style: Theme.of(context).textTheme.bodyText1,
                               ),
@@ -83,7 +83,7 @@ class Footer extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
-                              child: Text(
+                              child: SelectableText(
                                 'MENU',
                                 style: Theme.of(context).textTheme.caption,
                               ),
@@ -94,7 +94,7 @@ class Footer extends StatelessWidget {
                             SizedBox(
                               child: GestureDetector(
                                 onTap: () {},
-                                child: Text(
+                                child: SelectableText(
                                   'Home',
                                   style: Theme.of(context).textTheme.subtitle1,
                                 ),
@@ -106,7 +106,7 @@ class Footer extends StatelessWidget {
                             SizedBox(
                               child: GestureDetector(
                                 onTap: () {},
-                                child: Text(
+                                child: SelectableText(
                                   'School Project',
                                   style: Theme.of(context).textTheme.subtitle1,
                                 ),
@@ -118,7 +118,7 @@ class Footer extends StatelessWidget {
                             SizedBox(
                               child: GestureDetector(
                                 onTap: () {},
-                                child: Text(
+                                child: SelectableText(
                                   'Church Project',
                                   style: Theme.of(context).textTheme.subtitle1,
                                 ),
@@ -130,7 +130,7 @@ class Footer extends StatelessWidget {
                             SizedBox(
                               child: GestureDetector(
                                 onTap: () {},
-                                child: Text(
+                                child: SelectableText(
                                   'Church History',
                                   style: Theme.of(context).textTheme.subtitle1,
                                 ),
@@ -142,7 +142,7 @@ class Footer extends StatelessWidget {
                             SizedBox(
                               child: GestureDetector(
                                 onTap: () {},
-                                child: Text(
+                                child: SelectableText(
                                   'Contact Us',
                                   style: Theme.of(context).textTheme.subtitle1,
                                 ),
@@ -156,7 +156,7 @@ class Footer extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
-                              child: Text(
+                              child: SelectableText(
                                 'NEWSLETTER',
                                 style: Theme.of(context).textTheme.caption,
                               ),
@@ -184,7 +184,7 @@ class Footer extends StatelessWidget {
                                   height: 45,
                                   child: ElevatedButton(
                                     onPressed: () {},
-                                    child: const Text(
+                                    child: const SelectableText(
                                       'SIGN UP',
                                     ),
                                     style: ButtonStyle(
@@ -201,7 +201,7 @@ class Footer extends StatelessWidget {
                             ),
                             SizedBox(
                               width: 350,
-                              child: Text(
+                              child: SelectableText(
                                 'Subscribe to our newsletter and receive updates on our currents projects and services',
                                 style: Theme.of(context).textTheme.bodyText1,
                               ),
@@ -225,7 +225,7 @@ class Footer extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    SelectableText(
                       '© 2021 PCG - Nazareth Congregation',
                       style: Theme.of(context).textTheme.bodyText1,
                     ),
@@ -320,7 +320,7 @@ class Footer extends StatelessWidget {
                             ),
                           ]),
                     ),
-                    Text(
+                    SelectableText(
                       'Designed by Daniel Pistis Partey',
                       style: Theme.of(context).textTheme.bodyText1,
                     )

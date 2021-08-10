@@ -87,7 +87,7 @@ class _MainBodyState extends State<MainBody> {
                                     height: 70,
                                   ),
                                   SizedBox(
-                                    child: Text(
+                                    child: SelectableText(
                                       'PRESBYTERIAN CHURCH OF GHANA\nNAZARETH CONGREGATION\nADJEI KOJO',
                                       style: TextStyle(
                                         // fontSize: 20.0,
@@ -108,7 +108,7 @@ class _MainBodyState extends State<MainBody> {
                                     height: 50,
                                   ),
                                   SizedBox(
-                                    child: Text(
+                                    child: SelectableText(
                                       'PRESBYTERIAN CHURCH OF GHANA\nNAZARETH CONGREGATION\nADJEI KOJO',
                                       style: TextStyle(
                                         fontSize: 13.0,

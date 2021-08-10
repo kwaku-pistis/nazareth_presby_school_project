@@ -27,7 +27,7 @@ class _AnnouncementsState extends State<Announcements> {
               ),
             ),
           ),
-          child: const Text(
+          child: const SelectableText(
             'ANNOUNCEMENTS',
             style:
                 TextStyle(fontWeight: FontWeight.bold, color: CustomColor.blue),
@@ -43,7 +43,7 @@ class _AnnouncementsState extends State<Announcements> {
               Icons.announcement,
               color: CustomColor.red,
             ),
-            title: Text(
+            title: SelectableText(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
               style: TextStyle(
                 fontFamily: 'Raleway',
@@ -63,7 +63,7 @@ class _AnnouncementsState extends State<Announcements> {
               Icons.announcement,
               color: CustomColor.red,
             ),
-            title: Text(
+            title: SelectableText(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
               style: TextStyle(
                 fontFamily: 'Raleway',
@@ -83,7 +83,7 @@ class _AnnouncementsState extends State<Announcements> {
               Icons.announcement,
               color: CustomColor.red,
             ),
-            title: Text(
+            title: SelectableText(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
               style: TextStyle(
                 fontFamily: 'Raleway',
@@ -103,7 +103,7 @@ class _AnnouncementsState extends State<Announcements> {
               Icons.announcement,
               color: CustomColor.red,
             ),
-            title: Text(
+            title: SelectableText(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
               style: TextStyle(
                 fontFamily: 'Raleway',
@@ -123,7 +123,7 @@ class _AnnouncementsState extends State<Announcements> {
               Icons.announcement,
               color: CustomColor.red,
             ),
-            title: Text(
+            title: SelectableText(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
               style: TextStyle(
                 fontFamily: 'Raleway',

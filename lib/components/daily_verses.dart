@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
 
 class DailyVerse extends StatefulWidget {
-  const DailyVerse({ Key? key }) : super(key: key);
+  const DailyVerse({Key? key}) : super(key: key);
 
   @override
   _DailyVerseState createState() => _DailyVerseState();
@@ -20,15 +20,12 @@ class _DailyVerseState extends State<DailyVerse> {
           padding: const EdgeInsets.only(bottom: 5),
           // alignment: Alignment.centerRight,
           decoration: const BoxDecoration(
-            border: Border(
-              bottom: BorderSide(
-                color: CustomColor.red,
-                width: 2,
-                style: BorderStyle.solid
-              )
-            )
-          ),
-          child: const Text(
+              border: Border(
+                  bottom: BorderSide(
+                      color: CustomColor.red,
+                      width: 2,
+                      style: BorderStyle.solid))),
+          child: const SelectableText(
             'DAILY VERSE',
             style: TextStyle(
               fontFamily: 'Raleway',
@@ -38,36 +35,38 @@ class _DailyVerseState extends State<DailyVerse> {
             ),
           ),
         ),
-        const SizedBox(height: 30,),
-        Container(
-          alignment: Alignment.center,
-          child: AnimatedTextKit(
-            animatedTexts: [
-              TypewriterAnimatedText(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                textStyle: const TextStyle(
-                  fontSize: 14.0,
-                  fontStyle: FontStyle.italic,
-                  color: Colors.grey,
-                ),
-                speed: const Duration(milliseconds: 100),
-              )
-            ],
-            repeatForever: true,
-          )
+        const SizedBox(
+          height: 30,
         ),
-        const SizedBox(height: 30,),
         Container(
-          alignment: Alignment.centerRight,
-          child: const Text(
-            '- Lorem ipsum',
-            style: TextStyle(
-              fontSize: 14.0,
-              fontStyle: FontStyle.italic,
-              color: CustomColor.red,
-            ),
-          )
-        )
+            alignment: Alignment.center,
+            child: AnimatedTextKit(
+              animatedTexts: [
+                TypewriterAnimatedText(
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                  textStyle: const TextStyle(
+                    fontSize: 14.0,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.grey,
+                  ),
+                  speed: const Duration(milliseconds: 100),
+                )
+              ],
+              repeatForever: true,
+            )),
+        const SizedBox(
+          height: 30,
+        ),
+        Container(
+            alignment: Alignment.centerRight,
+            child: const SelectableText(
+              '- Lorem ipsum',
+              style: TextStyle(
+                fontSize: 14.0,
+                fontStyle: FontStyle.italic,
+                color: CustomColor.red,
+              ),
+            ))
       ],
     );
   }

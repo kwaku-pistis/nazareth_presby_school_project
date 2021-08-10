@@ -69,7 +69,7 @@ class _HomeDetailsState extends State<HomeDetails> {
                               decoration: const BoxDecoration(
                                 color: CustomColor.red,
                               ),
-                              child: const Text(
+                              child: const SelectableText(
                                 'CURRENT PROJECTS',
                                 style: TextStyle(
                                   fontSize: 16.0,
@@ -82,7 +82,7 @@ class _HomeDetailsState extends State<HomeDetails> {
                         Container(
                           // width: MediaQuery.of(context).size.width * 0.5,
                           margin: const EdgeInsets.fromLTRB(0, 16, 0, 20),
-                          child: Text(
+                          child: SelectableText(
                             bodyText,
                             style: Theme.of(context).textTheme.bodyText1,
                           ),
@@ -97,7 +97,7 @@ class _HomeDetailsState extends State<HomeDetails> {
                               ),
                             ),
                           ),
-                          child: const Text(
+                          child: const SelectableText(
                             'School Building Project',
                             style: TextStyle(
                                 fontSize: 16.0,
@@ -141,7 +141,7 @@ class _HomeDetailsState extends State<HomeDetails> {
                               ),
                             ),
                           ),
-                          child: const Text(
+                          child: const SelectableText(
                             'Church Building Project',
                             style: TextStyle(
                                 fontSize: 16.0,
@@ -231,7 +231,7 @@ class _HomeDetailsState extends State<HomeDetails> {
                         decoration: const BoxDecoration(
                           color: CustomColor.red,
                         ),
-                        child: const Text(
+                        child: const SelectableText(
                           'VIDEO PODCASTS',
                           style: TextStyle(
                             fontSize: 16.0,

@@ -52,7 +52,7 @@ class _ProfileState extends State<Profile> {
                                         color: CustomColor.red,
                                         width: 2,
                                         style: BorderStyle.solid))),
-                            child: const Text(
+                            child: const SelectableText(
                               'Rev. Godfried Emmanuel Quagraine',
                               style: TextStyle(
                                 fontFamily: 'Raleway',
@@ -65,7 +65,7 @@ class _ProfileState extends State<Profile> {
                             height: 10,
                           ),
                           SizedBox(
-                            child: Text(
+                            child: SelectableText(
                               'Agent-In-Charge',
                               style: Theme.of(context).textTheme.bodyText1,
                             ),
@@ -74,7 +74,7 @@ class _ProfileState extends State<Profile> {
                             height: 10,
                           ),
                           SizedBox(
-                            child: Text(
+                            child: SelectableText(
                               '+233 24 393 5949 / +233 20 268 7335',
                               style: Theme.of(context).textTheme.bodyText1,
                             ),
@@ -121,7 +121,7 @@ class _ProfileState extends State<Profile> {
                                         color: CustomColor.red,
                                         width: 2,
                                         style: BorderStyle.solid))),
-                            child: const Text(
+                            child: const SelectableText(
                               'Cat. Roseline Gyanwaa Baiden',
                               style: TextStyle(
                                 fontFamily: 'Raleway',
@@ -134,7 +134,7 @@ class _ProfileState extends State<Profile> {
                             height: 10,
                           ),
                           SizedBox(
-                            child: Text(
+                            child: SelectableText(
                               'Catechist with a Charge',
                               style: Theme.of(context).textTheme.bodyText1,
                             ),
@@ -143,7 +143,7 @@ class _ProfileState extends State<Profile> {
                             height: 10,
                           ),
                           SizedBox(
-                            child: Text(
+                            child: SelectableText(
                               '+233 54 295 9967 / +233 24 809 6119',
                               style: Theme.of(context).textTheme.bodyText1,
                             ),
@@ -158,7 +158,9 @@ class _ProfileState extends State<Profile> {
           ],
         ),
       ),
-      const SizedBox(height: 20,),
+      const SizedBox(
+        height: 20,
+      ),
       SizedBox(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -199,7 +201,7 @@ class _ProfileState extends State<Profile> {
                                         color: CustomColor.red,
                                         width: 2,
                                         style: BorderStyle.solid))),
-                            child: const Text(
+                            child: const SelectableText(
                               'Mr. Kennedy Boakye-Yiadom',
                               style: TextStyle(
                                 fontFamily: 'Raleway',
@@ -212,7 +214,7 @@ class _ProfileState extends State<Profile> {
                             height: 10,
                           ),
                           SizedBox(
-                            child: Text(
+                            child: SelectableText(
                               'Senior Presbyter',
                               style: Theme.of(context).textTheme.bodyText1,
                             ),
@@ -221,7 +223,7 @@ class _ProfileState extends State<Profile> {
                             height: 10,
                           ),
                           SizedBox(
-                            child: Text(
+                            child: SelectableText(
                               '+233 24 393 5949 / +233 20 268 7335',
                               style: Theme.of(context).textTheme.bodyText1,
                             ),
@@ -268,7 +270,7 @@ class _ProfileState extends State<Profile> {
                                         color: CustomColor.red,
                                         width: 2,
                                         style: BorderStyle.solid))),
-                            child: const Text(
+                            child: const SelectableText(
                               'Mr. Emmanuel K. O. Larbi',
                               style: TextStyle(
                                 fontFamily: 'Raleway',
@@ -281,7 +283,7 @@ class _ProfileState extends State<Profile> {
                             height: 10,
                           ),
                           SizedBox(
-                            child: Text(
+                            child: SelectableText(
                               'Clerk',
                               style: Theme.of(context).textTheme.bodyText1,
                             ),
@@ -290,7 +292,7 @@ class _ProfileState extends State<Profile> {
                             height: 10,
                           ),
                           SizedBox(
-                            child: Text(
+                            child: SelectableText(
                               '+233 24 636 0674 / +233 24 478 3244',
                               style: Theme.of(context).textTheme.bodyText1,
                             ),
