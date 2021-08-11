@@ -56,6 +56,15 @@ class _HomeDetailsState extends State<HomeDetails> {
 
   @override
   Widget build(BuildContext context) {
+    var _orientation = MediaQuery.of(context).orientation;
+
+    return _orientation == Orientation.landscape
+        ? desktopView(context)
+        : mobileView(context);
+  }
+
+  // desktop view
+  desktopView(BuildContext context) {
     return Center(
       child: SizedBox(
           key: homeDetailsKey,
@@ -379,5 +388,309 @@ class _HomeDetailsState extends State<HomeDetails> {
             ],
           )),
     );
+  }
+
+  // mobile view
+  mobileView(BuildContext context) {
+    return Center(
+        child: SizedBox(
+      key: homeDetailsKey,
+      width: MediaQuery.of(context).size.width * 0.8,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+              margin: const EdgeInsets.only(
+                top: 30,
+              ),
+              alignment: Alignment.centerLeft,
+              child: Container(
+                padding: const EdgeInsets.all(10),
+                decoration: const BoxDecoration(
+                  color: CustomColor.red,
+                ),
+                child: const SelectableText(
+                  'CURRENT PROJECTS',
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              )),
+          Container(
+            // width: MediaQuery.of(context).size.width * 0.5,
+            margin: const EdgeInsets.fromLTRB(0, 16, 0, 20),
+            child: SelectableText(
+              bodyText,
+              style: Theme.of(context).textTheme.bodyText1,
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.only(bottom: 5),
+            decoration: const BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  width: 2.0,
+                  color: CustomColor.red,
+                ),
+              ),
+            ),
+            child: SelectableText(
+              'School Building Project',
+              style: const TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
+                  color: CustomColor.blue),
+              showCursor: false,
+              onTap: () {
+                // context
+                //     .read<BodyWidget>()
+                //     .setBodyWidget(const SchoolProject());
+              },
+            ),
+          ),
+          const SizedBox(
+            height: 10.0,
+          ),
+          SizedBox(
+              child: SelectableText.rich(
+            TextSpan(
+                text:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor... ',
+                style: Theme.of(context).textTheme.bodyText1,
+                children: [
+                  TextSpan(
+                      text: 'Read More',
+                      style: Theme.of(context).textTheme.headline3,
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          counter++;
+                          context
+                              .read<ChangeBoolState>()
+                              .setActiveMenu('PROJECTS');
+                          context
+                              .read<BodyWidget>()
+                              .setBodyWidget(const SchoolProject());
+                        })
+                ]),
+          )),
+          Container(
+              width: MediaQuery.of(context).size.width,
+              height: 300.0,
+              margin: const EdgeInsets.only(top: 16, bottom: 16),
+              child: Carousel(
+                images: _schoolImages,
+              )),
+          const SizedBox(
+            height: 16,
+          ),
+          Container(
+            padding: const EdgeInsets.only(bottom: 5),
+            decoration: const BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  width: 2.0,
+                  color: CustomColor.red,
+                ),
+              ),
+            ),
+            child: const SelectableText(
+              'Washroom Project',
+              style: TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
+                  color: CustomColor.blue),
+            ),
+          ),
+          const SizedBox(
+            height: 10.0,
+          ),
+          SizedBox(
+              child: SelectableText.rich(
+            TextSpan(
+                text:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor... ',
+                style: Theme.of(context).textTheme.bodyText1,
+                children: [
+                  TextSpan(
+                      text: 'Read More',
+                      style: Theme.of(context).textTheme.headline3,
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          counter++;
+                          context
+                              .read<ChangeBoolState>()
+                              .setActiveMenu('PROJECTS');
+                          context
+                              .read<BodyWidget>()
+                              .setBodyWidget(const WashroomProject());
+                        })
+                ]),
+          )),
+          Container(
+              width: MediaQuery.of(context).size.width,
+              height: 300.0,
+              margin: const EdgeInsets.only(top: 16, bottom: 16),
+              child: Carousel(
+                images: _washroomImages,
+              )),
+          const SizedBox(
+            height: 16,
+          ),
+          Container(
+            padding: const EdgeInsets.only(bottom: 5),
+            decoration: const BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  width: 2.0,
+                  color: CustomColor.red,
+                ),
+              ),
+            ),
+            child: const SelectableText(
+              'Church Building Project',
+              style: TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
+                  color: CustomColor.blue),
+            ),
+          ),
+          const SizedBox(
+            height: 10.0,
+          ),
+          SizedBox(
+              child: SelectableText.rich(
+            TextSpan(
+                text:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor... ',
+                style: Theme.of(context).textTheme.bodyText1,
+                children: [
+                  TextSpan(
+                      text: 'Read More',
+                      style: Theme.of(context).textTheme.headline3,
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          counter++;
+                          context
+                              .read<ChangeBoolState>()
+                              .setActiveMenu('PROJECTS');
+                          context
+                              .read<BodyWidget>()
+                              .setBodyWidget(const ChurchProject());
+                        })
+                ]),
+          )),
+          Container(
+              width: MediaQuery.of(context).size.width,
+              height: 300.0,
+              margin: const EdgeInsets.only(top: 16),
+              child: Carousel(
+                images: _churchImages,
+              )),
+          Container(
+              width: MediaQuery.of(context).size.width,
+              margin: const EdgeInsets.only(top: 30),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                // crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height * 0.7,
+                    margin: const EdgeInsets.only(bottom: 30),
+                    child: Card(
+                      child: Container(
+                        padding: const EdgeInsets.all(16),
+                        color: CustomColor.white,
+                        child: const Announcements(),
+                      ),
+                      elevation: 10,
+                      shadowColor: Colors.black38,
+                      color: Colors.white,
+                    ),
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height * 0.3,
+                    child: Card(
+                      child: Container(
+                          padding: const EdgeInsets.all(16),
+                          color: CustomColor.white,
+                          child: const DailyVerse()),
+                      elevation: 10,
+                      shadowColor: Colors.black38,
+                      color: Colors.white,
+                    ),
+                  )
+                ],
+              )),
+          const SizedBox(
+            height: 10,
+          ),
+          Container(
+              margin: const EdgeInsets.only(top: 20),
+              alignment: Alignment.centerLeft,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(right: 10),
+                    padding: const EdgeInsets.all(10),
+                    decoration: const BoxDecoration(
+                      color: CustomColor.red,
+                    ),
+                    child: const SelectableText(
+                      'VIDEO PODCASTS',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                  ),
+                  Expanded(
+                    child: SizedBox(
+                      height: 30.0,
+                      child: AnimatedTextKit(
+                        animatedTexts: [
+                          RotateAnimatedText('Listen and be blessed!',
+                              textStyle: Theme.of(context).textTheme.headline4,
+                              rotateOut: true,
+                              textAlign: TextAlign.left,
+                              duration: const Duration(seconds: 3)),
+                          RotateAnimatedText(
+                              'Messages from Rev. Godfried Emmanuel Quagraine',
+                              textStyle: Theme.of(context).textTheme.headline4,
+                              rotateOut: true,
+                              textAlign: TextAlign.left,
+                              duration: const Duration(seconds: 3)),
+                        ],
+                        repeatForever: true,
+                      ),
+                    ),
+                  )
+                ],
+              )),
+          const SizedBox(
+            height: 20,
+          ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            height: 300.0,
+            child: YoutubePlayerIFrame(
+              controller: _controller,
+              aspectRatio: 16 / 9,
+            ),
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+        ],
+      ),
+    ));
   }
 }
