@@ -107,8 +107,8 @@ class _HeaderState extends State<Header> {
                         icon: const Icon(Icons.arrow_drop_down),
                         elevation: 8,
                         style: _activeMenu == 'PROJECTS'
-                                ? Theme.of(context).textTheme.headline1
-                                : Theme.of(context).textTheme.headline2,
+                            ? Theme.of(context).textTheme.headline1
+                            : Theme.of(context).textTheme.headline2,
                         isDense: true,
                         underline: Container(
                           height: 0,
@@ -225,7 +225,6 @@ class _HeaderState extends State<Header> {
                         showDialog(
                             context: context,
                             barrierDismissible: true,
-                            useSafeArea: false,
                             builder: (_) => Center(
                                   child: SizedBox(
                                       width: MediaQuery.of(context).size.width *
@@ -300,13 +299,29 @@ class _HeaderState extends State<Header> {
                           alignment: Alignment.centerRight,
                           margin: const EdgeInsets.only(right: 0.0),
                           child: ElevatedButton.icon(
-                            onPressed: () {},
+                            onPressed: () {
+                              showDialog(
+                                  context: context,
+                                  barrierDismissible: true,
+                                  builder: (_) => Center(
+                                        child: SizedBox(
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.85,
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height *
+                                                0.6,
+                                            child: const GivingsDialog()),
+                                      ));
+                            },
                             icon: const Icon(
                               Icons.monetization_on,
                               color: CustomColor.white,
                               size: 20,
                             ),
-                            label: const SelectableText(
+                            label: const Text(
                               'GIVINGS',
                               style: TextStyle(
                                 fontSize: 16.0,
