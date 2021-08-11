@@ -106,7 +106,9 @@ class _HeaderState extends State<Header> {
                         value: 'PROJECTS',
                         icon: const Icon(Icons.arrow_drop_down),
                         elevation: 8,
-                        style: Theme.of(context).textTheme.headline2,
+                        style: _activeMenu == 'PROJECTS'
+                                ? Theme.of(context).textTheme.headline1
+                                : Theme.of(context).textTheme.headline2,
                         isDense: true,
                         underline: Container(
                           height: 0,
@@ -254,7 +256,7 @@ class _HeaderState extends State<Header> {
             key: homeKey,
             width: MediaQuery.of(context).size.width,
             child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   SizedBox(

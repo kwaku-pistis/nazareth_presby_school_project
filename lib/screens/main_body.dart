@@ -125,7 +125,9 @@ class _MainBodyState extends State<MainBody> {
                                   ),
                                 ],
                               )),
-                background: Carousel(images: _mainPageImages,),
+                background: Carousel(
+                  images: _mainPageImages,
+                ),
               ),
               backgroundColor: Colors.white,
             ),
@@ -133,7 +135,8 @@ class _MainBodyState extends State<MainBody> {
               delegate: SliverChildListDelegate([
                 Visibility(
                     child: const MobileMenu(),
-                    visible: context.watch<ChangeBoolState>().isMenuOpen),
+                    visible: context.watch<ChangeBoolState>().isMenuOpen &&
+                        _landscape == Orientation.portrait),
                 context.watch<BodyWidget>().bodyWidget,
                 const Footer(),
               ]),
