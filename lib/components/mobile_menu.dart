@@ -75,7 +75,7 @@ class _MobileMenuState extends State<MobileMenu> {
                 },
                 child: Text(
                   'WASHROOM BUILDING PROJECT',
-                  style: _activeMenu == 'WASHROOM BUIDLING PROJECT'
+                  style: _activeMenu == 'WASHROOM BUILDING PROJECT'
                       ? Theme.of(context).textTheme.headline1
                       : Theme.of(context).textTheme.headline2,
                 ),

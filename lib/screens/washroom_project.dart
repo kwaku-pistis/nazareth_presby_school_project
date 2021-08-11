@@ -38,6 +38,8 @@ final _washroomOngoing = [
 class _WashroomProjectState extends State<WashroomProject> {
   @override
   Widget build(BuildContext context) {
+    var _orientation = MediaQuery.of(context).orientation;
+
     return SizedBox(
       key: washroomProjectKey,
       width: MediaQuery.of(context).size.width,
@@ -61,160 +63,322 @@ class _WashroomProjectState extends State<WashroomProject> {
                         fontWeight: FontWeight.bold,
                         color: CustomColor.white)),
               )),
-          Center(
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width * 0.6,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                      margin: const EdgeInsets.only(top: 30),
-                      child: Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: const BoxDecoration(
-                          color: CustomColor.red,
-                        ),
-                        child: const SelectableText(
-                          'ABOUT PROJECT',
-                          style: TextStyle(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      )),
-                  Container(
-                    // width: MediaQuery.of(context).size.width * 0.5,
-                    margin: const EdgeInsets.only(top: 30),
-                    child: SelectableText(
-                      bodyText,
-                      style: Theme.of(context).textTheme.bodyText1,
+          _orientation == Orientation.landscape
+              ? desktopView(context)
+              : mobileView(context),
+        ],
+      ),
+    );
+  }
+
+  desktopView(BuildContext context) {
+    return Center(
+      child: SizedBox(
+        width: MediaQuery.of(context).size.width * 0.6,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+                margin: const EdgeInsets.only(top: 30),
+                child: Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: const BoxDecoration(
+                    color: CustomColor.red,
+                  ),
+                  child: const SelectableText(
+                    'ABOUT PROJECT',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
+                    textAlign: TextAlign.left,
                   ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  Container(
-                      margin: const EdgeInsets.only(bottom: 30),
-                      child: Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: const BoxDecoration(
-                          color: CustomColor.red,
-                        ),
-                        child: const SelectableText(
-                          'BUILDING PLAN',
-                          style: TextStyle(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      )),
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.6,
-                    height: 400.0,
-                    margin: const EdgeInsets.only(bottom: 10),
-                    child: Carousel(
-                      images: _washroomPlan,
-                    ),
-                  ),
-                  Container(
-                    alignment: Alignment.centerRight,
-                    child: SelectableText(
-                      'Designed by: Mr. Hello World',
-                      style: Theme.of(context).textTheme.headline3,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  Container(
-                      margin: const EdgeInsets.only(bottom: 20),
-                      child: Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: const BoxDecoration(
-                          color: CustomColor.red,
-                        ),
-                        child: const SelectableText(
-                          'GALLERY',
-                          style: TextStyle(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      )),
-                  Container(
-                    padding: const EdgeInsets.only(bottom: 5),
-                    decoration: const BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                color: CustomColor.red,
-                                width: 2,
-                                style: BorderStyle.solid))),
-                    child: const SelectableText(
-                      'Before',
-                      style: TextStyle(
-                        fontFamily: 'Raleway',
-                        fontSize: 16.0,
-                        color: CustomColor.blue,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.6,
-                    height: 400.0,
-                    margin: const EdgeInsets.only(bottom: 20),
-                    child: Carousel(
-                      images: _washroomBefore,
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.only(bottom: 5),
-                    // alignment: Alignment.centerRight,
-                    decoration: const BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                color: CustomColor.red,
-                                width: 2,
-                                style: BorderStyle.solid))),
-                    child: const SelectableText(
-                      'On-going',
-                      style: TextStyle(
-                        fontFamily: 'Raleway',
-                        fontSize: 16.0,
-                        color: CustomColor.blue,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.6,
-                    height: 400.0,
-                    margin: const EdgeInsets.only(bottom: 10),
-                    child: Carousel(
-                      images: _washroomOngoing,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                ],
+                )),
+            Container(
+              // width: MediaQuery.of(context).size.width * 0.5,
+              margin: const EdgeInsets.only(top: 30),
+              child: SelectableText(
+                bodyText,
+                style: Theme.of(context).textTheme.bodyText1,
               ),
             ),
-          )
-        ],
+            const SizedBox(
+              height: 30,
+            ),
+            Container(
+                margin: const EdgeInsets.only(bottom: 30),
+                child: Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: const BoxDecoration(
+                    color: CustomColor.red,
+                  ),
+                  child: const SelectableText(
+                    'BUILDING PLAN',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                )),
+            Container(
+              width: MediaQuery.of(context).size.width * 0.6,
+              height: 400.0,
+              margin: const EdgeInsets.only(bottom: 10),
+              child: Carousel(
+                images: _washroomPlan,
+              ),
+            ),
+            Container(
+              alignment: Alignment.centerRight,
+              child: SelectableText(
+                'Designed by: Mr. Hello World',
+                style: Theme.of(context).textTheme.headline3,
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Container(
+                margin: const EdgeInsets.only(bottom: 20),
+                child: Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: const BoxDecoration(
+                    color: CustomColor.red,
+                  ),
+                  child: const SelectableText(
+                    'GALLERY',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                )),
+            Container(
+              padding: const EdgeInsets.only(bottom: 5),
+              decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          color: CustomColor.red,
+                          width: 2,
+                          style: BorderStyle.solid))),
+              child: const SelectableText(
+                'Before',
+                style: TextStyle(
+                  fontFamily: 'Raleway',
+                  fontSize: 16.0,
+                  color: CustomColor.blue,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width * 0.6,
+              height: 400.0,
+              margin: const EdgeInsets.only(bottom: 20),
+              child: Carousel(
+                images: _washroomBefore,
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.only(bottom: 5),
+              // alignment: Alignment.centerRight,
+              decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          color: CustomColor.red,
+                          width: 2,
+                          style: BorderStyle.solid))),
+              child: const SelectableText(
+                'On-going',
+                style: TextStyle(
+                  fontFamily: 'Raleway',
+                  fontSize: 16.0,
+                  color: CustomColor.blue,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width * 0.6,
+              height: 400.0,
+              margin: const EdgeInsets.only(bottom: 10),
+              child: Carousel(
+                images: _washroomOngoing,
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  mobileView(BuildContext context) {
+    return Center(
+      child: SizedBox(
+        width: MediaQuery.of(context).size.width * 0.8,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+                margin: const EdgeInsets.only(top: 30),
+                child: Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: const BoxDecoration(
+                    color: CustomColor.red,
+                  ),
+                  child: const SelectableText(
+                    'ABOUT PROJECT',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                )),
+            Container(
+              // width: MediaQuery.of(context).size.width * 0.5,
+              margin: const EdgeInsets.only(top: 30),
+              child: SelectableText(
+                bodyText,
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Container(
+                margin: const EdgeInsets.only(bottom: 30),
+                child: Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: const BoxDecoration(
+                    color: CustomColor.red,
+                  ),
+                  child: const SelectableText(
+                    'BUILDING PLAN',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                )),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 300.0,
+              margin: const EdgeInsets.only(bottom: 10),
+              child: Carousel(
+                images: _washroomPlan,
+              ),
+            ),
+            Container(
+              alignment: Alignment.centerRight,
+              child: SelectableText(
+                'Designed by: Mr. Hello World',
+                style: Theme.of(context).textTheme.headline3,
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Container(
+                margin: const EdgeInsets.only(bottom: 20),
+                child: Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: const BoxDecoration(
+                    color: CustomColor.red,
+                  ),
+                  child: const SelectableText(
+                    'GALLERY',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                )),
+            Container(
+              padding: const EdgeInsets.only(bottom: 5),
+              decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          color: CustomColor.red,
+                          width: 2,
+                          style: BorderStyle.solid))),
+              child: const SelectableText(
+                'Before',
+                style: TextStyle(
+                  fontFamily: 'Raleway',
+                  fontSize: 16.0,
+                  color: CustomColor.blue,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 300.0,
+              margin: const EdgeInsets.only(bottom: 20),
+              child: Carousel(
+                images: _washroomBefore,
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.only(bottom: 5),
+              // alignment: Alignment.centerRight,
+              decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          color: CustomColor.red,
+                          width: 2,
+                          style: BorderStyle.solid))),
+              child: const SelectableText(
+                'On-going',
+                style: TextStyle(
+                  fontFamily: 'Raleway',
+                  fontSize: 16.0,
+                  color: CustomColor.blue,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 300.0,
+              margin: const EdgeInsets.only(bottom: 10),
+              child: Carousel(
+                images: _washroomOngoing,
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+          ],
+        ),
       ),
     );
   }
