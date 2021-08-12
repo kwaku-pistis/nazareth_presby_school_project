@@ -395,7 +395,7 @@ class _HomeDetailsState extends State<HomeDetails> {
     return Center(
         child: SizedBox(
       key: homeDetailsKey,
-      width: MediaQuery.of(context).size.width * 0.8,
+      width: MediaQuery.of(context).size.width * 0.875,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,

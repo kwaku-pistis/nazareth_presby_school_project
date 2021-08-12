@@ -90,14 +90,14 @@ class _MainBodyState extends State<MainBody> {
                                   Image(
                                     image: AssetImage(
                                         'assets/images/pcg_logo.png'),
-                                    width: 70,
-                                    height: 70,
+                                    width: 65,
+                                    height: 65,
                                   ),
                                   SizedBox(
                                     child: SelectableText(
                                       'PRESBYTERIAN CHURCH OF GHANA\nNAZARETH CONGREGATION\nADJEI KOJO',
                                       style: TextStyle(
-                                        // fontSize: 20.0,
+                                        // fontSize: 18.0,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
                                       ),

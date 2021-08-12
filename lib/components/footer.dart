@@ -445,215 +445,202 @@ class Footer extends StatelessWidget {
           ),
         ),
         SizedBox(
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+          child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+            SizedBox(
+              child: SelectableText(
+                'CONTACT',
+                style: Theme.of(context).textTheme.caption,
+              ),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            SizedBox(
+              child: SelectableText(
+                'pcg.nazarethak@gmail.com\nP. O. Box AS 717\nAshaiman\nTema West District\nAdjei Kojo\n+233 24 636 0674\n+233 24 478 3244',
+                style: Theme.of(context).textTheme.bodyText1,
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ]),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        SizedBox(
+          child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+            SizedBox(
+              child: SelectableText(
+                'MENU',
+                style: Theme.of(context).textTheme.caption,
+              ),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            SizedBox(
+              child: GestureDetector(
+                onTap: () {
+                  // setActiveMenu('HOME');
+                  context.read<ChangeBoolState>().setActiveMenu('HOME');
+                  context.read<BodyWidget>().setBodyWidget(const HomeDetails());
+                },
+                child: Text(
+                  'Home',
+                  style: Theme.of(context).textTheme.subtitle1,
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            SizedBox(
+              child: GestureDetector(
+                onTap: () {
+                  counter++;
+                  context.read<ChangeBoolState>().setActiveMenu('PROJECTS');
+                  context
+                      .read<BodyWidget>()
+                      .setBodyWidget(const SchoolProject());
+                },
+                child: Text(
+                  'School Project',
+                  style: Theme.of(context).textTheme.subtitle1,
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            SizedBox(
+              child: GestureDetector(
+                onTap: () {
+                  counter++;
+                  context.read<ChangeBoolState>().setActiveMenu('PROJECTS');
+                  context
+                      .read<BodyWidget>()
+                      .setBodyWidget(const ChurchProject());
+                },
+                child: Text(
+                  'Church Project',
+                  style: Theme.of(context).textTheme.subtitle1,
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            SizedBox(
+              child: GestureDetector(
+                onTap: () {
+                  counter++;
+                  context.read<ChangeBoolState>().setActiveMenu('PROJECTS');
+                  context
+                      .read<BodyWidget>()
+                      .setBodyWidget(const WashroomProject());
+                },
+                child: Text(
+                  'Washroom Project',
+                  style: Theme.of(context).textTheme.subtitle1,
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            SizedBox(
+              child: GestureDetector(
+                onTap: () {
+                  context
+                      .read<ChangeBoolState>()
+                      .setActiveMenu('CHURCH HISTORY');
+                  context.read<BodyWidget>().setBodyWidget(const ChurchInfo());
+                },
+                child: Text(
+                  'Church History',
+                  style: Theme.of(context).textTheme.subtitle1,
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            SizedBox(
+              child: GestureDetector(
+                onTap: () {
+                  context.read<ChangeBoolState>().setActiveMenu('CONTACT US');
+                  context.read<BodyWidget>().setBodyWidget(const ContactUs());
+                },
+                child: Text(
+                  'Contact Us',
+                  style: Theme.of(context).textTheme.subtitle1,
+                ),
+              ),
+            ),
+          ]),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        SizedBox(
+          child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+            SizedBox(
+              child: SelectableText(
+                'NEWSLETTER',
+                style: Theme.of(context).textTheme.caption,
+              ),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                  child: SelectableText(
-                    'CONTACT',
-                    style: Theme.of(context).textTheme.caption,
-                  ),
-                ),
-                const SizedBox(
-                  height: 8,
-                ),
-                SizedBox(
-                  child: SelectableText(
-                    'pcg.nazarethak@gmail.com\nP. O. Box AS 717\nAshaiman\nTema West District\nAdjei Kojo\n+233 24 636 0674\n+233 24 478 3244',
+                Container(
+                  width: 250,
+                  height: 50,
+                  color: Colors.white,
+                  child: TextField(
+                    decoration: const InputDecoration(
+                      hintText: 'Enter your email address',
+                      contentPadding: EdgeInsets.all(8),
+                      border: InputBorder.none,
+                    ),
                     style: Theme.of(context).textTheme.bodyText1,
-                    textAlign: TextAlign.center,
                   ),
-                ),
-              ]),
-        ),
-        const SizedBox(height: 20,),
-        SizedBox(
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                SizedBox(
-                  child: SelectableText(
-                    'MENU',
-                    style: Theme.of(context).textTheme.caption,
-                  ),
-                ),
-                const SizedBox(
-                  height: 8,
                 ),
                 SizedBox(
-                  child: GestureDetector(
-                    onTap: () {
-                      // setActiveMenu('HOME');
-                      context
-                          .read<ChangeBoolState>()
-                          .setActiveMenu('HOME');
-                      context
-                          .read<BodyWidget>()
-                          .setBodyWidget(const HomeDetails());
-                    },
-                    child: Text(
-                      'Home',
-                      style: Theme.of(context).textTheme.subtitle1,
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                SizedBox(
-                  child: GestureDetector(
-                    onTap: () {
-                      counter++;
-                      context
-                          .read<ChangeBoolState>()
-                          .setActiveMenu('PROJECTS');
-                      context
-                          .read<BodyWidget>()
-                          .setBodyWidget(const SchoolProject());
-                    },
-                    child: Text(
-                      'School Project',
-                      style: Theme.of(context).textTheme.subtitle1,
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                SizedBox(
-                  child: GestureDetector(
-                    onTap: () {
-                      counter++;
-                      context
-                          .read<ChangeBoolState>()
-                          .setActiveMenu('PROJECTS');
-                      context
-                          .read<BodyWidget>()
-                          .setBodyWidget(const ChurchProject());
-                    },
-                    child: Text(
-                      'Church Project',
-                      style: Theme.of(context).textTheme.subtitle1,
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                SizedBox(
-                  child: GestureDetector(
-                    onTap: () {
-                      counter++;
-                      context
-                          .read<ChangeBoolState>()
-                          .setActiveMenu('PROJECTS');
-                      context
-                          .read<BodyWidget>()
-                          .setBodyWidget(const WashroomProject());
-                    },
-                    child: Text(
-                      'Washroom Project',
-                      style: Theme.of(context).textTheme.subtitle1,
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                SizedBox(
-                  child: GestureDetector(
-                    onTap: () {
-                      context
-                          .read<ChangeBoolState>()
-                          .setActiveMenu('CHURCH HISTORY');
-                      context
-                          .read<BodyWidget>()
-                          .setBodyWidget(const ChurchInfo());
-                    },
-                    child: Text(
-                      'Church History',
-                      style: Theme.of(context).textTheme.subtitle1,
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                SizedBox(
-                  child: GestureDetector(
-                    onTap: () {
-                      context
-                          .read<ChangeBoolState>()
-                          .setActiveMenu('CONTACT US');
-                      context
-                          .read<BodyWidget>()
-                          .setBodyWidget(const ContactUs());
-                    },
-                    child: Text(
-                      'Contact Us',
-                      style: Theme.of(context).textTheme.subtitle1,
-                    ),
-                  ),
-                ),
-              ]),
-        ),
-        const SizedBox(height: 20,),
-        SizedBox(
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                SizedBox(
-                  child: SelectableText(
-                    'NEWSLETTER',
-                    style: Theme.of(context).textTheme.caption,
-                  ),
-                ),
-                const SizedBox(
-                  height: 8,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 250,
-                      height: 45,
-                      color: Colors.white,
-                      child: TextField(
-                        decoration: const InputDecoration(
-                          hintText: 'Enter your email address',
-                          contentPadding: EdgeInsets.all(8),
-                          border: InputBorder.none,
-                        ),
-                        style: Theme.of(context).textTheme.bodyText1,
+                  height: 50,
+                  width: 70,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const SelectableText(
+                      'SIGN UP',
+                      style: TextStyle(
+                        fontSize: 12.0,
                       ),
                     ),
-                    SizedBox(
-                      height: 45,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        child: const SelectableText(
-                          'SIGN UP',
-                        ),
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(
-                              CustomColor.red),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                SizedBox(
-                  width: 350,
-                  child: SelectableText(
-                    'Subscribe to our newsletter and receive updates on our currents projects and services',
-                    style: Theme.of(context).textTheme.bodyText1,
-                    textAlign: TextAlign.center,
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(CustomColor.red),
+                      padding: MaterialStateProperty.all(EdgeInsets.zero)
+                    ),
                   ),
-                ),
-              ]),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            SizedBox(
+              width: 350,
+              child: SelectableText(
+                'Subscribe to our newsletter and receive updates on our currents projects and services',
+                style: Theme.of(context).textTheme.bodyText1,
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ]),
         ),
         Container(
           width: MediaQuery.of(context).size.width,
@@ -669,97 +656,97 @@ class Footer extends StatelessWidget {
         ),
         const SizedBox(height: 20),
         SizedBox(
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                GestureDetector(
-                  child: Container(
-                    width: 30,
-                    height: 30,
-                    margin: const EdgeInsets.only(right: 5),
-                    padding: EdgeInsets.zero,
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
-                        image: DecorationImage(
-                          image: AssetImage(
-                              'assets/images/social_icons/facebook.png'),
-                          fit: BoxFit.cover,
-                        )),
-                  ),
-                  onTap: () {},
-                ),
-                GestureDetector(
-                  child: Container(
-                    width: 30,
-                    height: 30,
-                    margin: const EdgeInsets.only(right: 5),
-                    padding: EdgeInsets.zero,
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
-                        image: DecorationImage(
-                          image: AssetImage(
-                              'assets/images/social_icons/instagram.png'),
-                          fit: BoxFit.cover,
-                        )),
-                  ),
-                  onTap: () {},
-                ),
-                GestureDetector(
-                  child: Container(
-                    width: 30,
-                    height: 30,
-                    margin: const EdgeInsets.only(right: 5),
-                    padding: EdgeInsets.zero,
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
-                        image: DecorationImage(
-                          image: AssetImage(
-                              'assets/images/social_icons/twitter.png'),
-                          fit: BoxFit.cover,
-                        )),
-                  ),
-                  onTap: () {},
-                ),
-                GestureDetector(
-                  child: Container(
-                    width: 30,
-                    height: 30,
-                    margin: const EdgeInsets.only(right: 5),
-                    padding: EdgeInsets.zero,
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
-                        image: DecorationImage(
-                          image: AssetImage(
-                              'assets/images/social_icons/linkedin.png'),
-                          fit: BoxFit.cover,
-                        )),
-                  ),
-                  onTap: () {},
-                ),
-                GestureDetector(
-                  child: Container(
-                    width: 30,
-                    height: 30,
-                    margin: const EdgeInsets.only(right: 5),
-                    padding: EdgeInsets.zero,
-                    decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
-                        image: DecorationImage(
-                          image: AssetImage(
-                              'assets/images/social_icons/youtube.png'),
-                          fit: BoxFit.cover,
-                        )),
-                  ),
-                  onTap: () {},
-                ),
-              ]),
+          child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            GestureDetector(
+              child: Container(
+                width: 30,
+                height: 30,
+                margin: const EdgeInsets.only(right: 5),
+                padding: EdgeInsets.zero,
+                decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                    image: DecorationImage(
+                      image:
+                          AssetImage('assets/images/social_icons/facebook.png'),
+                      fit: BoxFit.cover,
+                    )),
+              ),
+              onTap: () {},
+            ),
+            GestureDetector(
+              child: Container(
+                width: 30,
+                height: 30,
+                margin: const EdgeInsets.only(right: 5),
+                padding: EdgeInsets.zero,
+                decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                    image: DecorationImage(
+                      image: AssetImage(
+                          'assets/images/social_icons/instagram.png'),
+                      fit: BoxFit.cover,
+                    )),
+              ),
+              onTap: () {},
+            ),
+            GestureDetector(
+              child: Container(
+                width: 30,
+                height: 30,
+                margin: const EdgeInsets.only(right: 5),
+                padding: EdgeInsets.zero,
+                decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                    image: DecorationImage(
+                      image:
+                          AssetImage('assets/images/social_icons/twitter.png'),
+                      fit: BoxFit.cover,
+                    )),
+              ),
+              onTap: () {},
+            ),
+            GestureDetector(
+              child: Container(
+                width: 30,
+                height: 30,
+                margin: const EdgeInsets.only(right: 5),
+                padding: EdgeInsets.zero,
+                decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                    image: DecorationImage(
+                      image:
+                          AssetImage('assets/images/social_icons/linkedin.png'),
+                      fit: BoxFit.cover,
+                    )),
+              ),
+              onTap: () {},
+            ),
+            GestureDetector(
+              child: Container(
+                width: 30,
+                height: 30,
+                margin: const EdgeInsets.only(right: 5),
+                padding: EdgeInsets.zero,
+                decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.white,
+                    image: DecorationImage(
+                      image:
+                          AssetImage('assets/images/social_icons/youtube.png'),
+                      fit: BoxFit.cover,
+                    )),
+              ),
+              onTap: () {},
+            ),
+          ]),
         ),
-        const SizedBox(height: 20,),
+        const SizedBox(
+          height: 20,
+        ),
         SizedBox(
           child: SelectableText(
             'Designed by Daniel Pistis Partey',

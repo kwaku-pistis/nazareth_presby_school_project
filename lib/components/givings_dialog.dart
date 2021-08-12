@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class GivingsDialog extends StatefulWidget {
   const GivingsDialog({Key? key}) : super(key: key);
@@ -41,7 +42,10 @@ class _GivingsDialogState extends State<GivingsDialog> {
             SizedBox(
               width: 300,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  launch(
+                      'https://flutterwave.com/pay/presbynazarethcongregationhpoz');
+                },
                 child: SelectableText(
                   'TITHE',
                   style: Theme.of(context).textTheme.button,
@@ -55,7 +59,10 @@ class _GivingsDialogState extends State<GivingsDialog> {
             SizedBox(
               width: 300,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  launch(
+                      'https://flutterwave.com/pay/presbynazarethcongregationhpoz');
+                },
                 child: SelectableText(
                   'OFFERING',
                   style: Theme.of(context).textTheme.button,
@@ -69,7 +76,10 @@ class _GivingsDialogState extends State<GivingsDialog> {
             SizedBox(
               width: 300,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  launch(
+                      'https://flutterwave.com/pay/presbynazarethcongregationhpoz');
+                },
                 child: SelectableText(
                   'DONATE TO SCHOOL BUILDING',
                   style: Theme.of(context).textTheme.button,
@@ -83,7 +93,10 @@ class _GivingsDialogState extends State<GivingsDialog> {
             SizedBox(
               width: 300,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  launch(
+                      'https://flutterwave.com/pay/presbynazarethcongregationhpoz');
+                },
                 child: SelectableText(
                   'DONATE TO CHURCH BUILDING',
                   style: Theme.of(context).textTheme.button,

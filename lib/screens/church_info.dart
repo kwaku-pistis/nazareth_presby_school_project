@@ -2380,7 +2380,7 @@ class _ChurchInfoState extends State<ChurchInfo> {
     return Center(
       child: SizedBox(
         key: churchInfoKey,
-        width: MediaQuery.of(context).size.width * 0.8,
+        width: MediaQuery.of(context).size.width * 0.875,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,

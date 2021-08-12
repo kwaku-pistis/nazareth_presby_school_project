@@ -106,9 +106,7 @@ class _HeaderState extends State<Header> {
                         value: 'PROJECTS',
                         icon: const Icon(Icons.arrow_drop_down),
                         elevation: 8,
-                        style: _activeMenu == 'PROJECTS'
-                            ? Theme.of(context).textTheme.headline1
-                            : Theme.of(context).textTheme.headline2,
+                        style: Theme.of(context).textTheme.headline2,
                         isDense: true,
                         underline: Container(
                           height: 0,
@@ -259,7 +257,7 @@ class _HeaderState extends State<Header> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   SizedBox(
-                      width: 50,
+                      width: 40,
                       child: IconButton(
                           onPressed: () =>
                               context.read<ChangeBoolState>().changeState(),
@@ -278,14 +276,14 @@ class _HeaderState extends State<Header> {
                       children: const [
                         Image(
                           image: AssetImage('assets/images/pcg_logo.png'),
-                          width: 60,
-                          height: 60,
+                          width: 50,
+                          height: 50,
                         ),
                         SizedBox(
                           child: SelectableText(
                             'NAZARETH\nCONGREGATION\nADJEI KOJO',
                             style: TextStyle(
-                              fontSize: 16.0,
+                              fontSize: 14.0,
                               fontWeight: FontWeight.bold,
                               color: Colors.black,
                             ),
@@ -324,7 +322,7 @@ class _HeaderState extends State<Header> {
                             label: const Text(
                               'GIVINGS',
                               style: TextStyle(
-                                fontSize: 16.0,
+                                fontSize: 14.0,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                               ),
