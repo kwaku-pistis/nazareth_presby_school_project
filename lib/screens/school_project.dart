@@ -16,34 +16,34 @@ final schoolProjectKey = GlobalKey();
 
 class _SchoolProjectState extends State<SchoolProject> {
   final _schoolPlan = [
-    'images/school/plan1.jpeg',
-    'images/school/plan2.jpeg',
-    'images/school/plan4.jpeg',
+    'assets/images/school/plan1.jpeg',
+    'assets/images/school/plan2.jpeg',
+    'assets/images/school/plan4.jpeg',
   ];
 
   final _schoolBefore = [
-    'images/school/s1.jpeg',
-    'images/school/s4.jpeg',
-    'images/school/s5.jpeg',
-    'images/school/s6.jpeg',
-    'images/school/s8.jpeg',
-    'images/school/s9.jpeg',
-    'images/school/s11.jpeg',
-    'images/school/s12.jpeg',
-    'images/school/s13.jpeg',
-    'images/school/s17.jpeg',
-    'images/school/s18.jpeg',
-    'images/school/s22.jpeg',
+    'assets/images/school/s1.jpeg',
+    'assets/images/school/s4.jpeg',
+    'assets/images/school/s5.jpeg',
+    'assets/images/school/s6.jpeg',
+    'assets/images/school/s8.jpeg',
+    'assets/images/school/s9.jpeg',
+    'assets/images/school/s11.jpeg',
+    'assets/images/school/s12.jpeg',
+    'assets/images/school/s13.jpeg',
+    'assets/images/school/s17.jpeg',
+    'assets/images/school/s18.jpeg',
+    'assets/images/school/s22.jpeg',
   ];
 
   final _schoolOngoing = [
-    'images/school/s2.jpeg',
-    'images/school/s3.jpeg',
-    'images/school/s24.jpeg',
-    'images/school/s25.jpeg',
-    'images/school/s26.jpeg',
-    'images/school/s27.jpeg',
-    'images/school/s28.jpeg',
+    'assets/images/school/s2.jpeg',
+    'assets/images/school/s3.jpeg',
+    'assets/images/school/s24.jpeg',
+    'assets/images/school/s25.jpeg',
+    'assets/images/school/s26.jpeg',
+    'assets/images/school/s27.jpeg',
+    'assets/images/school/s28.jpeg',
   ];
 
   @override

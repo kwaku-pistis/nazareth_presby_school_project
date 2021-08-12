@@ -14,25 +14,25 @@ String bodyText =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Sem integer vitae justo eget magna. Vel orci porta non pulvinar neque laoreet suspendisse. Facilisis gravida neque convallis a cras semper auctor neque. Duis convallis convallis tellus id interdum velit laoreet id. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Orci nulla pellentesque dignissim enim sit. Quis lectus nulla at volutpat diam ut venenatis tellus in. Etiam tempor orci eu lobortis elementum nibh tellus molestie nunc. Scelerisque fermentum dui faucibus in ornare quam viverra orci. Magna eget est lorem ipsum dolor sit amet consectetur. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Tortor at risus viverra adipiscing at in tellus integer. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Congue mauris rhoncus aenean vel.';
 
 final _washroomPlan = [
-  'images/school/plan1.jpeg',
-  'images/school/plan2.jpeg',
-  'images/school/plan4.jpeg',
+  'assets/images/school/plan1.jpeg',
+  'assets/images/school/plan2.jpeg',
+  'assets/images/school/plan4.jpeg',
 ];
 
 final _washroomBefore = [
-  'images/toilet/t6.jpeg',
-  'images/toilet/t10.jpeg',
+  'assets/images/toilet/t6.jpeg',
+  'assets/images/toilet/t10.jpeg',
 ];
 
 final _washroomOngoing = [
-  'images/toilet/t9.jpeg',
-  'images/toilet/t1.jpeg',
-  'images/toilet/t2.jpeg',
-  'images/toilet/t3.jpeg',
-  'images/toilet/t4.jpeg',
-  'images/toilet/t5.jpeg',
-  'images/toilet/t7.jpeg',
-  'images/toilet/t8.jpeg',
+  'assets/images/toilet/t9.jpeg',
+  'assets/images/toilet/t1.jpeg',
+  'assets/images/toilet/t2.jpeg',
+  'assets/images/toilet/t3.jpeg',
+  'assets/images/toilet/t4.jpeg',
+  'assets/images/toilet/t5.jpeg',
+  'assets/images/toilet/t7.jpeg',
+  'assets/images/toilet/t8.jpeg',
 ];
 
 class _WashroomProjectState extends State<WashroomProject> {

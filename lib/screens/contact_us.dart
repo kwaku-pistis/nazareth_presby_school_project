@@ -199,7 +199,7 @@ class _ContactUsState extends State<ContactUs> {
                                             ),
                                           ),
                                           SelectableText(
-                                            'nazarethpresby@gmail.com',
+                                            'pcg.nazarethak@gmail.com',
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .bodyText1,
@@ -328,7 +328,7 @@ class _ContactUsState extends State<ContactUs> {
                               elevation: 10,
                               shadowColor: Colors.black45,
                               child: Image.asset(
-                                '/images/map.png',
+                                'assets/images/map.png',
                                 fit: BoxFit.cover,
                               )
 
@@ -363,7 +363,7 @@ class _ContactUsState extends State<ContactUs> {
     return Center(
       child: SizedBox(
           key: contactKey,
-          width: MediaQuery.of(context).size.width * 0.8,
+          width: MediaQuery.of(context).size.width * 0.875,
           child: Container(
             alignment: Alignment.center,
             child: Column(
@@ -529,7 +529,7 @@ class _ContactUsState extends State<ContactUs> {
                                             ),
                                           ),
                                           SelectableText(
-                                            'nazarethpresby@gmail.com',
+                                            'pcg.nazarethak@gmail.com',
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .bodyText1,
@@ -686,7 +686,7 @@ class _ContactUsState extends State<ContactUs> {
                         elevation: 10,
                         shadowColor: Colors.black45,
                         child: Image.asset(
-                          '/images/map.png',
+                          'assets/images/map.png',
                           fit: BoxFit.cover,
                         )
 

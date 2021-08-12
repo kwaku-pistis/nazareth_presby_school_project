@@ -43,7 +43,7 @@ class _ProfileState extends State<Profile> {
                       decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                            image: AssetImage('/images/pcg_logo.png'),
+                            image: AssetImage('assets/images/pcg_logo.png'),
                             fit: BoxFit.cover,
                           )),
                     ),
@@ -112,7 +112,7 @@ class _ProfileState extends State<Profile> {
                       decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                            image: AssetImage('/images/pcg_logo.png'),
+                            image: AssetImage('assets/images/pcg_logo.png'),
                             fit: BoxFit.cover,
                           )),
                     ),
@@ -192,7 +192,7 @@ class _ProfileState extends State<Profile> {
                       decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                            image: AssetImage('/images/pcg_logo.png'),
+                            image: AssetImage('assets/images/pcg_logo.png'),
                             fit: BoxFit.cover,
                           )),
                     ),
@@ -261,7 +261,7 @@ class _ProfileState extends State<Profile> {
                       decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                            image: AssetImage('/images/ekol.jpeg'),
+                            image: AssetImage('assets/images/ekol.jpeg'),
                             fit: BoxFit.cover,
                           )),
                     ),
@@ -341,7 +341,7 @@ class _ProfileState extends State<Profile> {
                   decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
-                        image: AssetImage('/images/pcg_logo.png'),
+                        image: AssetImage('assets/images/pcg_logo.png'),
                         fit: BoxFit.cover,
                       )),
                 ),
@@ -412,7 +412,7 @@ class _ProfileState extends State<Profile> {
                   decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
-                        image: AssetImage('/images/pcg_logo.png'),
+                        image: AssetImage('assets/images/pcg_logo.png'),
                         fit: BoxFit.cover,
                       )),
                 ),
@@ -486,7 +486,7 @@ class _ProfileState extends State<Profile> {
                   decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
-                        image: AssetImage('/images/pcg_logo.png'),
+                        image: AssetImage('assets/images/pcg_logo.png'),
                         fit: BoxFit.cover,
                       )),
                 ),
@@ -557,7 +557,7 @@ class _ProfileState extends State<Profile> {
                   decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
-                        image: AssetImage('/images/ekol.jpeg'),
+                        image: AssetImage('assets/images/ekol.jpeg'),
                         fit: BoxFit.cover,
                       )),
                 ),

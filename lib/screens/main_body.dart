@@ -21,9 +21,10 @@ bool _isSliverCollapsed = false;
 bool _isFabVisible = false;
 
 var _mainPageImages = [
-  'images/carousel_1.jpg',
-  'images/carousel_2.jpg',
-  'images/carousel_3.jpg',
+  'assets/images/church.jpg',
+  'assets/images/carousel_1.jpg',
+  'assets/images/carousel_2.jpg',
+  'assets/images/carousel_3.jpg',
 ];
 
 class _MainBodyState extends State<MainBody> {

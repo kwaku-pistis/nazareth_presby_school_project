@@ -90,7 +90,7 @@ class Footer extends StatelessWidget {
                         ),
                         SizedBox(
                           child: SelectableText(
-                            'nazarethpresby@gmail.com\nP. O. Box AS 717\nAshaiman\nTema West District\nAdjei Kojo\n+233 50 143 1230\n+233 55 042 3009',
+                            'pcg.nazarethak@gmail.com\nP. O. Box AS 717\nAshaiman\nTema West District\nAdjei Kojo\n+233 24 636 0674\n+233 24 478 3244',
                             style: Theme.of(context).textTheme.bodyText1,
                           ),
                         ),
@@ -319,7 +319,7 @@ class Footer extends StatelessWidget {
                                 color: Colors.white,
                                 image: DecorationImage(
                                   image: AssetImage(
-                                      '/images/social_icons/facebook.png'),
+                                      'assets/images/social_icons/facebook.png'),
                                   fit: BoxFit.cover,
                                 )),
                           ),
@@ -336,7 +336,7 @@ class Footer extends StatelessWidget {
                                 color: Colors.white,
                                 image: DecorationImage(
                                   image: AssetImage(
-                                      '/images/social_icons/instagram.png'),
+                                      'assets/images/social_icons/instagram.png'),
                                   fit: BoxFit.cover,
                                 )),
                           ),
@@ -353,7 +353,7 @@ class Footer extends StatelessWidget {
                                 color: Colors.white,
                                 image: DecorationImage(
                                   image: AssetImage(
-                                      '/images/social_icons/twitter.png'),
+                                      'assets/images/social_icons/twitter.png'),
                                   fit: BoxFit.cover,
                                 )),
                           ),
@@ -370,7 +370,7 @@ class Footer extends StatelessWidget {
                                 color: Colors.white,
                                 image: DecorationImage(
                                   image: AssetImage(
-                                      '/images/social_icons/linkedin.png'),
+                                      'assets/images/social_icons/linkedin.png'),
                                   fit: BoxFit.cover,
                                 )),
                           ),
@@ -387,7 +387,7 @@ class Footer extends StatelessWidget {
                                 color: Colors.white,
                                 image: DecorationImage(
                                   image: AssetImage(
-                                      '/images/social_icons/youtube.png'),
+                                      'assets/images/social_icons/youtube.png'),
                                   fit: BoxFit.cover,
                                 )),
                           ),
@@ -459,7 +459,7 @@ class Footer extends StatelessWidget {
                 ),
                 SizedBox(
                   child: SelectableText(
-                    'nazarethpresby@gmail.com\nP. O. Box AS 717\nAshaiman\nTema West District\nAdjei Kojo\n+233 50 143 1230\n+233 55 042 3009',
+                    'pcg.nazarethak@gmail.com\nP. O. Box AS 717\nAshaiman\nTema West District\nAdjei Kojo\n+233 24 636 0674\n+233 24 478 3244',
                     style: Theme.of(context).textTheme.bodyText1,
                     textAlign: TextAlign.center,
                   ),
@@ -683,7 +683,7 @@ class Footer extends StatelessWidget {
                         color: Colors.white,
                         image: DecorationImage(
                           image: AssetImage(
-                              '/images/social_icons/facebook.png'),
+                              'assets/images/social_icons/facebook.png'),
                           fit: BoxFit.cover,
                         )),
                   ),
@@ -700,7 +700,7 @@ class Footer extends StatelessWidget {
                         color: Colors.white,
                         image: DecorationImage(
                           image: AssetImage(
-                              '/images/social_icons/instagram.png'),
+                              'assets/images/social_icons/instagram.png'),
                           fit: BoxFit.cover,
                         )),
                   ),
@@ -717,7 +717,7 @@ class Footer extends StatelessWidget {
                         color: Colors.white,
                         image: DecorationImage(
                           image: AssetImage(
-                              '/images/social_icons/twitter.png'),
+                              'assets/images/social_icons/twitter.png'),
                           fit: BoxFit.cover,
                         )),
                   ),
@@ -734,7 +734,7 @@ class Footer extends StatelessWidget {
                         color: Colors.white,
                         image: DecorationImage(
                           image: AssetImage(
-                              '/images/social_icons/linkedin.png'),
+                              'assets/images/social_icons/linkedin.png'),
                           fit: BoxFit.cover,
                         )),
                   ),
@@ -751,7 +751,7 @@ class Footer extends StatelessWidget {
                         color: Colors.white,
                         image: DecorationImage(
                           image: AssetImage(
-                              '/images/social_icons/youtube.png'),
+                              'assets/images/social_icons/youtube.png'),
                           fit: BoxFit.cover,
                         )),
                   ),

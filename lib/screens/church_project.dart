@@ -16,9 +16,9 @@ final churchProjectKey = GlobalKey();
 
 class _ChurchProjectState extends State<ChurchProject> {
   var images = [
-    'images/carousel_1.jpg',
-    'images/carousel_2.jpg',
-    'images/carousel_3.jpg',
+    'assets/images/carousel_1.jpg',
+    'assets/images/carousel_2.jpg',
+    'assets/images/carousel_3.jpg',
   ];
 
   @override

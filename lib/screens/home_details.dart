@@ -38,20 +38,20 @@ final YoutubePlayerController _controller = YoutubePlayerController(
 
 class _HomeDetailsState extends State<HomeDetails> {
   final _schoolImages = [
-    'images/school/plan1.jpeg',
-    'images/school/plan2.jpeg',
-    'images/school/plan4.jpeg',
+    'assets/images/school/plan1.jpeg',
+    'assets/images/school/plan2.jpeg',
+    'assets/images/school/plan4.jpeg',
   ];
 
   final _churchImages = [
-    'images/carousel_1.jpg',
-    'images/carousel_2.jpg',
-    'images/carousel_3.jpg',
+    'assets/images/carousel_1.jpg',
+    'assets/images/carousel_2.jpg',
+    'assets/images/carousel_3.jpg',
   ];
 
   final _washroomImages = [
-    'images/toilet/t9.jpeg',
-    'images/toilet/t2.jpeg',
+    'assets/images/toilet/t9.jpeg',
+    'assets/images/toilet/t2.jpeg',
   ];
 
   @override

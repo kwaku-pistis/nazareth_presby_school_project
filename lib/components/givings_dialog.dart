@@ -20,7 +20,7 @@ class _GivingsDialogState extends State<GivingsDialog> {
         padding: const EdgeInsets.all(20),
         decoration: const BoxDecoration(
             image: DecorationImage(
-          image: AssetImage('/images/giving.jpg'),
+          image: AssetImage('assets/images/giving.jpg'),
           fit: BoxFit.cover,
         )),
         child: Column(
