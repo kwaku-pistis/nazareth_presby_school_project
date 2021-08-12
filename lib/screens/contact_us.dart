@@ -159,7 +159,7 @@ class _ContactUsState extends State<ContactUs> {
                                             ),
                                           ),
                                           SelectableText(
-                                            '+233 50 143 1230',
+                                            '+233 24 636 0674',
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .bodyText1,
@@ -177,7 +177,7 @@ class _ContactUsState extends State<ContactUs> {
                                                   right: 10.0),
                                               child: null),
                                           SelectableText(
-                                            '+233 55 143 1230',
+                                            '+233 24 478 3244',
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .bodyText1,
@@ -489,7 +489,7 @@ class _ContactUsState extends State<ContactUs> {
                                             ),
                                           ),
                                           SelectableText(
-                                            '+233 50 143 1230',
+                                            '+233 24 636 0674',
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .bodyText1,
@@ -507,7 +507,7 @@ class _ContactUsState extends State<ContactUs> {
                                                   right: 10.0),
                                               child: null),
                                           SelectableText(
-                                            '+233 55 143 1230',
+                                            '+233 24 478 3244',
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .bodyText1,

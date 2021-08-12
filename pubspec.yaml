@@ -45,6 +45,7 @@ dependencies:
   easy_google_maps: ^1.0.0+2
   url_launcher: ^6.0.9
   mailto: ^2.0.0
+  peanut: ^4.0.1
   # imagebutton: ^0.0.6
 
 dev_dependencies:
