@@ -428,8 +428,8 @@ class _ContactUsState extends State<ContactUs> {
                           ),
                           Container(
                             padding: const EdgeInsets.only(top: 20),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 SizedBox(
@@ -468,6 +468,7 @@ class _ContactUsState extends State<ContactUs> {
                                     ],
                                   ),
                                 ),
+                                const SizedBox(height: 20,),
                                 SizedBox(
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.start,

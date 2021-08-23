@@ -133,9 +133,10 @@ class MyApp extends StatelessWidget {
               bodyText1: TextStyle(
                 // fontSize: 16.0,
                 color: Colors.grey,
-                height: 1.2,
+                // height: 1.2,
               ),
               bodyText2: TextStyle(fontSize: 16.0, color: Colors.white),
+              subtitle2: TextStyle(fontSize: 12.0, color: Colors.grey),
               subtitle1: TextStyle(
                 fontFamily: 'Raleway',
                 fontSize: 14,

@@ -335,8 +335,8 @@ class _ProfileState extends State<Profile> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  width: 70,
-                  height: 70,
+                  width: 50,
+                  height: 50,
                   margin: const EdgeInsets.only(right: 20),
                   decoration: const BoxDecoration(
                       shape: BoxShape.circle,
@@ -362,7 +362,7 @@ class _ProfileState extends State<Profile> {
                           'Rev. Godfried Emmanuel Quagraine',
                           style: TextStyle(
                             fontFamily: 'Raleway',
-                            fontSize: 14.0,
+                            fontSize: 12.0,
                             color: CustomColor.blue,
                           ),
                         ),
@@ -373,7 +373,7 @@ class _ProfileState extends State<Profile> {
                       SizedBox(
                         child: SelectableText(
                           'Agent-In-Charge',
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.subtitle2,
                         ),
                       ),
                       const SizedBox(
@@ -382,7 +382,7 @@ class _ProfileState extends State<Profile> {
                       SizedBox(
                         child: SelectableText(
                           '+233 24 393 5949 / +233 20 268 7335',
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.subtitle2,
                         ),
                       ),
                     ],
@@ -406,8 +406,8 @@ class _ProfileState extends State<Profile> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  width: 70,
-                  height: 70,
+                  width: 50,
+                  height: 50,
                   margin: const EdgeInsets.only(right: 20),
                   decoration: const BoxDecoration(
                       shape: BoxShape.circle,
@@ -433,7 +433,7 @@ class _ProfileState extends State<Profile> {
                           'Cat. Roseline Gyanwaa Baiden',
                           style: TextStyle(
                             fontFamily: 'Raleway',
-                            fontSize: 14.0,
+                            fontSize: 12.0,
                             color: CustomColor.blue,
                           ),
                         ),
@@ -444,7 +444,7 @@ class _ProfileState extends State<Profile> {
                       SizedBox(
                         child: SelectableText(
                           'Catechist with a Charge',
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.subtitle2,
                         ),
                       ),
                       const SizedBox(
@@ -453,7 +453,7 @@ class _ProfileState extends State<Profile> {
                       SizedBox(
                         child: SelectableText(
                           '+233 54 295 9967 / +233 24 809 6119',
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.subtitle2,
                         ),
                       ),
                     ],
@@ -463,9 +463,6 @@ class _ProfileState extends State<Profile> {
             ),
           ),
         ),
-      ),
-      const SizedBox(
-        height: 20,
       ),
       SizedBox(
         child: Card(
@@ -480,8 +477,8 @@ class _ProfileState extends State<Profile> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  width: 70,
-                  height: 70,
+                  width: 50,
+                  height: 50,
                   margin: const EdgeInsets.only(right: 20),
                   decoration: const BoxDecoration(
                       shape: BoxShape.circle,
@@ -507,7 +504,7 @@ class _ProfileState extends State<Profile> {
                           'Mr. Kennedy Boakye-Yiadom',
                           style: TextStyle(
                             fontFamily: 'Raleway',
-                            fontSize: 14.0,
+                            fontSize: 12.0,
                             color: CustomColor.blue,
                           ),
                         ),
@@ -518,7 +515,7 @@ class _ProfileState extends State<Profile> {
                       SizedBox(
                         child: SelectableText(
                           'Senior Presbyter',
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.subtitle2,
                         ),
                       ),
                       const SizedBox(
@@ -527,7 +524,7 @@ class _ProfileState extends State<Profile> {
                       SizedBox(
                         child: SelectableText(
                           '+233 24 344 1682',
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.subtitle2,
                         ),
                       ),
                     ],
@@ -551,8 +548,8 @@ class _ProfileState extends State<Profile> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  width: 70,
-                  height: 70,
+                  width: 50,
+                  height: 50,
                   margin: const EdgeInsets.only(right: 20),
                   decoration: const BoxDecoration(
                       shape: BoxShape.circle,
@@ -578,7 +575,7 @@ class _ProfileState extends State<Profile> {
                           'Mr. Emmanuel K. O. Larbi',
                           style: TextStyle(
                             fontFamily: 'Raleway',
-                            fontSize: 14.0,
+                            fontSize: 12.0,
                             color: CustomColor.blue,
                           ),
                         ),
@@ -589,7 +586,7 @@ class _ProfileState extends State<Profile> {
                       SizedBox(
                         child: SelectableText(
                           'Clerk',
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.subtitle2,
                         ),
                       ),
                       const SizedBox(
@@ -598,7 +595,7 @@ class _ProfileState extends State<Profile> {
                       SizedBox(
                         child: SelectableText(
                           '+233 24 636 0674 / +233 24 478 3244',
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.subtitle2,
                         ),
                       ),
                     ],
