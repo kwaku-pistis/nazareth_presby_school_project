@@ -254,7 +254,6 @@ class _HeaderState extends State<Header> {
             width: MediaQuery.of(context).size.width,
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                mainAxisSize: MainAxisSize.max,
                 children: [
                   SizedBox(
                       width: 40,
@@ -270,64 +269,69 @@ class _HeaderState extends State<Header> {
                                   Icons.menu,
                                   color: CustomColor.blue,
                                 ))),
-                  SizedBox(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: const [
-                        Image(
-                          image: AssetImage('assets/images/pcg_logo.png'),
-                          width: 50,
-                          height: 50,
-                        ),
-                        SizedBox(
-                          child: SelectableText(
-                            'NAZARETH\nCONGREGATION\nADJEI KOJO',
-                            style: TextStyle(
-                              fontSize: 14.0,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-                      ],
+                  const SizedBox(
+                    child: Image(
+                      image: AssetImage('assets/images/pcg_logo.png'),
+                      width: 50,
+                      height: 50,
                     ),
+                    
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.start,
+                    //   children: const [
+                    //     Image(
+                    //       image: AssetImage('assets/images/pcg_logo.png'),
+                    //       width: 50,
+                    //       height: 50,
+                    //     ),
+                    //     SizedBox(
+                    //       child: SelectableText(
+                    //         'NAZARETH\nCONGREGATION\nADJEI KOJO',
+                    //         style: TextStyle(
+                    //           fontSize: 14.0,
+                    //           fontWeight: FontWeight.bold,
+                    //           color: Colors.black,
+                    //         ),
+                    //       ),
+                    //     ),
+                    //   ],
+                    // ),
                   ),
-                  Expanded(
-                      child: Container(
-                          alignment: Alignment.centerRight,
-                          margin: const EdgeInsets.only(right: 0.0),
-                          child: ElevatedButton.icon(
-                            onPressed: () {
-                              showDialog(
-                                  context: context,
-                                  barrierDismissible: true,
-                                  builder: (_) => Center(
-                                        child: SizedBox(
-                                            width: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
-                                                0.85,
-                                            height: MediaQuery.of(context)
-                                                    .size
-                                                    .height *
-                                                0.6,
-                                            child: const GivingsDialog()),
-                                      ));
-                            },
-                            icon: const Icon(
-                              Icons.monetization_on,
-                              color: CustomColor.white,
-                              size: 20,
-                            ),
-                            label: const Text(
-                              'GIVINGS',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          )))
+                  Container(
+                    // alignment: Alignment.centerRight,
+                    margin: const EdgeInsets.only(right: 0.0),
+                    child: ElevatedButton.icon(
+                      onPressed: () {
+                        showDialog(
+                            context: context,
+                            barrierDismissible: true,
+                            builder: (_) => Center(
+                                  child: SizedBox(
+                                      width: MediaQuery.of(context)
+                                              .size
+                                              .width *
+                                          0.85,
+                                      height: MediaQuery.of(context)
+                                              .size
+                                              .height *
+                                          0.6,
+                                      child: const GivingsDialog()),
+                                ));
+                      },
+                      icon: const Icon(
+                        Icons.monetization_on,
+                        color: CustomColor.white,
+                        size: 20,
+                      ),
+                      label: const Text(
+                        'GIVINGS',
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ))
                 ]));
   }
 

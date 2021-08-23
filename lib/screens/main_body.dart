@@ -86,15 +86,17 @@ class _MainBodyState extends State<MainBody> {
                         child: _landscape == Orientation.landscape
                             ? Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
-                                children: const [
-                                  Image(
+                                children: [
+                                  const Image(
                                     image: AssetImage(
                                         'assets/images/pcg_logo.png'),
                                     width: 65,
                                     height: 65,
                                   ),
-                                  SizedBox(
-                                    child: SelectableText(
+                                  Container(
+                                    color: const Color(0xAA000000),
+                                    padding: const EdgeInsets.all(8),
+                                    child: const SelectableText(
                                       'PRESBYTERIAN CHURCH OF GHANA\nNAZARETH CONGREGATION\nADJEI KOJO',
                                       style: TextStyle(
                                         // fontSize: 18.0,
@@ -107,16 +109,18 @@ class _MainBodyState extends State<MainBody> {
                               )
                             : Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
-                                children: const [
-                                  Image(
+                                children: [
+                                  const Image(
                                     image: AssetImage(
                                         'assets/images/pcg_logo.png'),
                                     width: 50,
                                     height: 50,
                                   ),
-                                  SizedBox(
-                                    child: SelectableText(
-                                      'PRESBYTERIAN CHURCH OF GHANA\nNAZARETH CONGREGATION\nADJEI KOJO',
+                                  Container(
+                                    color: const Color(0xAA000000),
+                                    padding: const EdgeInsets.all(8),
+                                    child: const SelectableText(
+                                      'NAZARETH\nCONGREGATION\nADJEI KOJO',
                                       style: TextStyle(
                                         fontSize: 13.0,
                                         fontWeight: FontWeight.bold,
