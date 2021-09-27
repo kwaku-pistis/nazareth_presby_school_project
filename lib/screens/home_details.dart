@@ -1,4 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:nazareth_presby_school_project/components/announcements.dart';
@@ -25,6 +26,7 @@ String bodyText =
 
 final PageController controller = PageController();
 final homeDetailsKey = GlobalKey();
+FirebaseFirestore firestore = FirebaseFirestore.instance;
 
 final YoutubePlayerController _controller = YoutubePlayerController(
   initialVideoId: '0Qy_PDrfZaI',
@@ -53,6 +55,13 @@ class _HomeDetailsState extends State<HomeDetails> {
     'assets/images/toilet/t9.jpeg',
     'assets/images/toilet/t2.jpeg',
   ];
+
+  @override
+  void initState() {
+    super.initState();
+
+    CollectionReference announcements = firestore.collection('announcements');
+  }
 
   @override
   Widget build(BuildContext context) {

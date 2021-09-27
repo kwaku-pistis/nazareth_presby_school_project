@@ -32,6 +32,27 @@
   <link rel="icon" type="image/ico" href="favicon.ico"/>
 </head>
 <body>
+  <!-- Firebase SDK for Web -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+  <!-- Firebase Configuration -->
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyAG6M-PI4-qBNZCd07wy8wvHxIPwrLCGEY",
+      authDomain: "nazareth-website.firebaseapp.com",
+      projectId: "nazareth-website",
+      storageBucket: "nazareth-website.appspot.com",
+      messagingSenderId: "375741818048",
+      appId: "1:375741818048:web:51e279e40b5a16d8f77925",
+      measurementId: "G-FNE70RWTCJ"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
