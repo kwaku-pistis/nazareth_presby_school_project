@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:nazareth_presby_school_project/screens/contact_us.dart';
 import 'package:nazareth_presby_school_project/screens/home_details.dart';
 import 'package:nazareth_presby_school_project/screens/main_body.dart';
+import 'package:nazareth_presby_school_project/screens/upload.dart';
 import 'package:nazareth_presby_school_project/style/colors.dart';
 import 'package:provider/provider.dart';
 
@@ -149,6 +151,11 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.bold
               ))),
       home: const MainBody(),
+      routes: {
+        // '/': (context) => const MainBody(),
+        '/contact_us': (context) => const ContactUs(),
+        '/upload': (context) => const Upload()
+      },
     );
   }
 }
