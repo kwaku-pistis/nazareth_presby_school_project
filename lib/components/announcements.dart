@@ -54,7 +54,8 @@ class _AnnouncementsState extends State<Announcements> {
           height: 20,
         ),
         Expanded(
-            child: SizedBox(
+            child: Container(
+              margin: const EdgeInsets.only(top: 10, bottom: 10),
                 child: StreamBuilder<QuerySnapshot>(
                     stream: announcements.snapshots(),
                     builder: (context, snapshot) {
