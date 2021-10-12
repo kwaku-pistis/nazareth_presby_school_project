@@ -321,8 +321,8 @@ class _HomeDetailsState extends State<HomeDetails> {
                               ),
                               SizedBox(
                                 width: MediaQuery.of(context).size.width * 0.35,
-                                height:
-                                    MediaQuery.of(context).size.height * 0.3,
+                                // height:
+                                //     MediaQuery.of(context).size.height * 0.3,
                                 child: Card(
                                   child: Container(
                                       padding: const EdgeInsets.all(16),

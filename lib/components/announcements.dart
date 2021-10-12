@@ -55,9 +55,11 @@ class _AnnouncementsState extends State<Announcements> {
         ),
         Expanded(
             child: Container(
-              margin: const EdgeInsets.only(top: 10, bottom: 10),
+                margin: const EdgeInsets.only(top: 10, bottom: 10),
                 child: StreamBuilder<QuerySnapshot>(
-                    stream: announcements.snapshots(),
+                    stream: announcements
+                        .orderBy('date', descending: true)
+                        .snapshots(),
                     builder: (context, snapshot) {
                       return ListView(
                         children: snapshot.data!.docs.map((doc) {
