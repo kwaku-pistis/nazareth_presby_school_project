@@ -61,25 +61,32 @@ class _AnnouncementsState extends State<Announcements> {
                         .orderBy('date', descending: true)
                         .snapshots(),
                     builder: (context, snapshot) {
-                      return ListView(
-                        children: snapshot.data!.docs.map((doc) {
-                          return ListTile(
-                            contentPadding: EdgeInsets.zero,
-                            leading: const Icon(
-                              Icons.announcement,
-                              color: CustomColor.red,
-                            ),
-                            title: SelectableText(
-                              doc['message'].toString(),
-                              style: const TextStyle(
-                                fontFamily: 'Raleway',
-                                color: Colors.grey,
-                                decoration: TextDecoration.none,
+                      if (snapshot.hasData) {
+                        return ListView(
+                          children: snapshot.data!.docs.map((doc) {
+                            return ListTile(
+                              contentPadding: EdgeInsets.zero,
+                              leading: const Icon(
+                                Icons.announcement,
+                                color: CustomColor.red,
                               ),
-                            ),
-                          );
-                        }).toList(),
-                      );
+                              title: SelectableText(
+                                doc['message'].toString(),
+                                style: const TextStyle(
+                                  fontFamily: 'Raleway',
+                                  color: Colors.grey,
+                                  decoration: TextDecoration.none,
+                                ),
+                              ),
+                            );
+                          }).toList(),
+                        );
+                      } else if (snapshot.hasError) {
+                        return const Center(
+                            child: Text("Something went wrong"));
+                      } else {
+                        return const Center(child: CircularProgressIndicator());
+                      }
                     })))
       ],
     );
